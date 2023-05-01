@@ -1,0 +1,42 @@
+@import 'base';
+
+// 헤더 서식
+header{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: $m_color;
+  img{
+    width: 80px;
+  }
+
+  nav{
+    .gnb{
+      display: flex;
+      gap: 50px;
+      a{
+        position: relative;
+        color: $t_color01;
+        font-size: $fontSize03;
+      }
+    }
+  }
+  .h_sns a{
+    color: $t_color01;
+    font-size: 24px;
+  }
+}
+
+// 푸터서식
+footer{
+  width: 100%;
+  height: 70px;
+  background: $t_color01;
+  text-align: center;
+  address{
+    text-align: center;
+    padding: 30px 0;
+  }
+}

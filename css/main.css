@@ -1,0 +1,154 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "RIDIBatang";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "RIDIBatang", "맑은 고딕", sans-serif;
+  font-size: 12px;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  font-size: 12px;
+}
+
+#main_visu {
+  position: relative;
+  height: calc(100vh - 100px);
+  background: #3C5296;
+}
+#main_visu p {
+  position: absolute;
+  font-size: 68px;
+  color: white;
+  z-index: 1;
+}
+#main_visu p:first-of-type {
+  top: 30%;
+  left: 30%;
+}
+#main_visu p:last-of-type {
+  top: 50%;
+  left: 50%;
+}
+
+canvas {
+  position: absolute;
+  touch-action: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+}
+
+#about {
+  width: 100%;
+  padding: 50px 0;
+  margin: 0 auto;
+  background-image: url(../images/bg.jpg);
+}
+#about > article {
+  width: 1260px;
+  margin: 0 auto;
+  padding: 50px;
+  background: #fff;
+}
+#about > article h2 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+#about > article .profile {
+  display: flex;
+}
+#about > article .profile img {
+  width: 400px;
+}
+#about > article .profile dt, #about > article .profile dd {
+  display: inline-block;
+}
+
+#projects {
+  width: 1260px;
+  padding: 50px 0;
+  margin: 0 auto;
+}
+#projects h2 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+#projects .category {
+  position: relative;
+  padding: 20px 0;
+  font-size: 14px;
+  border-bottom: 1px solid #333;
+}
+#projects .category input[type=radio] {
+  display: none;
+}
+#projects .category input[type=radio]:checked + label {
+  font-weight: bold;
+}
+#projects .category label {
+  margin: 0 20px;
+  cursor: pointer;
+}
+#projects .year {
+  position: absolute;
+  display: flex;
+  gap: 100px;
+  bottom: 10px;
+  right: 0;
+  font-size: 20px;
+  font-style: italic;
+}
+#projects .year::before {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 1px;
+  position: absolute;
+  bottom: 8px;
+  right: 54px;
+  background: #ccc;
+}
+#projects .project .con {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 400px;
+  margin: 50px 0;
+}
+#projects .project .con .con_img {
+  position: absolute;
+  top: 0;
+  left: 250px;
+}
+#projects .project .con .con_img img {
+  transition: 0.8s;
+}
+#projects .project .con .con_img span {
+  display: inline-block;
+  transform: translate(-50px, -200px);
+}
+#projects .project .con h4 {
+  display: inline-block;
+  position: relative;
+  z-index: 999;
+  font-size: 32px;
+}
+#projects .project .con .con_bottom {
+  display: flex;
+  justify-content: space-between;
+}
+#projects .project :hover .con_img > a > img {
+  scale: 0.98;
+}/*# sourceMappingURL=main.css.map */

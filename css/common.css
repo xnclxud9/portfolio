@@ -1,0 +1,54 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "RIDIBatang";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "RIDIBatang", "맑은 고딕", sans-serif;
+  font-size: 12px;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  font-size: 12px;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #3C5296;
+}
+header img {
+  width: 80px;
+}
+header nav .gnb {
+  display: flex;
+  gap: 50px;
+}
+header nav .gnb a {
+  position: relative;
+  color: #fff;
+  font-size: 20px;
+}
+header .h_sns a {
+  color: #fff;
+  font-size: 24px;
+}
+
+footer {
+  width: 100%;
+  height: 70px;
+  background: #fff;
+  text-align: center;
+}
+footer address {
+  text-align: center;
+  padding: 30px 0;
+}/*# sourceMappingURL=common.css.map */

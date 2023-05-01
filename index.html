@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ㅎㅇ</title>
+  <!-- 초기화 -->
+  <link rel="stylesheet" href="./css/reset.css" type="text/css">
+  <!-- 기본서식, 공통서식 -->
+  <link rel="stylesheet" href="./css/base.css" type="text/css">
+  <link rel="stylesheet" href="./css/common.css" type="text/css">
+  <link rel="stylesheet" href="./css/wave.css" type="text/css">
+  <!-- 콘텐츠영역서식 -->
+  <link rel="stylesheet" href="./css/main.css" type="text/css">
+  <!-- 폰트어썸 주소 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <!-- 접두사 자동 -->
+  <script src="./script/prefixfree.min.js"></script>
+  <!-- 제이쿼리 라이브러리 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="./script/canvas.js" defer></script>
+</head>
+<body>
+  <!-- 헤더 -->
+  <header>
+    <h1>
+      <a href="index.html" title="메인으로 바로가기"><img src="./images/logo.png" alt="상단 로고"></a>
+    </h1>
+    <nav>
+      <ul class="gnb">
+        <li><a href="#about" title="about">About</a></li>
+        <li><a href="#projects" title="projects">Projects</a></li>
+        <li><a href="#contact" title="contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="h_sns">
+      <a href="https://github.com/xnclxud9" title="깃허브" target="_blank"><i class="fas fab fa-github"></i></a>
+    </div>
+  </header>
+
+  <!-- 메인 -->
+  <main>
+    <article id="main_visu"> 
+      <p>FRONTEND</p>
+      <p>LEE SEUNGA</p>
+    </article>
+
+    <!--Waves Container-->
+    <div>
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+      <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+      </defs>
+      <g class="parallax">
+      <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+      <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+      <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+      <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+      </g>
+      </svg>
+    </div>
+    <!--Waves end-->
+
+    <div id="about">
+      <article>
+        <h2>ABOUT</h2>
+        <section class="profile">
+          <img src="./images/123.png" alt="내사진">
+          <dl>
+            <dt>이름</dt>
+            <dd>이승아</dd>
+            <dt>이름</dt>
+            <dd>이승아</dd>
+            <dt>이름</dt>
+            <dd>이승아</dd>
+            <dt>이름</dt>
+            <dd>이승아</dd>
+            <dt>이름</dt>
+            <dd>이승아</dd>
+            <dt>이름</dt>
+            <dd>이승아</dd>
+          </dl>
+        </section>
+        <section class="skil">
+          <section>경력</section>
+          <section>스킬</section>
+        </section>
+      </article>
+    </div>
+
+    <article id="projects">
+      <h2>projects</h2>
+      <div class="category">
+        <input type="radio" id="all" name="cate" checked><label for="all">All</label>
+        <input type="radio" id="develop" name="cate"><label for="develop">Develop</label>
+        <input type="radio" id="design" name="cate"><label for="design">Design</label>
+        <input type="radio" id="etc" name="cate"><label for="etc">etc</label>
+
+        <div class="year">
+          <span>2022</span>
+          <span>2023</span>
+        </div>
+      </div>
+
+      <div class="project">
+        <section class="con">
+          <h3>브랜딩 사이트 반응형웹 제작</h3>
+          <h4>TGI 홈페이지 리뉴얼</h4>
+          <div class="con_img">
+            <a href="#none" title="프로젝트 자세히보기"><img src="./images/tgi.jpg" alt="TGI 목업"></a>
+            <span><img src="./images/arrow.png" alt=""></span>
+          </div>
+          <div class="con_bottom">
+            <p>Team Project</p>
+            <a href="#none" title="프로젝트 자세히보기">VIEW the PROJECT</a>
+          </div>
+        </section>
+      </div>
+    </article>
+
+    <footer>
+      <address>copyrightsⓒ 2023 All rights reserved.</address>
+    </footer>
+  </main>
+</body>
+</html>
