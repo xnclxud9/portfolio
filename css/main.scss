@@ -1,24 +1,26 @@
 @import 'base';
 
+// 상단 비주얼
 #main_visu{
   position: relative;
   height: calc(100vh - 100px);
   background: $m_color;
   p{
     position: absolute;
-    font-size: 68px;
+    font-size: 48px;
     color: white;
     z-index: 1;
   }
   p:first-of-type{
     top: 30%;
-    left: 30%;
+    left: 25%;
   }
   p:last-of-type{
     top: 50%;
-    left: 50%;
+    left: 55%;
   }
 }
+
 canvas{
   position: absolute;
   touch-action: none;
@@ -27,31 +29,38 @@ canvas{
   transform: translate(-50%, -50%);
   width: 1000px;
 }
+// 상단 비주얼 끝
 
+
+// 어바웃
 #about{
   @include box(100%);
   background-image: url(../images/bg.jpg);
+  // background-size: cover;
   > article{
-    width: 1260px;
+    width: 70%;
     margin: 0 auto;
     padding: 50px;
     background: #fff;
-    h2{
-      @include title;
-    }
     .profile{
       display: flex;
-        img{width: 400px;}
+        img{
+          width: 400px;
+          border-radius: 48% 48% 0 0;
+        }
+        dl{
+          width: 100px;
+        }
         dt, dd{display: inline-block;}
     }
   }
 }
+// 어바웃 끝
 
+
+// 프로젝트
 #projects{
-  @include box(1260px);
-  h2{
-    @include title
-  }
+  @include box(70%);
   .category{
     position: relative;
     padding: 20px 0;
@@ -121,6 +130,29 @@ canvas{
     }
     :hover .con_img > a > img{
       scale: .98;
+      border-radius: 25% 0 25% 0;
     }
   }
 }
+// 프로젝트 끝
+
+
+// 컨택트
+#contact{
+  @include box(70%);
+  .con{
+    display: inline-block;
+    position: relative;
+    width: 300px;
+    height: 450px;
+    border: 1px solid #333;
+    border-radius: 300px;
+  }
+  .phone{
+    left: -50px;
+  }
+  .mm{
+    left: -100px;
+  }
+}
+// 컨택트 끝

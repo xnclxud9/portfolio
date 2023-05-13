@@ -26,7 +26,11 @@ $t_color01: #fff;
   width: $width;
   padding: 50px 0;
   margin: 0 auto;
+  h2{
+    @include title;
+  }
 }
+
 body{
   font-family: 'RIDIBatang', '맑은 고딕', sans-serif;
   font-size: $fontSize;

@@ -24,17 +24,17 @@ a {
 }
 #main_visu p {
   position: absolute;
-  font-size: 68px;
+  font-size: 48px;
   color: white;
   z-index: 1;
 }
 #main_visu p:first-of-type {
   top: 30%;
-  left: 30%;
+  left: 25%;
 }
 #main_visu p:last-of-type {
   top: 50%;
-  left: 50%;
+  left: 55%;
 }
 
 canvas {
@@ -52,29 +52,33 @@ canvas {
   margin: 0 auto;
   background-image: url(../images/bg.jpg);
 }
-#about > article {
-  width: 1260px;
-  margin: 0 auto;
-  padding: 50px;
-  background: #fff;
-}
-#about > article h2 {
+#about h2 {
   font-size: 20px;
   text-align: center;
   margin-bottom: 50px;
+}
+#about > article {
+  width: 70%;
+  margin: 0 auto;
+  padding: 50px;
+  background: #fff;
 }
 #about > article .profile {
   display: flex;
 }
 #about > article .profile img {
   width: 400px;
+  border-radius: 48% 48% 0 0;
+}
+#about > article .profile dl {
+  width: 100px;
 }
 #about > article .profile dt, #about > article .profile dd {
   display: inline-block;
 }
 
 #projects {
-  width: 1260px;
+  width: 70%;
   padding: 50px 0;
   margin: 0 auto;
 }
@@ -151,4 +155,30 @@ canvas {
 }
 #projects .project :hover .con_img > a > img {
   scale: 0.98;
+  border-radius: 25% 0 25% 0;
+}
+
+#contact {
+  width: 70%;
+  padding: 50px 0;
+  margin: 0 auto;
+}
+#contact h2 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+#contact .con {
+  display: inline-block;
+  position: relative;
+  width: 300px;
+  height: 450px;
+  border: 1px solid #333;
+  border-radius: 300px;
+}
+#contact .phone {
+  left: -50px;
+}
+#contact .mm {
+  left: -100px;
 }/*# sourceMappingURL=main.css.map */
