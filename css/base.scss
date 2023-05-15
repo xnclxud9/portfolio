@@ -31,6 +31,33 @@ $t_color01: #fff;
   }
 }
 
+@mixin about_slide{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  h3{
+    font-size: 18px;
+  }
+  a > img{
+    margin-left: 5px;
+  }
+  .a_title{
+    p{
+      font-size: 20px;
+      line-height: 28px;
+      span{
+        color: $m_color;
+        font-weight: bold;
+      }
+    }
+  }
+  .a_con{
+    p{
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+}
 body{
   font-family: 'RIDIBatang', '맑은 고딕', sans-serif;
   font-size: $fontSize;
@@ -42,3 +69,5 @@ a{
   color: $t_color;
   font-size: $fontSize;
 }
+
+.hidden{display: none;}

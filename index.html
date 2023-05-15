@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ㅎㅇ</title>
+  <title>이승아 포트폴리오</title>
+  <!-- 파비콘 -->
+  <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.jpg">
   <!-- 초기화 -->
   <link rel="stylesheet" href="./css/reset.css" type="text/css">
   <!-- 기본서식, 공통서식 -->
@@ -19,7 +21,11 @@
   <script src="./script/prefixfree.min.js"></script>
   <!-- 제이쿼리 라이브러리 -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <!-- swiper slide -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="./script/canvas.js" defer></script>
+  <script src="./script/main.js" defer></script>
 </head>
 <body>
   <!-- 헤더 -->
@@ -42,7 +48,7 @@
   <!-- 메인 -->
   <main>
     <article id="main_visu"> 
-      <p>잔잔한 파도처럼 꾸준한</p>
+      <p>파도처럼 꾸준한</p>
       <p>이승아입니다.</p>
     </article>
 
@@ -64,29 +70,58 @@
     <!--Waves end-->
 
     <div id="about">
-      <article>
+      <article class="swiper mySwiper">
         <h2>ABOUT</h2>
-        <section class="profile">
-          <img src="./images/123.png" alt="내사진">
-          <dl>
-            <dt>이름</dt>
-            <dd>이승아</dd>
-            <dt>이름</dt>
-            <dd>이승아</dd>
-            <dt>이름</dt>
-            <dd>이승아</dd>
-            <dt>이름</dt>
-            <dd>이승아</dd>
-            <dt>이름</dt>
-            <dd>이승아</dd>
-            <dt>이름</dt>
-            <dd>이승아</dd>
-          </dl>
-        </section>
-        <section class="skil">
-          <section>경력</section>
-          <section>스킬</section>
-        </section>
+        <div class="swiper-wrapper">
+          <section class="profile swiper-slide">
+            <h3>ME</h3>
+            <div class="a_title">
+              <p>안녕하세요!</p>
+              <p><span>프론트엔드 </span>개발자를 꿈꾸는</p>
+              <p>이승아입니다.</p>
+            </div>
+            <div class="a_con">
+              <p>저는 호기심이 많습니다.</p>
+              <p>항상 ‘왜?’라는 질문을 하며, 의문을 품고 궁금증이 해결되어야 직성이 풀립니다.</p>
+              <p>이러한 제 성향이 끊임없이 탐구하고 배워야 하는 개발 직군과 잘 맞는다고 생각했고,</p>
+              <p>그중에서도 사용자와 가장 가까운 프론트엔드에 매력을 느꼈습니다.</p>
+              <p>저의 호기심을 기반으로 프론트엔드 개발자로서 성장하고 싶습니다.</p>
+            </div>
+            <div class="tag">
+              <span>#호기심</span>
+              <span>#꾸준함</span>
+              <span>#꼼꼼함</span>
+              <span>#섬세함</span>
+              <span>#창의력</span>
+              <span>#해결사</span>
+              <span>#탐구력</span>
+            </div>
+            <a href="#none" title="">이력서 보러가기<img src="./images/arrow_s.png" alt=""></a>
+          </section>
+          <section class="skil swiper-slide">
+            <h3>SKILL</h3>
+          </section>
+          <section class="logo swiper-slide">
+            <h3>LOGO</h3>
+            <img src="./images/a_logo.png" alt="로고">
+            <div class="a_title">
+              <p>바다에</p>
+              <p>꾸준하게</p>
+              <p>이는 물결 <span>'파도'</span></p>
+            </div>
+            <div class="a_con">
+              <p>잔잔해 보이는 바다에도 파도는 존재합니다.</p>
+              <p>오랜 시간 동안 밀려왔다 밀려가기를 반복하며 모래사장이나 절벽을 만들고, 바다를 썩지 않게 합니다.</p>
+              <p>이러한 파도의 꾸준함을 닮은 저를 로고로 표현하였습니다.</p>
+            </div>
+            <a href="#none" title="">기획서 보러가기<img src="./images/arrow_s.png" alt=""></a>
+          </section>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="slide_color">
+
+        </div>
       </article>
     </div>
 
@@ -112,7 +147,7 @@
             <span><img src="./images/arrow.png" alt=""></span>
           </div>
           <div class="con_bottom">
-            <p>Team Project</p>
+            <p>Team Project / 22.12.20~23.01.20</p>
             <a href="#none" title="프로젝트 자세히보기">VIEW the PROJECT</a>
           </div>
         </section>
@@ -121,18 +156,20 @@
 
     <article id="contact">
       <h2>CONTACT</h2>
-      <section class="con email">
-        <h3>이메일</h3>
-      </section>
-      <section class="con phone">
-        <h3>전화번호</h3>
-      </section>
-      <section class="con mm">
-        <h3>뭐하지</h3>
-      </section>
+      <div class="con_wrap">
+        <section class="con email">
+          <h3>이메일</h3>
+        </section>
+        <section class="con phone">
+          <h3>전화번호</h3>
+        </section>
+        <section class="con mm">
+          <h3>뭐하지</h3>
+        </section>
+      </div>
     </article>
     <footer>
-      <address>copyrightsⓒ 2023 All rights reserved.</address>
+      <address>copyrightⓒ 2023 LEE SEUNGA All rights reserved.</address>
     </footer>
   </main>
 </body>

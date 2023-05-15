@@ -37,21 +37,64 @@ canvas{
   @include box(100%);
   background-image: url(../images/bg.jpg);
   // background-size: cover;
-  > article{
+  .swiper{
+    position: relative;
     width: 70%;
     margin: 0 auto;
-    padding: 50px;
+    padding: 50px 100px;
     background: #fff;
+    section{
+      width: 60%; 
+    }
     .profile{
-      display: flex;
-        img{
-          width: 400px;
-          border-radius: 48% 48% 0 0;
+      @include about_slide;
+      .tag{
+        margin-bottom: 130px;
+        span{
+          margin-right: 5px;
         }
-        dl{
-          width: 100px;
-        }
-        dt, dd{display: inline-block;}
+      }
+    }
+    .skil{
+      @include about_slide;
+    }
+    .logo{
+      @include about_slide;
+      > img{
+        width: 100px;
+      }
+      .a_con{
+        margin-bottom: 100px;
+      }
+    }
+    .swiper-button-next, .swiper-button-prev{
+      top: 90%;
+      width: 40px;
+      height: 40px;
+      border: 1px solid $m_color;
+      border-radius: 50%;
+    }
+    .swiper-button-next{
+      left: auto;
+      right: 50px;
+    }
+    .swiper-button-prev{
+      left: auto;
+      right: 100px;
+    }
+    .swiper-button-next::after, .swiper-button-prev::after{
+      color: $m_color;
+      font-size: 20px;
+    }
+    .slide_color{
+      position: absolute;
+      top: 120px;
+      right: 200px;
+      width: 330px;
+      height: 500px;
+      background: $m_color;
+      border-radius: 500px 500px 0px 0px;
+      z-index: 9;
     }
   }
 }
@@ -102,6 +145,7 @@ canvas{
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      align-items: flex-start;
       width: 100%;
       height: 400px;
       margin: 50px 0;
@@ -117,6 +161,10 @@ canvas{
           transform: translate(-50px, -200px);
         }
       }
+      :hover a > img{
+        scale: .98;
+        border-radius: 25% 0 25% 0;
+      }
       h4{
         display: inline-block;
         position: relative;
@@ -124,13 +172,10 @@ canvas{
         font-size: 32px;
       }
       .con_bottom{
+        width: 100%;
         display: flex;
         justify-content: space-between;
       }
-    }
-    :hover .con_img > a > img{
-      scale: .98;
-      border-radius: 25% 0 25% 0;
     }
   }
 }
@@ -140,19 +185,24 @@ canvas{
 // 컨택트
 #contact{
   @include box(70%);
-  .con{
-    display: inline-block;
-    position: relative;
-    width: 300px;
-    height: 450px;
-    border: 1px solid #333;
-    border-radius: 300px;
+  .con_wrap{
+    width: 100%;
+    text-align: center;
+    .con{
+      display: inline-block;
+      position: relative;
+      width: 300px;
+      height: 450px;
+      border: 1px solid #333;
+      border-radius: 300px;
+    }
+    .email{
+      right: -50px;
+    }
+    .mm{
+      left: -50px;
+    }
   }
-  .phone{
-    left: -50px;
-  }
-  .mm{
-    left: -100px;
-  }
+
 }
 // 컨택트 끝
