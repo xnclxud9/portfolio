@@ -227,7 +227,12 @@ canvas {
   right: 54px;
   background: #ccc;
 }
-#projects .project .con {
+#projects .project {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#projects .project .unit {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -237,34 +242,61 @@ canvas {
   height: 400px;
   margin: 50px 0;
 }
-#projects .project .con .con_img {
+#projects .project .unit::after {
+  content: "";
   position: absolute;
+  display: block;
+  width: 100%;
+  height: 1px;
+  bottom: -50px;
+  background: #333;
+}
+#projects .project .unit .p_img {
+  position: absolute;
+  display: flex;
+  align-items: center;
   top: 0;
   left: 250px;
+  cursor: pointer;
 }
-#projects .project .con .con_img img {
+#projects .project .unit .p_img img {
   transition: 0.8s;
 }
-#projects .project .con .con_img span {
+#projects .project .unit .p_img .arrow {
+  position: absolute;
   display: inline-block;
-  transform: translate(-50px, -200px);
+  transform: translate(-40px, 180px);
 }
-#projects .project .con :hover a > img {
+#projects .project .unit .p_img:hover a > img {
   scale: 0.98;
   border-radius: 25% 0 25% 0;
 }
-#projects .project .con h4 {
+#projects .project .unit .p_img:hover a .arrow {
+  animation: arrow 1s infinite;
+}
+#projects .project .unit h4 {
   display: inline-block;
   position: relative;
   z-index: 999;
   font-size: 32px;
 }
-#projects .project .con .con_bottom {
+#projects .project .unit .p_bottom {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
+@keyframes arrow {
+  0% {
+    transform: translate(-40px, 180px);
+  }
+  50% {
+    transform: translate(-30px, 180px);
+  }
+  100% {
+    transform: translate(-40px, 180px);
+  }
+}
 #contact {
   width: 70%;
   padding: 50px 0;

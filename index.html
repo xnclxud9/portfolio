@@ -17,8 +17,6 @@
   <link rel="stylesheet" href="./css/main.css" type="text/css">
   <!-- 폰트어썸 주소 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-  <!-- 접두사 자동 -->
-  <script src="./script/prefixfree.min.js"></script>
   <!-- 제이쿼리 라이브러리 -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <!-- swiper slide -->
@@ -129,8 +127,8 @@
       <h2>PROJECTS</h2>
       <div class="category">
         <input type="radio" id="all" name="cate" checked><label for="all">All</label>
-        <input type="radio" id="develop" name="cate"><label for="develop">PERSONAL</label>
-        <input type="radio" id="design" name="cate"><label for="design">TEAM</label>
+        <input type="radio" id="personal" name="cate"><label for="personal">PERSONAL</label>
+        <input type="radio" id="team" name="cate"><label for="team">TEAM</label>
 
         <div class="year">
           <span>2022</span>
@@ -139,15 +137,31 @@
       </div>
 
       <div class="project">
-        <section class="con">
+        <section class="unit team">
           <h3>브랜딩 사이트 반응형웹 제작</h3>
           <h4>TGI 홈페이지 리뉴얼</h4>
-          <div class="con_img">
-            <a href="#none" title="프로젝트 자세히보기"><img src="./images/tgi.jpg" alt="TGI 목업"></a>
-            <span><img src="./images/arrow.png" alt=""></span>
+          <div class="p_img">
+            <a href="#none" title="프로젝트 자세히보기">
+              <img src="./images/tgi.jpg" alt="TGI 목업">
+              <span class="arrow"><img src="./images/arrow.png" alt=""></span>
+            </a>
           </div>
-          <div class="con_bottom">
-            <p>Team Project / 22.12.20~23.01.20</p>
+          <div class="p_bottom">
+            <p>Team Project / 22.12.20 ~ 23.01.20</p>
+            <a href="#none" title="프로젝트 자세히보기">VIEW the PROJECT</a>
+          </div>
+        </section>
+        <section class="unit team">
+          <h3>브랜딩 사이트 반응형웹 제작</h3>
+          <h4>TGI 홈페이지 리뉴얼</h4>
+          <div class="p_img">
+            <a href="#none" title="프로젝트 자세히보기">
+              <img src="./images/tgi.jpg" alt="TGI 목업">
+              <span class="arrow"><img src="./images/arrow.png" alt=""></span>
+            </a>
+          </div>
+          <div class="p_bottom">
+            <p>Team Project / 22.12.20 ~ 23.01.20</p>
             <a href="#none" title="프로젝트 자세히보기">VIEW the PROJECT</a>
           </div>
         </section>
@@ -169,6 +183,9 @@
       </div>
     </article>
     <footer>
+      <a href="#" title="위로 바로가기" class="t_btn">
+        <i class="fas fa-angle-up"></i>
+      </a>
       <address>copyrightⓒ 2023 LEE SEUNGA All rights reserved.</address>
     </footer>
   </main>

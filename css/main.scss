@@ -36,7 +36,6 @@ canvas{
 #about{
   @include box(100%);
   background-image: url(../images/bg.jpg);
-  // background-size: cover;
   .swiper{
     position: relative;
     width: 70%;
@@ -140,7 +139,10 @@ canvas{
     background: #ccc;
   }
   .project{
-    .con{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .unit{
       position: relative;
       display: flex;
       flex-direction: column;
@@ -149,21 +151,41 @@ canvas{
       width: 100%;
       height: 400px;
       margin: 50px 0;
-      .con_img{
+      &::after{
+        content: '';
         position: absolute;
+        display: block;
+        width: 100%;
+        height: 1px;
+        bottom: -50px;
+        background: $t_color;
+      }
+      .p_img{
+        position: absolute;
+        display: flex;
+        align-items: center;
         top: 0;
         left: 250px;
+        cursor: pointer;
         img{
           transition: .8s;
         }
-        span{
+        .arrow{
+          position: absolute;
           display: inline-block;
-          transform: translate(-50px, -200px);
+          transform: translate(-40px, 180px);
         }
-      }
-      :hover a > img{
-        scale: .98;
-        border-radius: 25% 0 25% 0;
+        &:hover{
+          a{
+            > img{
+              scale: .98;
+              border-radius: 25% 0 25% 0;
+            }
+            .arrow{
+              animation: arrow 1s infinite;
+            }
+          }
+        }
       }
       h4{
         display: inline-block;
@@ -171,12 +193,23 @@ canvas{
         z-index: 999;
         font-size: 32px;
       }
-      .con_bottom{
+      .p_bottom{
         width: 100%;
         display: flex;
         justify-content: space-between;
       }
     }
+  }
+}
+@keyframes arrow{
+  0%{
+    transform: translate(-40px, 180px);
+  }
+  50%{
+    transform: translate(-30px, 180px);
+  }
+  100%{
+    transform: translate(-40px, 180px);
   }
 }
 // 프로젝트 끝

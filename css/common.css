@@ -17,6 +17,10 @@ a {
   font-size: 12px;
 }
 
+.hidden {
+  display: none;
+}
+
 header {
   width: 100%;
   height: 100px;
@@ -46,6 +50,27 @@ footer {
   width: 100%;
   background: #3C5296;
   text-align: center;
+  /* 탑버튼 서식 */
+}
+footer .t_btn {
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  z-index: 9999;
+  display: none;
+}
+footer .t_btn i.fas {
+  background: #fff;
+  color: #3C5296;
+  padding: 20px;
+  border: 2px solid #3C5296;
+  border-radius: 50%;
+  font-size: 18px;
+}
+footer .t_btn i.fas:hover {
+  background: #3C5296;
+  color: #fff;
+  border: 2px solid #fff;
 }
 footer address {
   color: #fff;
