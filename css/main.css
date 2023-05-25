@@ -123,6 +123,21 @@ canvas {
   font-size: 14px;
   line-height: 24px;
 }
+#about .swiper .skil ul {
+  width: 54%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+#about .swiper .skil ul img {
+  height: 100px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+#about .swiper .skil ul img:hover {
+  transform: scale(1.08);
+}
 #about .swiper .logo {
   display: flex;
   flex-direction: column;
@@ -171,19 +186,29 @@ canvas {
   color: #3C5296;
   font-size: 20px;
 }
-#about .swiper .slide_color {
+#about .swiper .arch {
   position: absolute;
   top: 120px;
   right: 200px;
   width: 330px;
   height: 500px;
+  padding: 30px;
   background: #3C5296;
   border-radius: 500px 500px 0px 0px;
+  text-align: center;
   z-index: 9;
+}
+#about .swiper .arch .skil_t {
+  font-size: 20px;
+  line-height: 28px;
+}
+#about .swiper .arch .skil_t span {
+  color: #fff;
+  font-weight: bold;
 }
 
 #projects {
-  width: 70%;
+  width: 70vw;
   padding: 50px 0;
   margin: 0 auto;
 }
@@ -198,15 +223,16 @@ canvas {
   font-size: 14px;
   border-bottom: 1px solid #333;
 }
-#projects .category input[type=radio] {
-  display: none;
-}
-#projects .category input[type=radio]:checked + label {
-  font-weight: bold;
-}
 #projects .category label {
-  margin: 0 20px;
+  margin-right: 40px;
   cursor: pointer;
+}
+#projects .category .line {
+  position: absolute;
+  height: 2px;
+  top: 12px;
+  background: #333;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 #projects .year {
   position: absolute;
@@ -232,13 +258,25 @@ canvas {
   flex-direction: column;
   gap: 20px;
 }
+#projects .project input[type=radio] {
+  display: none;
+}
+#projects .project #all:checked ~ .unit {
+  display: flex;
+}
+#projects .project #personal:checked ~ .personal {
+  display: flex;
+}
+#projects .project #team:checked ~ .team {
+  display: flex;
+}
 #projects .project .unit {
   position: relative;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  width: 100%;
+  width: 70vw;
   height: 400px;
   margin: 50px 0;
 }
@@ -256,8 +294,12 @@ canvas {
   display: flex;
   align-items: center;
   top: 0;
-  left: 250px;
+  left: 14vw;
   cursor: pointer;
+}
+#projects .project .unit .p_img .mockup {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 #projects .project .unit .p_img img {
   transition: 0.8s;
@@ -272,18 +314,28 @@ canvas {
   border-radius: 25% 0 25% 0;
 }
 #projects .project .unit .p_img:hover a .arrow {
-  animation: arrow 1s infinite;
+  animation: arrow 1s ease-in-out infinite;
 }
 #projects .project .unit h4 {
   display: inline-block;
   position: relative;
   z-index: 999;
   font-size: 32px;
+  opacity: 0;
+  transition: 0.4s ease-out;
+  transform: translateY(40px);
+}
+#projects .project .unit h4.title_up {
+  opacity: 1;
+  transition: 1s ease-out;
+  transform: translateY(0px);
+  transition-delay: 0.7s;
 }
 #projects .project .unit .p_bottom {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  z-index: 9;
 }
 
 @keyframes arrow {

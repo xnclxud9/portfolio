@@ -56,6 +56,21 @@ canvas{
     }
     .skil{
       @include about_slide;
+      ul{
+        width: 54%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 40px;
+        img{
+          height: 100px;
+          transition: .4s;
+          cursor: pointer;
+          &:hover{
+            transform: scale(1.08);
+          }
+        }
+      }
     }
     .logo{
       @include about_slide;
@@ -85,15 +100,25 @@ canvas{
       color: $m_color;
       font-size: 20px;
     }
-    .slide_color{
+    .arch{
       position: absolute;
       top: 120px;
       right: 200px;
       width: 330px;
       height: 500px;
+      padding: 30px;
       background: $m_color;
       border-radius: 500px 500px 0px 0px;
+      text-align: center;
       z-index: 9;
+      .skil_t{
+        font-size: $fontSize03;
+        line-height: 28px;
+        span{
+          color: $t_color01;
+          font-weight: bold;
+        }
+      }
     }
   }
 }
@@ -102,21 +127,22 @@ canvas{
 
 // 프로젝트
 #projects{
-  @include box(70%);
+  @include box(70vw);
   .category{
     position: relative;
     padding: 20px 0;
     font-size: $fontSize01;
     border-bottom: 1px solid #333;
-    input[type=radio]{
-      display: none;
-    }
-    input[type=radio]:checked + label{
-      font-weight: bold;
-    }
     label{
-      margin: 0 20px;
+      margin-right: 40px;
       cursor: pointer;
+    }
+    .line{
+      position: absolute;
+      height: 2px;
+      top: 12px;
+      background: #333;
+      transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
   }
   .year{
@@ -142,13 +168,25 @@ canvas{
     display: flex;
     flex-direction: column;
     gap: 20px;
+    input[type=radio]{
+      display: none;
+    }
+    #all:checked ~ .unit{
+      display: flex;
+    }
+    #personal:checked ~ .personal{
+      display: flex;
+    }
+    #team:checked ~ .team{
+      display: flex;
+    }
     .unit{
       position: relative;
-      display: flex;
+      display: none;
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-start;
-      width: 100%;
+      width: 70vw;
       height: 400px;
       margin: 50px 0;
       &::after{
@@ -165,8 +203,11 @@ canvas{
         display: flex;
         align-items: center;
         top: 0;
-        left: 250px;
+        left: 14vw;
         cursor: pointer;
+        .mockup{
+          object-fit: contain;
+        }
         img{
           transition: .8s;
         }
@@ -182,7 +223,7 @@ canvas{
               border-radius: 25% 0 25% 0;
             }
             .arrow{
-              animation: arrow 1s infinite;
+              animation: arrow 1s ease-in-out infinite;
             }
           }
         }
@@ -192,11 +233,21 @@ canvas{
         position: relative;
         z-index: 999;
         font-size: 32px;
+        opacity: 0;
+        transition: 0.4s ease-out;
+        transform: translateY(40px);
+        &.title_up{
+          opacity: 1;
+          transition: 1s ease-out;
+          transform: translateY(0px);
+          transition-delay: 0.7s;
+        }
       }
       .p_bottom{
         width: 100%;
         display: flex;
         justify-content: space-between;
+        z-index: 9;
       }
     }
   }

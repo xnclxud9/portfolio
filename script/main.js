@@ -1,5 +1,7 @@
 
-// 어바웃 슬라이드
+// 어바웃
+
+// 슬라이드
 const swiper = new Swiper(".mySwiper", {
   slidesPerView : '1',
   spaceBetween : 100,
@@ -9,6 +11,24 @@ const swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+let slide = document.querySelectorAll('#about .swiper-slide');
+let arch = document.querySelectorAll('.arch_con');
+
+let skil = document.querySelectorAll('.skil li');
+let skilText = document.querySelector('.arch .skil_t span');
+
+// 아치
+// slide_class
+
+// 스킬
+skil.forEach(function(item){
+  item.addEventListener('mouseenter', function(){
+    skilText.innerHTML=this.dataset.skil;
+  });
+});
+
+
 
 // 탑버튼
 let t_btn = document.querySelector('.t_btn');
@@ -30,4 +50,28 @@ window.addEventListener('scroll', ()=>{
   }else{
     t_btn.style.display='none';
   }
+});
+
+// 프로젝트 탭
+let tab = document.querySelectorAll('#projects .category label');
+let line = document.querySelector('#projects .line');
+let unit = document.querySelectorAll('#project .unit');
+
+// act 이동함수
+function actStyle(num){
+  let newLeft = tab[num].offsetLeft;
+  let newWidth = tab[num].offsetWidth;
+  line.style.left = newLeft + 'px';
+  line.style.width = newWidth + 'px';
+  tab.forEach(function(item){
+    item.style.fontWeight='normal';
+  });
+  tab[num].style.fontWeight='bold';
+}
+actStyle(0);
+
+tab.forEach(function(item,idx){
+  item.addEventListener('click', function(){
+    actStyle(idx);
+  });
 });

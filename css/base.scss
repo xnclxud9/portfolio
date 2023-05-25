@@ -36,14 +36,14 @@ $t_color01: #fff;
   flex-direction: column;
   gap: 30px;
   h3{
-    font-size: 18px;
+    font-size: $fontSize02;
   }
   a > img{
     margin-left: 5px;
   }
   .a_title{
     p{
-      font-size: 20px;
+      font-size: $fontSize03;
       line-height: 28px;
       span{
         color: $m_color;
@@ -53,7 +53,7 @@ $t_color01: #fff;
   }
   .a_con{
     p{
-      font-size: 14px;
+      font-size: $fontSize01;
       line-height: 24px;
     }
   }
