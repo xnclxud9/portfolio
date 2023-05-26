@@ -1,5 +1,8 @@
 
 // 어바웃
+let arch_con = document.querySelectorAll('.arch_con');
+let skil = document.querySelectorAll('.skil li');
+let skilText = document.querySelector('.arch .skil_t span');
 
 // 슬라이드
 const swiper = new Swiper(".mySwiper", {
@@ -10,18 +13,17 @@ const swiper = new Swiper(".mySwiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  on: { // 아치 내용 변경
+    slideChange: function () {
+      arch_con.forEach(function(item){
+        item.classList.add('hidden');
+      });
+      arch_con[this.realIndex].classList.remove('hidden');
+    }
+  }
 });
 
-let slide = document.querySelectorAll('#about .swiper-slide');
-let arch = document.querySelectorAll('.arch_con');
-
-let skil = document.querySelectorAll('.skil li');
-let skilText = document.querySelector('.arch .skil_t span');
-
-// 아치
-// slide_class
-
-// 스킬
+// 스킬 이름 변경
 skil.forEach(function(item){
   item.addEventListener('mouseenter', function(){
     skilText.innerHTML=this.dataset.skil;

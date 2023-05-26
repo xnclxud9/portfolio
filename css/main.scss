@@ -42,43 +42,43 @@ canvas{
     margin: 0 auto;
     padding: 50px 100px;
     background: #fff;
-    section{
-      width: 60%; 
-    }
-    .profile{
-      @include about_slide;
-      .tag{
-        margin-bottom: 130px;
-        span{
-          margin-right: 5px;
-        }
+    .swiper-wrapper{
+      .swiper-slide{
+        @include about_slide;
+        width: 60%; 
       }
-    }
-    .skil{
-      @include about_slide;
-      ul{
-        width: 54%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 40px;
-        img{
-          height: 100px;
-          transition: .4s;
-          cursor: pointer;
-          &:hover{
-            transform: scale(1.08);
+      .profile{
+        .tag{
+          margin-bottom: 130px;
+          span{
+            margin-right: 5px;
           }
         }
       }
-    }
-    .logo{
-      @include about_slide;
-      > img{
-        width: 100px;
+      .skil{
+        ul{
+          width: 54%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          gap: 40px;
+          img{
+            height: 100px;
+            transition: .4s;
+            cursor: pointer;
+            &:hover{
+              transform: scale(1.08);
+            }
+          }
+        }
       }
-      .a_con{
-        margin-bottom: 100px;
+      .logo{
+        > img{
+          width: 100px;
+        }
+        .a_con{
+          margin-bottom: 100px;
+        }
       }
     }
     .swiper-button-next, .swiper-button-prev{
@@ -103,20 +103,29 @@ canvas{
     .arch{
       position: absolute;
       top: 120px;
-      right: 200px;
-      width: 330px;
+      right: 10vw;
+      width: 18vw;
       height: 500px;
       padding: 30px;
       background: $m_color;
       border-radius: 500px 500px 0px 0px;
       text-align: center;
       z-index: 9;
-      .skil_t{
-        font-size: $fontSize03;
-        line-height: 28px;
-        span{
-          color: $t_color01;
-          font-weight: bold;
+      .arch_con{
+        .skil_t{
+          font-size: $fontSize03;
+          line-height: 28px;
+          span{
+            color: $t_color01;
+            font-weight: bold;
+            background: $m_color;
+          }
+        }
+      }
+      .profile{
+        img{
+          width: 300px;
+          border-radius: 50%;
         }
       }
     }
@@ -187,7 +196,7 @@ canvas{
       justify-content: space-between;
       align-items: flex-start;
       width: 70vw;
-      height: 400px;
+      height: 480px;
       margin: 50px 0;
       &::after{
         content: '';
@@ -206,7 +215,9 @@ canvas{
         left: 14vw;
         cursor: pointer;
         .mockup{
-          object-fit: contain;
+          width: 42vw;
+          height: 480px;
+          object-fit: cover;
         }
         img{
           transition: .8s;
@@ -214,7 +225,7 @@ canvas{
         .arrow{
           position: absolute;
           display: inline-block;
-          transform: translate(-40px, 180px);
+          transform: translate(-40px, 225px);
         }
         &:hover{
           a{
@@ -228,39 +239,132 @@ canvas{
           }
         }
       }
-      h4{
+      h3{
         display: inline-block;
         position: relative;
+        padding: 8px 12px;
+        background: #ffffff9f;
         z-index: 999;
         font-size: 32px;
-        opacity: 0;
         transition: 0.4s ease-out;
-        transform: translateY(40px);
+        transform: translateY(80%);
+        opacity: 1;
         &.title_up{
-          opacity: 1;
           transition: 1s ease-out;
-          transform: translateY(0px);
+          transform: translateY(0);
           transition-delay: 0.7s;
+          opacity: 1;
         }
       }
+      .p_top{
+        @include p_detail;
+        order: -1;
+      }
       .p_bottom{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        z-index: 9;
+        @include p_detail;
+        div{
+          p{
+            margin: 10px 0;
+            span:first-child{
+              display: inline-block;
+              width: 60px;
+              font-weight: bold;
+            }
+          }
+          .color{
+            span:not(:first-child){
+              display: inline-block;
+              width: 20px;
+              height: 20px;
+              margin-right: 10px;
+              border-radius: 50%;
+              vertical-align: middle;
+            }
+          }
+        }
+      }
+    }
+    .tgi{
+      .p_bottom{
+        .color{
+          span:nth-child(2){
+            background: #B60000;
+          }
+          span:nth-child(3){
+            background: #242422;
+          }
+          span:last-child{
+            background: #F2EDE4;
+          }
+        }
+      }
+    }
+    .freitag{
+      .p_bottom{
+        .color{
+          span:nth-child(2){
+            background: #000;
+          }
+          span:nth-child(3){
+            background: #fff;
+            border: 1px solid #333;
+          }
+        }
+      }
+    }
+    .emart{
+      .p_bottom{
+        .color{
+          span:nth-child(2){
+            background: #FCB416;
+          }
+          span:nth-child(3){
+            background: #484C55;
+          }
+        }
+      }
+    }
+    .petfriends{
+      .p_bottom{
+        .color{
+          span:nth-child(2){
+            background: #998F86;
+          }
+          span:nth-child(3){
+            background: #D6D2C9;
+          }
+          span:nth-child(4){
+            background: #E2DFDA;
+          }
+        }
+      }
+    }
+    .canon{
+      .p_bottom{
+        .color{
+          span:nth-child(2){
+            background: #DE0010;
+          }
+          span:nth-child(3){
+            background: #38373C;
+          }
+          span:nth-child(4){
+            background: #E6E6E6;
+          }
+        }
       }
     }
   }
 }
 @keyframes arrow{
   0%{
-    transform: translate(-40px, 180px);
+    transform: translate(-40px, 225px);
   }
   50%{
-    transform: translate(-30px, 180px);
+    transform: translate(-30px, 225px);
   }
   100%{
-    transform: translate(-40px, 180px);
+    transform: translate(-40px, 225px);
   }
 }
 // 프로젝트 끝

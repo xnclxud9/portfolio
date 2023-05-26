@@ -1,0 +1,264 @@
+@mixin onemobile{
+  font-family: 'ONE-Mobile-Regular', sans-serif, arial;
+}
+@mixin montserrat{
+  font-family: 'Montserrat', sans-serif, arial;
+}
+
+@mixin box($top){
+  position: relative;
+  top: $top;
+  width: 100%;
+  margin: 0 auto;
+  padding: 36px 20px 24px 20px;
+  background: #fff;
+  border-radius: 15px 15px 0px 0px;
+  box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.05);
+}
+
+@mixin tab{
+  @include onemobile;
+  padding-bottom: 29px;
+  display: flex;
+  gap: 20px;
+  text-align: center;
+  li{
+    padding: 0 8px 8px;
+    font-size: 18px;
+    color: #5A5A5C;
+    transition: .3s;
+    cursor: pointer;
+  }
+}
+
+@mixin tab_active($top){
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  top: $top;
+  left: 0;
+  background: #EFF1F3;
+}
+
+@mixin title($pb){
+  padding-bottom: $pb;
+  color: #38373C;
+  font-size: 18px;
+  text-indent: 10px;
+}
+
+@mixin my{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px 0 52px 0;
+  p:first-child{
+    font-size: 14px;
+    color: #DE0010;
+    a{
+      float: right;
+      font-size: 16px;
+      img{
+        width: 30px;
+        margin-right: 4px;
+        border-radius: 50%;
+        vertical-align: middle;
+      }
+    }
+  }
+  h3{
+    font-size: 20px;
+  }
+  .mypage{
+    a{
+      margin-right: 40px;
+    }
+    img{
+      margin-right: 4px;
+      padding: 8px;
+      border-radius: 50%;
+      background: #fff;
+      vertical-align: middle;
+    }
+  }
+}
+
+@mixin more($top,$right){
+  position: absolute;
+  top: $top;
+  right: $right;
+  font-size: 14px;
+  i.fas{
+    margin-left: 5px;
+    font-size: 10px;
+  }
+}
+
+@mixin img{
+  width: 100%;
+  border-radius: 15px;
+}
+
+@mixin tab_on($width, $top){
+  position: absolute;
+  width: $width;
+  height: 3px;
+  top: $top;
+  left: 20px;
+  bottom: 0;
+  background: #DE0010;
+  border-radius: 5px;
+  transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+// 박스 올리는거 때문에 밑에 공백 생겨서 푸터 땡김
+@mixin footer($top){
+  position: relative;
+  top: $top;
+  padding: 25px 25px 100px 25px;
+}
+
+
+//이전버튼이 있는 타이틀 페이지
+@mixin sub_title_prev() {
+  @include onemobile();
+  width: 100%; height: 65px;
+  border-radius: 15px 15px 0 0;
+  background-color: var(--sub-color01);
+  padding-left: 20px;
+  > a {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    height: 50px;
+    color: var(--f-color01);
+    font-size: 1.125rem;
+  }
+}
+// 입력서식
+// <h2 class="sub_title_prev">
+//   <a href="링크" title="돌아가기">
+//     <img src="<?=$base_URL?>images/arrow_title_prev.svg" alt="prev">
+//     제목
+//   </a>
+// </h2>
+
+
+// 수강평 별점
+@mixin star{
+  position: relative;
+  height: 13px;
+  img{
+    position: absolute;
+  }
+  .star1{ // 1점
+    clip: rect(0, 15px, 13px, 0);
+  }
+  .star2{ // 2점
+    clip: rect(0, 30px, 13px, 0);
+  }
+  .star3{ // 3점
+    clip: rect(0, 45px, 13px, 0);
+  }
+  .star4{ // 4점
+    clip: rect(0, 60px, 13px, 0);
+  }
+}
+// 1. 입력서식
+// <div class="star">
+//  <img src="./images/star_f.png" alt="별점" class="star_f">
+//  <img src="./images/star_b.png" alt="별점">
+//  <p class="hidden"><?=$data['review_star']?></p>
+// </div>
+
+// 2. js코드
+// let review = document.querySelectorAll('#review .star p');
+// let star_img = document.querySelectorAll('#review .star .star_f');
+
+// for(i=0;i<review.length;i++){
+//   star = review[i].innerText;
+//   star_img[i].classList.add('star'+star);
+// }
+
+
+//버튼 서식
+//사용예시
+// .test01 {
+//   @include btn('red', 'large');
+// }
+// .test02 {
+//   @include btn('before', 'medium');
+// }
+// .test03 {
+//   @include btn('cancle', 'small');
+// }
+// .test04 {
+//   @include btn('stroke gray', 'extra small');
+// }
+// .test05 {
+//   @include btn('stroke red', 'mini', 400);
+// }
+// .test06 {
+//   @include btn('stroke red', 'mini', 500, 'montserrat');
+// }
+@mixin btn($type, $size, $weight:700, $font:'onemobile') {
+  @if ($font == 'montserrat') {
+    @include montserrat();
+  } @else {
+    @include onemobile();
+  }
+  
+  //버튼 공통 서식
+  border-radius: 20px;
+  border: 0;
+  font-weight: $weight;
+  
+  //색상 관련
+  @if ($type == 'red') {
+    background-color: var(--main-color);
+    color: var(--f-color01);
+  } @else if ($type == 'before') {
+    background-color: #767676;
+    color: var(--f-color01);
+  } @else if ($type == 'cancle') {
+    background-color: #5A5A5C;
+    color: var(--f-color01);
+  } @else if ($type == 'gray') {
+    background-color: #EFF1F3;
+    color: var(--f-color03);
+  } @else if ($type == 'stroke gray') {
+    background-color: var(--bg-color01);
+    border: 1px solid var(--sub-color01);
+    color: var(--sub-color01);
+  } @else if ($type == 'stroke red') {
+    background-color: var(--bg-color01);
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+  } @else if ($type == 'white red') {
+    background-color: var(--bg-color01);
+    border: 1px solid #E6E6E6;
+    color: var(--main-color);
+  }
+
+  //크기 관련
+  @if ($size == 'large') {
+    font-size: var(--f-size02);
+    padding: 9px 48px;
+  } @else if($size == 'medium') {
+    font-size: var(--f-size02);
+    padding: 7px 22px;
+  } @else if($size == 'small') {
+    font-size: var(--f-size02);
+    padding: 5px 16px;
+  } @else if($size == 'extra small') {
+    font-size: var(--f-size01);
+    padding: 4px 8px;
+  } @else if($size == 'mini') {
+    font-size: 0.5rem;
+    padding: 4px 8px;
+  }
+}
