@@ -1,152 +1,195 @@
 @import 'base';
 
 // 상단 비주얼
-#main_visu{
+#main_visu {
   position: relative;
   height: calc(100vh - 100px);
   background: $m_color;
-  p{
+
+  p {
     position: absolute;
     font-size: 48px;
     color: white;
     z-index: 1;
   }
-  p:first-of-type{
+
+  p:first-of-type {
     top: 30%;
     left: 25%;
   }
-  p:last-of-type{
+
+  p:last-of-type {
     top: 50%;
     left: 55%;
   }
 }
 
-canvas{
+canvas {
   position: absolute;
-  touch-action: none;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 1000px;
+  width: 50%;
 }
+
 // 상단 비주얼 끝
 
 
 // 어바웃
-#about{
+#about {
   @include box(100%);
-  background-image: url(../images/bg.jpg);
-  .swiper{
+  // background-image: url(../images/bg.jpg);
+
+  .swiper {
     position: relative;
     width: 70%;
     margin: 0 auto;
-    padding: 50px 100px;
+    padding: 50px;
     background: #fff;
-    .swiper-wrapper{
-      .swiper-slide{
+    // border: 1px solid $m_color;
+
+    .swiper-wrapper {
+      .swiper-slide {
         @include about_slide;
-        width: 60%; 
+        width: 60%;
       }
-      .profile{
-        .tag{
-          margin-bottom: 130px;
-          span{
+
+      .profile {
+        .tag {
+          margin-bottom: 90px;
+
+          span {
             margin-right: 5px;
           }
         }
       }
-      .skil{
-        ul{
-          width: 54%;
+
+      .skil {
+        ul {
+          width: 50%;
           display: flex;
           flex-wrap: wrap;
-          justify-content: space-between;
-          gap: 40px;
-          img{
-            height: 100px;
+          justify-content: space-evenly;
+          gap: 2vw;
+
+          img {
+            height: 65px;
             transition: .4s;
             cursor: pointer;
-            &:hover{
+
+            &:hover {
               transform: scale(1.08);
             }
           }
         }
       }
-      .logo{
-        > img{
-          width: 100px;
-        }
-        .a_con{
-          margin-bottom: 100px;
+
+      .logo {
+        .a_con {
+          margin-bottom: 160px;
         }
       }
     }
-    .swiper-button-next, .swiper-button-prev{
+
+    .swiper-button-next,
+    .swiper-button-prev {
       top: 90%;
       width: 40px;
       height: 40px;
       border: 1px solid $m_color;
       border-radius: 50%;
     }
-    .swiper-button-next{
+
+    .swiper-button-next {
       left: auto;
-      right: 50px;
+      right: 70px;
     }
-    .swiper-button-prev{
+
+    .swiper-button-prev {
       left: auto;
-      right: 100px;
+      right: 120px;
     }
-    .swiper-button-next::after, .swiper-button-prev::after{
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
       color: $m_color;
       font-size: 20px;
     }
-    .arch{
+
+    .arch {
       position: absolute;
       top: 120px;
-      right: 10vw;
+      right: 12vw;
       width: 18vw;
       height: 500px;
-      padding: 30px;
+      padding: 20px 35px;
       background: $m_color;
       border-radius: 500px 500px 0px 0px;
       text-align: center;
       z-index: 9;
-      .arch_con{
-        .skil_t{
-          font-size: $fontSize03;
+
+      .arch_con:not(.profile) {
+        @include arch_con;
+        padding: 120px 40px;
+        background: $t_color01;
+        border: 1px solid $m_color;
+      }
+
+      .profile {
+        img {
+          @include arch_con;
+          object-fit: cover;
+        }
+      }
+
+      .skil {
+        p {
+          display: none;
+          font-size: $fontSize01;
           line-height: 28px;
-          span{
-            color: $t_color01;
+        }
+
+        .skil_t {
+          font-size: $fontSize02;
+          line-height: 28px;
+          margin-bottom: 50px;
+
+          span {
+            font-size: $fontSize03;
+            color: $m_color;
             font-weight: bold;
-            background: $m_color;
           }
         }
       }
-      .profile{
-        img{
-          width: 300px;
-          border-radius: 50%;
+
+      .logo {
+        img {
+          width: 100px;
         }
       }
     }
   }
 }
+
 // 어바웃 끝
 
 
 // 프로젝트
-#projects{
+#projects {
   @include box(70vw);
-  .category{
+
+  .category {
     position: relative;
     padding: 20px 0;
-    font-size: $fontSize01;
+    font-size: 14px;
     border-bottom: 1px solid #333;
-    label{
-      margin-right: 40px;
+
+    label {
+      margin-right: 30px;
       cursor: pointer;
     }
-    .line{
+
+    .line {
       position: absolute;
       height: 2px;
       top: 12px;
@@ -154,7 +197,8 @@ canvas{
       transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
   }
-  .year{
+
+  .year {
     position: absolute;
     display: flex;
     gap: 100px;
@@ -163,7 +207,8 @@ canvas{
     font-size: $fontSize03;
     font-style: italic;
   }
-  .year::before{
+
+  .year::before {
     content: '';
     display: block;
     width: 80px;
@@ -173,23 +218,29 @@ canvas{
     right: 54px;
     background: #ccc;
   }
-  .project{
+
+  .project {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    input[type=radio]{
+
+    input[type=radio] {
       display: none;
     }
-    #all:checked ~ .unit{
+
+    #all:checked~.unit {
       display: flex;
     }
-    #personal:checked ~ .personal{
+
+    #personal:checked~.personal {
       display: flex;
     }
-    #team:checked ~ .team{
+
+    #team:checked~.team {
       display: flex;
     }
-    .unit{
+
+    .unit {
       position: relative;
       display: none;
       flex-direction: column;
@@ -198,7 +249,8 @@ canvas{
       width: 70vw;
       height: 480px;
       margin: 50px 0;
-      &::after{
+
+      &::after {
         content: '';
         position: absolute;
         display: block;
@@ -207,39 +259,46 @@ canvas{
         bottom: -50px;
         background: $t_color;
       }
-      .p_img{
+
+      .p_img {
         position: absolute;
         display: flex;
         align-items: center;
         top: 0;
         left: 14vw;
         cursor: pointer;
-        .mockup{
+
+        .mockup {
           width: 42vw;
           height: 480px;
           object-fit: cover;
         }
-        img{
+
+        img {
           transition: .8s;
         }
-        .arrow{
+
+        .arrow {
           position: absolute;
           display: inline-block;
           transform: translate(-40px, 225px);
         }
-        &:hover{
-          a{
-            > img{
+
+        &:hover {
+          a {
+            >img {
               scale: .98;
               border-radius: 25% 0 25% 0;
             }
-            .arrow{
+
+            .arrow {
               animation: arrow 1s ease-in-out infinite;
             }
           }
         }
       }
-      h3{
+
+      h3 {
         display: inline-block;
         position: relative;
         padding: 8px 12px;
@@ -249,30 +308,36 @@ canvas{
         transition: 0.4s ease-out;
         transform: translateY(80%);
         opacity: 1;
-        &.title_up{
+
+        &.title_up {
           transition: 1s ease-out;
           transform: translateY(0);
           transition-delay: 0.7s;
           opacity: 1;
         }
       }
-      .p_top{
+
+      .p_top {
         @include p_detail;
         order: -1;
       }
-      .p_bottom{
+
+      .p_bottom {
         @include p_detail;
-        div{
-          p{
+
+        div {
+          p {
             margin: 10px 0;
-            span:first-child{
+
+            span:first-child {
               display: inline-block;
               width: 60px;
               font-weight: bold;
             }
           }
-          .color{
-            span:not(:first-child){
+
+          .color {
+            span:not(:first-child) {
               display: inline-block;
               width: 20px;
               height: 20px;
@@ -284,71 +349,84 @@ canvas{
         }
       }
     }
-    .tgi{
-      .p_bottom{
-        .color{
-          span:nth-child(2){
+
+    .tgi {
+      .p_bottom {
+        .color {
+          span:nth-child(2) {
             background: #B60000;
           }
-          span:nth-child(3){
+
+          span:nth-child(3) {
             background: #242422;
           }
-          span:last-child{
+
+          span:last-child {
             background: #F2EDE4;
           }
         }
       }
     }
-    .freitag{
-      .p_bottom{
-        .color{
-          span:nth-child(2){
+
+    .freitag {
+      .p_bottom {
+        .color {
+          span:nth-child(2) {
             background: #000;
           }
-          span:nth-child(3){
+
+          span:nth-child(3) {
             background: #fff;
             border: 1px solid #333;
           }
         }
       }
     }
-    .emart{
-      .p_bottom{
-        .color{
-          span:nth-child(2){
+
+    .emart {
+      .p_bottom {
+        .color {
+          span:nth-child(2) {
             background: #FCB416;
           }
-          span:nth-child(3){
+
+          span:nth-child(3) {
             background: #484C55;
           }
         }
       }
     }
-    .petfriends{
-      .p_bottom{
-        .color{
-          span:nth-child(2){
+
+    .petfriends {
+      .p_bottom {
+        .color {
+          span:nth-child(2) {
             background: #998F86;
           }
-          span:nth-child(3){
+
+          span:nth-child(3) {
             background: #D6D2C9;
           }
-          span:nth-child(4){
+
+          span:nth-child(4) {
             background: #E2DFDA;
           }
         }
       }
     }
-    .canon{
-      .p_bottom{
-        .color{
-          span:nth-child(2){
+
+    .canon {
+      .p_bottom {
+        .color {
+          span:nth-child(2) {
             background: #DE0010;
           }
-          span:nth-child(3){
+
+          span:nth-child(3) {
             background: #38373C;
           }
-          span:nth-child(4){
+
+          span:nth-child(4) {
             background: #E6E6E6;
           }
         }
@@ -356,33 +434,41 @@ canvas{
     }
   }
 }
-@keyframes arrow{
-  0%{
+
+@keyframes arrow {
+  0% {
     transform: translate(-40px, 225px);
   }
-  50%{
+
+  50% {
     transform: translate(-30px, 225px);
   }
-  100%{
+
+  100% {
     transform: translate(-40px, 225px);
   }
 }
+
 // 프로젝트 끝
 
 
 // 컨택트
-#contact{
+#contact {
   @include box(70%);
-  .con_wrap{
+
+  .con_wrap {
     width: 100%;
     text-align: center;
     perspective: 1000px;
-    .con{
+
+    .con {
       display: inline-block;
       position: relative;
       width: 300px;
       height: 450px;
-      .card{
+
+      .card {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -394,36 +480,44 @@ canvas{
         backface-visibility: hidden;
         transition: 1s;
       }
-      .front{
+
+      .front {
         position: absolute;
         transform: rotateY(0deg);
       }
-      .back{transform: rotateY(-180deg);}
-      &:hover .front{
+
+      .back {
+        transform: rotateY(-180deg);
+      }
+
+      &:hover .front {
         transform: rotateY(180deg);
       }
-      &:hover .back{
+
+      &:hover .back {
         transform: rotateY(0deg);
         z-index: 9999;
       }
     }
-    .email{
+
+    .email {
       right: -50px;
-      .front{
-        background-image: url(../images/121212.jpg);
+
+      .front {
+        background-image: url(../images/123.jpg);
       }
-      .back{
+
+      .back {
         background: $m_color;
         color: $t_color01;
         font-size: $fontSize02;
       }
     }
-    .phone{
-    }
-    .mm{
+
+    .mm {
       left: -50px;
     }
   }
-
 }
+
 // 컨택트 끝

@@ -6,7 +6,7 @@
 }
 
 $fontSize: 12px;
-$fontSize01: 14px;
+$fontSize01: 16px;
 $fontSize02: 18px;
 $fontSize03: 20px;
 $fontSize04: 28px;
@@ -15,72 +15,92 @@ $m_color: #3C5296;
 $t_color: #333;
 $t_color01: #fff;
 
-// 공통서식
-@mixin title{
+body {
+  font-family: 'RIDIBatang', '맑은 고딕', sans-serif;
+  font-size: $fontSize;
+  color: $t_color;
+}
+
+a {
+  text-decoration: none;
+  color: $t_color;
+  font-size: $fontSize;
+}
+
+.hidden {
+  display: none;
+}
+
+// 아티클 제목
+@mixin title {
   font-size: $fontSize03;
   text-align: center;
   margin-bottom: 50px;
 }
 
-@mixin box($width){
+// 아티클
+@mixin box($width) {
   width: $width;
-  padding: 50px 0;
+  padding: 50px 0 100px 0;
   margin: 0 auto;
-  h2{
+
+  h2 {
     @include title;
   }
 }
 
-@mixin about_slide{
+// 어바웃
+@mixin about_slide {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 30px;
-  h3{
+
+  h3 {
     display: inline-block;
     padding: 8px 16px;
     font-size: $fontSize02;
     background: $m_color;
     color: $t_color01;
   }
-  a > img{
-    margin-left: 5px;
-  }
-  .a_title{
-    p{
-      font-size: $fontSize03;
-      line-height: 28px;
-      span{
+
+  .a_title {
+    p {
+      font-size: 22px;
+      line-height: 32px;
+
+      span {
         color: $m_color;
         font-weight: bold;
       }
     }
   }
-  .a_con{
-    p{
+
+  .a_con {
+    width: 32vw;
+
+    p {
       font-size: $fontSize01;
-      line-height: 24px;
+      line-height: 26px;
     }
+  }
+
+  a>img {
+    margin-left: 5px;
   }
 }
 
-@mixin p_detail{
+// 아치형 컨텐츠
+@mixin arch_con {
+  width: 18vw;
+  height: 500px;
+  border-radius: 500px 500px 0px 0px;
+}
+
+// 프로젝트 표지 내용
+@mixin p_detail {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
-
-body{
-  font-family: 'RIDIBatang', '맑은 고딕', sans-serif;
-  font-size: $fontSize;
-  color: $t_color;
-}
-
-a{
-  text-decoration: none;
-  color: $t_color;
-  font-size: $fontSize;
-}
-
-.hidden{display: none;}

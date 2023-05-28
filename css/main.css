@@ -43,18 +43,16 @@ a {
 
 canvas {
   position: absolute;
-  touch-action: none;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 1000px;
+  width: 50%;
 }
 
 #about {
   width: 100%;
-  padding: 50px 0;
+  padding: 50px 0 100px 0;
   margin: 0 auto;
-  background-image: url(../images/bg.jpg);
 }
 #about h2 {
   font-size: 20px;
@@ -65,7 +63,7 @@ canvas {
   position: relative;
   width: 70%;
   margin: 0 auto;
-  padding: 50px 100px;
+  padding: 50px;
   background: #fff;
 }
 #about .swiper .swiper-wrapper .swiper-slide {
@@ -82,49 +80,50 @@ canvas {
   background: #3C5296;
   color: #fff;
 }
-#about .swiper .swiper-wrapper .swiper-slide a > img {
-  margin-left: 5px;
-}
 #about .swiper .swiper-wrapper .swiper-slide .a_title p {
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 22px;
+  line-height: 32px;
 }
 #about .swiper .swiper-wrapper .swiper-slide .a_title p span {
   color: #3C5296;
   font-weight: bold;
 }
+#about .swiper .swiper-wrapper .swiper-slide .a_con {
+  width: 32vw;
+}
 #about .swiper .swiper-wrapper .swiper-slide .a_con p {
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 26px;
+}
+#about .swiper .swiper-wrapper .swiper-slide a > img {
+  margin-left: 5px;
 }
 #about .swiper .swiper-wrapper .profile .tag {
-  margin-bottom: 130px;
+  margin-bottom: 90px;
 }
 #about .swiper .swiper-wrapper .profile .tag span {
   margin-right: 5px;
 }
 #about .swiper .swiper-wrapper .skil ul {
-  width: 54%;
+  width: 50%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 40px;
+  justify-content: space-evenly;
+  gap: 2vw;
 }
 #about .swiper .swiper-wrapper .skil ul img {
-  height: 100px;
+  height: 65px;
   transition: 0.4s;
   cursor: pointer;
 }
 #about .swiper .swiper-wrapper .skil ul img:hover {
   transform: scale(1.08);
 }
-#about .swiper .swiper-wrapper .logo > img {
-  width: 100px;
-}
 #about .swiper .swiper-wrapper .logo .a_con {
-  margin-bottom: 100px;
+  margin-bottom: 160px;
 }
-#about .swiper .swiper-button-next, #about .swiper .swiper-button-prev {
+#about .swiper .swiper-button-next,
+#about .swiper .swiper-button-prev {
   top: 90%;
   width: 40px;
   height: 40px;
@@ -133,45 +132,66 @@ canvas {
 }
 #about .swiper .swiper-button-next {
   left: auto;
-  right: 50px;
+  right: 70px;
 }
 #about .swiper .swiper-button-prev {
   left: auto;
-  right: 100px;
+  right: 120px;
 }
-#about .swiper .swiper-button-next::after, #about .swiper .swiper-button-prev::after {
+#about .swiper .swiper-button-next::after,
+#about .swiper .swiper-button-prev::after {
   color: #3C5296;
   font-size: 20px;
 }
 #about .swiper .arch {
   position: absolute;
   top: 120px;
-  right: 10vw;
+  right: 12vw;
   width: 18vw;
   height: 500px;
-  padding: 30px;
+  padding: 20px 35px;
   background: #3C5296;
   border-radius: 500px 500px 0px 0px;
   text-align: center;
   z-index: 9;
 }
-#about .swiper .arch .arch_con .skil_t {
-  font-size: 20px;
-  line-height: 28px;
-}
-#about .swiper .arch .arch_con .skil_t span {
-  color: #fff;
-  font-weight: bold;
-  background: #3C5296;
+#about .swiper .arch .arch_con:not(.profile) {
+  width: 18vw;
+  height: 500px;
+  border-radius: 500px 500px 0px 0px;
+  padding: 120px 40px;
+  background: #fff;
+  border: 1px solid #3C5296;
 }
 #about .swiper .arch .profile img {
-  width: 300px;
-  border-radius: 50%;
+  width: 18vw;
+  height: 500px;
+  border-radius: 500px 500px 0px 0px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#about .swiper .arch .skil p {
+  display: none;
+  font-size: 16px;
+  line-height: 28px;
+}
+#about .swiper .arch .skil .skil_t {
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 50px;
+}
+#about .swiper .arch .skil .skil_t span {
+  font-size: 20px;
+  color: #3C5296;
+  font-weight: bold;
+}
+#about .swiper .arch .logo img {
+  width: 100px;
 }
 
 #projects {
   width: 70vw;
-  padding: 50px 0;
+  padding: 50px 0 100px 0;
   margin: 0 auto;
 }
 #projects h2 {
@@ -186,7 +206,7 @@ canvas {
   border-bottom: 1px solid #333;
 }
 #projects .category label {
-  margin-right: 40px;
+  margin-right: 30px;
   cursor: pointer;
 }
 #projects .category .line {
@@ -380,7 +400,7 @@ canvas {
 }
 #contact {
   width: 70%;
-  padding: 50px 0;
+  padding: 50px 0 100px 0;
   margin: 0 auto;
 }
 #contact h2 {
@@ -400,6 +420,7 @@ canvas {
   height: 450px;
 }
 #contact .con_wrap .con .card {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -429,7 +450,7 @@ canvas {
   right: -50px;
 }
 #contact .con_wrap .email .front {
-  background-image: url(../images/121212.jpg);
+  background-image: url(../images/123.jpg);
 }
 #contact .con_wrap .email .back {
   background: #3C5296;

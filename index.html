@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,11 +21,12 @@
   <!-- 제이쿼리 라이브러리 -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <!-- swiper slide -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="./script/canvas.js" defer></script>
   <script src="./script/main.js" defer></script>
 </head>
+
 <body>
   <!-- 헤더 -->
   <header>
@@ -50,33 +52,31 @@
         <p>파도처럼 <span>꾸준한</span></p>
         <p>이승아입니다.</p>
       </div>
-      <div>
-        <p>파도처럼 <span>꾸준한</span></p>
-        <p>이승아입니다.</p>
-      </div>
     </article>
 
     <!--Waves Container-->
     <div>
       <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-      viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-      <defs>
-      <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-      </defs>
-      <g class="parallax">
-      <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-      <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-      <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-      <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
-      </g>
+        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+          <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+          <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+          <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+        </g>
       </svg>
     </div>
     <!--Waves end-->
 
+    <!-- 어바웃 -->
     <div id="about">
       <article class="swiper mySwiper">
         <h2>ABOUT</h2>
         <div class="swiper-wrapper">
+          <!-- 내 소개 -->
           <section class="profile swiper-slide">
             <h3>ME</h3>
             <div class="a_title">
@@ -102,8 +102,10 @@
             </div>
             <a href="#none" title="">이력서 보러가기<img src="./images/arrow_s.png" alt=""></a>
           </section>
+          <!-- 스킬 -->
           <section class="skil swiper-slide">
             <h3>SKILL</h3>
+            <p>아이콘에 마우스를 올려보세요.</p>
             <ul>
               <li data-skil="html"><img src="./images/html5.png" alt="html5 로고"></li>
               <li data-skil="css"><img src="./images/css3.png" alt="css3 로고"></li>
@@ -117,11 +119,14 @@
               <li data-skil="git"><img src="./images/git.png" alt="git 로고"></li>
               <li data-skil="github"><img src="./images/github.png" alt="github 로고"></li>
               <li data-skil="figma"><img src="./images/figma.png" alt="figma 로고"></li>
+              <li data-skil="photoshop"><img src="./images/photoshop.png" alt="photoshop 로고"></li>
+              <li data-skil="illustrator"><img src="./images/illustrator.png" alt="illustrator 로고"></li>
+              <li data-skil="premiere"><img src="./images/premiere.png" alt="premiere 로고"></li>
             </ul>
           </section>
+          <!-- 로고 -->
           <section class="logo swiper-slide">
             <h3>LOGO</h3>
-            <img src="./images/a_logo.png" alt="로고">
             <div class="a_title">
               <p>바다에</p>
               <p>꾸준하게</p>
@@ -137,20 +142,40 @@
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
+        <!-- 아치형 공간 -->
         <div class="arch">
+          <!-- 소개 -->
           <div class="arch_con profile">
-            <img src="./images/123.png" alt="내사진">
+            <img src="./images/me.jpg" alt="내사진">
           </div>
+          <!-- 스킬 -->
           <div class="arch_con skil hidden">
-            <p class="skil_t">저는<br><span>이런 것들</span>도<br>할 줄 압니다.</p>
+            <h3 class="skil_t">저는<br><span>이런 것들</span>도<br>할 줄 압니다.</h3>
+            <p data-skil="html">웹표준을 준수하고 웹접근성을 고려하여 어쩌구</p>
+            <p data-skil="css">css</p>
+            <p data-skil="sass">sass</p>
+            <p data-skil="javascript">javascript</p>
+            <p data-skil="jquery">jquery</p>
+            <p data-skil="react">react</p>
+            <p data-skil="bootstrap">bootstrap</p>
+            <p data-skil="php">php</p>
+            <p data-skil="mysql">mysql</p>
+            <p data-skil="git">git</p>
+            <p data-skil="github">github</p>
+            <p data-skil="figma">figma</p>
+            <p data-skil="photoshop">photoshop</p>
+            <p data-skil="illustrator">illustrator</p>
+            <p data-skil="premiere">premiere</p>
           </div>
+          <!-- 로고 -->
           <div class="arch_con logo hidden">
-            로고
+            <img src="./images/a_logo.png" alt="로고">
           </div>
         </div>
       </article>
     </div>
 
+    <!-- 프로젝트 -->
     <article id="projects">
       <h2>PROJECTS</h2>
       <div class="category">
@@ -172,18 +197,39 @@
         <section class="unit team canon">
           <h3>캐논아카데미 홈페이지 리뉴얼</h3>
           <div class="p_top">
-            <p>LMS 사이트 반응형웹 제작</p>
+            <p>LMS 학습지원시스템 사용자 페이지 제작</p>
             <p>Team Project / 23.03.28 ~ 23.04.18</p>
           </div>
           <div class="p_img">
             <a href="#none" title="프로젝트 자세히보기">
-              <img src="./images/canon.png" alt="캐논 목업" class="mockup">
+              <img src="./images/canon_user.jpg" alt="캐논 목업" class="mockup">
               <span class="arrow"><img src="./images/arrow.png" alt=""></span>
             </a>
           </div>
           <div class="p_bottom">
             <div>
-              <p><span>사용언어</span>HTML PHP CSS</p>
+              <p><span>사용언어</span>HTML CSS PHP JAVASCRIPT</p>
+              <p class="color"><span>컬러</span><span></span><span></span><span></span></p>
+              <p><span>키워드</span>#즐거운 #소통하는 #신뢰적인</p>
+            </div>
+            <a href="#none" title="프로젝트 자세히보기">VIEW the PROJECT</a>
+          </div>
+        </section>
+        <section class="unit team canon">
+          <h3>캐논아카데미 홈페이지 리뉴얼</h3>
+          <div class="p_top">
+            <p>LMS 학습지원시스템 관리자 페이지 제작</p>
+            <p>Team Project / 23.03.28 ~ 23.04.18</p>
+          </div>
+          <div class="p_img">
+            <a href="#none" title="프로젝트 자세히보기">
+              <img src="./images/canon_admin.jpg" alt="캐논 목업" class="mockup">
+              <span class="arrow"><img src="./images/arrow.png" alt=""></span>
+            </a>
+          </div>
+          <div class="p_bottom">
+            <div>
+              <p><span>사용언어</span>HTML CSS PHP JAVASCRIPT</p>
               <p class="color"><span>컬러</span><span></span><span></span><span></span></p>
               <p><span>키워드</span>#즐거운 #소통하는 #신뢰적인</p>
             </div>
@@ -204,7 +250,7 @@
           </div>
           <div class="p_bottom">
             <div>
-              <p><span>사용언어</span>HTML PHP CSS</p>
+              <p><span>사용언어</span>HTML CSS PHP JAVASCRIPT</p>
               <p class="color"><span>컬러</span><span></span><span></span><span></span></p>
               <p><span>키워드</span>#차분한 #안정된 #은은한</p>
             </div>
@@ -225,7 +271,7 @@
           </div>
           <div class="p_bottom">
             <div>
-              <p><span>사용언어</span>HTML PHP CSS</p>
+              <p><span>사용언어</span>HTML CSS PHP JAVASCRIPT</p>
               <p class="color"><span>컬러</span><span></span><span></span></p>
               <p><span>키워드</span>#트렌디한 #따뜻한 #친근한</p>
             </div>
@@ -277,6 +323,7 @@
       </div>
     </article>
 
+    <!-- 컨택 -->
     <article id="contact">
       <h2>CONTACT</h2>
       <div class="con_wrap">
@@ -307,11 +354,16 @@
       </div>
     </article>
     <footer>
+      <!-- 탑버튼 -->
       <a href="#" title="위로 바로가기" class="t_btn">
         <i class="fas fa-angle-up"></i>
       </a>
-      <address>copyrightⓒ 2023 LEE SEUNGA All rights reserved.</address>
+      <address>
+        본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.<br>
+        copyrightⓒ 2023 LEE SEUNGA All rights reserved.
+      </address>
     </footer>
   </main>
 </body>
+
 </html>

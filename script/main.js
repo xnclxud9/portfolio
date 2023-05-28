@@ -1,21 +1,22 @@
 
 // 어바웃
 let arch_con = document.querySelectorAll('.arch_con');
+let arch_p = document.querySelectorAll('.arch_con p');
 let skil = document.querySelectorAll('.skil li');
 let skilText = document.querySelector('.arch .skil_t span');
 
 // 슬라이드
-const swiper = new Swiper(".mySwiper", {
-  slidesPerView : '1',
-  spaceBetween : 100,
-  loop : true,
+const swiper = new Swiper('.mySwiper', {
+  slidesPerView: '1',
+  spaceBetween: 60,
+  loop: true,
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
   on: { // 아치 내용 변경
     slideChange: function () {
-      arch_con.forEach(function(item){
+      arch_con.forEach(function (item) {
         item.classList.add('hidden');
       });
       arch_con[this.realIndex].classList.remove('hidden');
@@ -24,9 +25,13 @@ const swiper = new Swiper(".mySwiper", {
 });
 
 // 스킬 이름 변경
-skil.forEach(function(item){
-  item.addEventListener('mouseenter', function(){
-    skilText.innerHTML=this.dataset.skil;
+skil.forEach(function (item, idx) {
+  item.addEventListener('mouseenter', function () {
+    skilText.innerHTML = this.dataset.skil;
+    arch_p.forEach(function (item) {
+      item.style.display = 'none'
+    });
+    arch_p[idx].style.display = 'block'
   });
 });
 
@@ -35,7 +40,7 @@ skil.forEach(function(item){
 // 탑버튼
 let t_btn = document.querySelector('.t_btn');
 
-t_btn.addEventListener('click', (e)=>{
+t_btn.addEventListener('click', (e) => {
   e.preventDefault();
   window.scrollTo({
     top: 0,
@@ -44,13 +49,13 @@ t_btn.addEventListener('click', (e)=>{
   });
 });
 
-window.addEventListener('scroll', ()=>{
+window.addEventListener('scroll', () => {
   let ws = window.scrollY;
   // console.log(ws);
-  if(ws>=800){
-    t_btn.style.display='block';
-  }else{
-    t_btn.style.display='none';
+  if (ws >= 800) {
+    t_btn.style.display = 'block';
+  } else {
+    t_btn.style.display = 'none';
   }
 });
 
@@ -60,20 +65,20 @@ let line = document.querySelector('#projects .line');
 let unit = document.querySelectorAll('#project .unit');
 
 // act 이동함수
-function actStyle(num){
+function actStyle(num) {
   let newLeft = tab[num].offsetLeft;
   let newWidth = tab[num].offsetWidth;
   line.style.left = newLeft + 'px';
   line.style.width = newWidth + 'px';
-  tab.forEach(function(item){
-    item.style.fontWeight='normal';
+  tab.forEach(function (item) {
+    item.style.fontWeight = 'normal';
   });
-  tab[num].style.fontWeight='bold';
+  tab[num].style.fontWeight = 'bold';
 }
 actStyle(0);
 
-tab.forEach(function(item,idx){
-  item.addEventListener('click', function(){
+tab.forEach(function (item, idx) {
+  item.addEventListener('click', function () {
     actStyle(idx);
   });
 });
