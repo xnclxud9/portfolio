@@ -1,3 +1,4 @@
+AOS.init();
 
 // 어바웃
 let arch_con = document.querySelectorAll('.arch_con');
