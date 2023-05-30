@@ -8,7 +8,7 @@
 
   p {
     position: absolute;
-    font-size: 48px;
+    font-size: 2.6vw;
     color: white;
     z-index: 1;
   }
@@ -37,135 +37,126 @@ canvas {
 
 // 어바웃
 #about {
-  @include box(100%);
-  // background-image: url(../images/bg.jpg);
+  @include box(70%);
+  position: relative;
+  padding: 50px 3vw 100px 3vw;
 
-  .swiper {
-    position: relative;
-    width: 70%;
-    margin: 0 auto;
-    padding: 50px;
-    background: #fff;
-    // border: 1px solid $m_color;
+  .swiper-wrapper {
+    .swiper-slide {
+      @include about_slide;
+    }
 
-    .swiper-wrapper {
-      .swiper-slide {
-        @include about_slide;
-        width: 60%;
-      }
+    .profile {
+      .tag {
+        margin-bottom: 6vw;
 
-      .profile {
-        .tag {
-          margin-bottom: 90px;
-
-          span {
-            margin-right: 5px;
-          }
-        }
-      }
-
-      .skil {
-        ul {
-          width: 50%;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-evenly;
-          gap: 2vw;
-
-          img {
-            height: 65px;
-            transition: .4s;
-            cursor: pointer;
-
-            &:hover {
-              transform: scale(1.08);
-            }
-          }
-        }
-      }
-
-      .logo {
-        .a_con {
-          margin-bottom: 160px;
+        span {
+          margin-right: 5px;
         }
       }
     }
 
-    .swiper-button-next,
-    .swiper-button-prev {
-      top: 90%;
-      width: 40px;
-      height: 40px;
+    .skil {
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 2vw;
+        margin: 2vw;
+
+        img {
+          height: 65px;
+          transition: .4s;
+          cursor: pointer;
+
+          &:hover {
+            transform: scale(1.08);
+          }
+        }
+      }
+    }
+
+    .logo {
+      .a_con {
+        margin-bottom: 11vw;
+      }
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: 90%;
+    width: 40px;
+    height: 40px;
+    border: 1px solid $m_color;
+    border-radius: 50%;
+  }
+
+  .swiper-button-next {
+    left: auto;
+    right: 70px;
+  }
+
+  .swiper-button-prev {
+    left: auto;
+    right: 120px;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    color: $m_color;
+    font-size: 20px;
+  }
+
+  .arch {
+    position: absolute;
+    top: 120px;
+    right: 12vw;
+    width: 18vw;
+    height: 500px;
+    padding: 20px 35px;
+    background: $m_color;
+    border-radius: 500px 500px 0px 0px;
+    text-align: center;
+    z-index: 9;
+
+    .arch_con:not(.profile) {
+      @include arch_con;
+      padding: 120px 40px;
+      background: $t_color01;
       border: 1px solid $m_color;
-      border-radius: 50%;
     }
 
-    .swiper-button-next {
-      left: auto;
-      right: 70px;
-    }
-
-    .swiper-button-prev {
-      left: auto;
-      right: 120px;
-    }
-
-    .swiper-button-next::after,
-    .swiper-button-prev::after {
-      color: $m_color;
-      font-size: 20px;
-    }
-
-    .arch {
-      position: absolute;
-      top: 120px;
-      right: 12vw;
-      width: 18vw;
-      height: 500px;
-      padding: 20px 35px;
-      background: $m_color;
-      border-radius: 500px 500px 0px 0px;
-      text-align: center;
-      z-index: 9;
-
-      .arch_con:not(.profile) {
+    .profile {
+      img {
         @include arch_con;
-        padding: 120px 40px;
-        background: $t_color01;
-        border: 1px solid $m_color;
+        object-fit: cover;
+      }
+    }
+
+    .skil {
+      p {
+        display: none;
+        font-size: $fontSize01;
+        line-height: 28px;
       }
 
-      .profile {
-        img {
-          @include arch_con;
-          object-fit: cover;
+      .skil_t {
+        font-size: $fontSize02;
+        line-height: 28px;
+        margin-bottom: 50px;
+
+        span {
+          font-size: $fontSize03;
+          color: $m_color;
+          font-weight: bold;
         }
       }
+    }
 
-      .skil {
-        p {
-          display: none;
-          font-size: $fontSize01;
-          line-height: 28px;
-        }
-
-        .skil_t {
-          font-size: $fontSize02;
-          line-height: 28px;
-          margin-bottom: 50px;
-
-          span {
-            font-size: $fontSize03;
-            color: $m_color;
-            font-weight: bold;
-          }
-        }
-      }
-
-      .logo {
-        img {
-          width: 100px;
-        }
+    .logo {
+      img {
+        width: 100px;
       }
     }
   }
@@ -176,7 +167,7 @@ canvas {
 
 // 프로젝트
 #projects {
-  @include box(70vw);
+  @include box(70%);
 
   .category {
     position: relative;
@@ -246,7 +237,7 @@ canvas {
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-start;
-      width: 70vw;
+      width: 100%;
       height: 480px;
       margin: 50px 0;
 
@@ -450,13 +441,18 @@ canvas {
   .con_wrap {
     width: 100%;
     text-align: center;
-    perspective: 1000px;
 
     .con {
       display: inline-block;
       position: relative;
-      width: 300px;
-      height: 450px;
+      width: 17vw;
+      height: 25vw;
+      font-size: $fontSize02;
+
+      a {
+        font-size: $fontSize02;
+        color: $m_color;
+      }
 
       .card {
         position: relative;
@@ -465,8 +461,6 @@ canvas {
         justify-content: center;
         width: 100%;
         height: 100%;
-        border: 1px solid #333;
-        background: #fff;
         border-radius: 300px;
         backface-visibility: hidden;
         transition: 1s;
@@ -478,6 +472,8 @@ canvas {
       }
 
       .back {
+        background: $t_color01;
+        border: 1px solid $m_color;
         transform: rotateY(-180deg);
       }
 
@@ -491,22 +487,51 @@ canvas {
       }
     }
 
-    .email {
-      right: -50px;
+    .resume {
+      right: -2.7vw;
 
       .front {
-        background-image: url(../images/123.jpg);
+        background-image: url(../images/me2.jpg);
+        background-size: cover;
       }
 
-      .back {
-        background: $m_color;
-        color: $t_color01;
-        font-size: $fontSize02;
+      .back {}
+    }
+
+    .email {
+      .front {
+        background-image: url(../images/con02.png);
+        background-size: cover;
       }
     }
 
-    .mm {
-      left: -50px;
+    .phone {
+      left: -2.7vw;
+
+      .front {
+        background-image: url(../images/con01.jpg);
+        background-size: cover;
+
+        span {
+          width: 65px;
+          height: 65px;
+          text-align: center;
+          background: $t_color01;
+          border-radius: 10px;
+          transform: rotate(45deg);
+
+          i {
+            position: relative;
+            top: 18px;
+            left: 0;
+            color: $m_color;
+            font-size: 28px;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+
+      .back {}
     }
   }
 }

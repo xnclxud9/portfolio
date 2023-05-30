@@ -26,9 +26,9 @@ class Blob {
     let center = this.center;
 
     var img = new Image();
-    img.src = "./images/123.jpg";
+    img.src = "./images/bg.jpg";
     img.onload = function () {
-      var size = canvas.width/1;
+      var size = canvas.width / 1;
       var tempCanvas = document.createElement("canvas"),
         tCtx = tempCanvas.getContext("2d");
 
@@ -175,7 +175,7 @@ class Point {
       (-0.3 * this.radialEffect +
         (leftPoint.radialEffect - this.radialEffect) +
         (rightPoint.radialEffect - this.radialEffect)) *
-        this.elasticity -
+      this.elasticity -
       this.speed * this.friction;
   }
 

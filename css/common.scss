@@ -40,26 +40,21 @@ footer {
 
   /* 탑버튼 서식 */
   .t_btn {
+    display: none;
     position: fixed;
     right: 30px;
     bottom: 50px;
+    width: 40px;
+    height: 40px;
+    background: $t_color01;
+    color: $m_color;
+    font-size: $fontSize02;
     z-index: 9999;
-    display: none;
   }
 
   .t_btn i.fas {
-    background: $t_color01;
+    display: block;
     color: $m_color;
-    padding: 20px;
-    border: 2px solid $m_color;
-    border-radius: 50%;
-    font-size: 18px;
-  }
-
-  .t_btn i.fas:hover {
-    background: $m_color;
-    color: $t_color01;
-    border: 2px solid $t_color01;
   }
 
   address {

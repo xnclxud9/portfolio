@@ -7,14 +7,14 @@
 }
 body {
   font-family: "RIDIBatang", "맑은 고딕", sans-serif;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #333;
 }
 
 a {
   text-decoration: none;
   color: #333;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .hidden {

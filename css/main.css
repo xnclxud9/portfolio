@@ -7,14 +7,14 @@
 }
 body {
   font-family: "RIDIBatang", "맑은 고딕", sans-serif;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #333;
 }
 
 a {
   text-decoration: none;
   color: #333;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .hidden {
@@ -28,7 +28,7 @@ a {
 }
 #main_visu p {
   position: absolute;
-  font-size: 48px;
+  font-size: 2.6vw;
   color: white;
   z-index: 1;
 }
@@ -50,100 +50,92 @@ canvas {
 }
 
 #about {
-  width: 100%;
+  width: 70%;
   padding: 50px 0 100px 0;
   margin: 0 auto;
+  position: relative;
+  padding: 50px 3vw 100px 3vw;
 }
 #about h2 {
-  font-size: 20px;
+  font-size: 1.25rem;
   text-align: center;
   margin-bottom: 50px;
 }
-#about .swiper {
-  position: relative;
-  width: 70%;
-  margin: 0 auto;
-  padding: 50px;
-  background: #fff;
-}
-#about .swiper .swiper-wrapper .swiper-slide {
+#about .swiper-wrapper .swiper-slide {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 30px;
-  width: 60%;
+  padding-right: 28vw;
 }
-#about .swiper .swiper-wrapper .swiper-slide h3 {
+#about .swiper-wrapper .swiper-slide h3 {
   display: inline-block;
   padding: 8px 16px;
-  font-size: 18px;
+  font-size: 1.125rem;
   background: #3C5296;
   color: #fff;
 }
-#about .swiper .swiper-wrapper .swiper-slide .a_title p {
+#about .swiper-wrapper .swiper-slide .a_title p {
   font-size: 22px;
   line-height: 32px;
 }
-#about .swiper .swiper-wrapper .swiper-slide .a_title p span {
+#about .swiper-wrapper .swiper-slide .a_title p span {
   color: #3C5296;
   font-weight: bold;
 }
-#about .swiper .swiper-wrapper .swiper-slide .a_con {
-  width: 32vw;
+#about .swiper-wrapper .swiper-slide .a_con p {
+  font-size: 0.875rem;
+  line-height: 24px;
 }
-#about .swiper .swiper-wrapper .swiper-slide .a_con p {
-  font-size: 16px;
-  line-height: 26px;
-}
-#about .swiper .swiper-wrapper .swiper-slide a > img {
+#about .swiper-wrapper .swiper-slide a > img {
   margin-left: 5px;
 }
-#about .swiper .swiper-wrapper .profile .tag {
-  margin-bottom: 90px;
+#about .swiper-wrapper .profile .tag {
+  margin-bottom: 6vw;
 }
-#about .swiper .swiper-wrapper .profile .tag span {
+#about .swiper-wrapper .profile .tag span {
   margin-right: 5px;
 }
-#about .swiper .swiper-wrapper .skil ul {
-  width: 50%;
+#about .swiper-wrapper .skil ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 2vw;
+  margin: 2vw;
 }
-#about .swiper .swiper-wrapper .skil ul img {
+#about .swiper-wrapper .skil ul img {
   height: 65px;
   transition: 0.4s;
   cursor: pointer;
 }
-#about .swiper .swiper-wrapper .skil ul img:hover {
+#about .swiper-wrapper .skil ul img:hover {
   transform: scale(1.08);
 }
-#about .swiper .swiper-wrapper .logo .a_con {
-  margin-bottom: 160px;
+#about .swiper-wrapper .logo .a_con {
+  margin-bottom: 11vw;
 }
-#about .swiper .swiper-button-next,
-#about .swiper .swiper-button-prev {
+#about .swiper-button-next,
+#about .swiper-button-prev {
   top: 90%;
   width: 40px;
   height: 40px;
   border: 1px solid #3C5296;
   border-radius: 50%;
 }
-#about .swiper .swiper-button-next {
+#about .swiper-button-next {
   left: auto;
   right: 70px;
 }
-#about .swiper .swiper-button-prev {
+#about .swiper-button-prev {
   left: auto;
   right: 120px;
 }
-#about .swiper .swiper-button-next::after,
-#about .swiper .swiper-button-prev::after {
+#about .swiper-button-next::after,
+#about .swiper-button-prev::after {
   color: #3C5296;
   font-size: 20px;
 }
-#about .swiper .arch {
+#about .arch {
   position: absolute;
   top: 120px;
   right: 12vw;
@@ -155,7 +147,7 @@ canvas {
   text-align: center;
   z-index: 9;
 }
-#about .swiper .arch .arch_con:not(.profile) {
+#about .arch .arch_con:not(.profile) {
   width: 18vw;
   height: 500px;
   border-radius: 500px 500px 0px 0px;
@@ -163,39 +155,39 @@ canvas {
   background: #fff;
   border: 1px solid #3C5296;
 }
-#about .swiper .arch .profile img {
+#about .arch .profile img {
   width: 18vw;
   height: 500px;
   border-radius: 500px 500px 0px 0px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-#about .swiper .arch .skil p {
+#about .arch .skil p {
   display: none;
-  font-size: 16px;
+  font-size: 0.875rem;
   line-height: 28px;
 }
-#about .swiper .arch .skil .skil_t {
-  font-size: 18px;
+#about .arch .skil .skil_t {
+  font-size: 1.125rem;
   line-height: 28px;
   margin-bottom: 50px;
 }
-#about .swiper .arch .skil .skil_t span {
-  font-size: 20px;
+#about .arch .skil .skil_t span {
+  font-size: 1.25rem;
   color: #3C5296;
   font-weight: bold;
 }
-#about .swiper .arch .logo img {
+#about .arch .logo img {
   width: 100px;
 }
 
 #projects {
-  width: 70vw;
+  width: 70%;
   padding: 50px 0 100px 0;
   margin: 0 auto;
 }
 #projects h2 {
-  font-size: 20px;
+  font-size: 1.25rem;
   text-align: center;
   margin-bottom: 50px;
 }
@@ -222,7 +214,7 @@ canvas {
   gap: 100px;
   bottom: 10px;
   right: 0;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-style: italic;
 }
 #projects .year::before {
@@ -258,7 +250,7 @@ canvas {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  width: 70vw;
+  width: 100%;
   height: 480px;
   margin: 50px 0;
 }
@@ -396,20 +388,24 @@ canvas {
   margin: 0 auto;
 }
 #contact h2 {
-  font-size: 20px;
+  font-size: 1.25rem;
   text-align: center;
   margin-bottom: 50px;
 }
 #contact .con_wrap {
   width: 100%;
   text-align: center;
-  perspective: 1000px;
 }
 #contact .con_wrap .con {
   display: inline-block;
   position: relative;
-  width: 300px;
-  height: 450px;
+  width: 17vw;
+  height: 25vw;
+  font-size: 1.125rem;
+}
+#contact .con_wrap .con a {
+  font-size: 1.125rem;
+  color: #3C5296;
 }
 #contact .con_wrap .con .card {
   position: relative;
@@ -418,8 +414,6 @@ canvas {
   justify-content: center;
   width: 100%;
   height: 100%;
-  border: 1px solid #333;
-  background: #fff;
   border-radius: 300px;
   backface-visibility: hidden;
   transition: 1s;
@@ -429,6 +423,8 @@ canvas {
   transform: rotateY(0deg);
 }
 #contact .con_wrap .con .back {
+  background: #fff;
+  border: 1px solid #3C5296;
   transform: rotateY(-180deg);
 }
 #contact .con_wrap .con:hover .front {
@@ -438,17 +434,37 @@ canvas {
   transform: rotateY(0deg);
   z-index: 9999;
 }
-#contact .con_wrap .email {
-  right: -50px;
+#contact .con_wrap .resume {
+  right: -2.7vw;
+}
+#contact .con_wrap .resume .front {
+  background-image: url(../images/me2.jpg);
+  background-size: cover;
 }
 #contact .con_wrap .email .front {
-  background-image: url(../images/123.jpg);
+  background-image: url(../images/con02.png);
+  background-size: cover;
 }
-#contact .con_wrap .email .back {
-  background: #3C5296;
-  color: #fff;
-  font-size: 18px;
+#contact .con_wrap .phone {
+  left: -2.7vw;
 }
-#contact .con_wrap .mm {
-  left: -50px;
+#contact .con_wrap .phone .front {
+  background-image: url(../images/con01.jpg);
+  background-size: cover;
+}
+#contact .con_wrap .phone .front span {
+  width: 65px;
+  height: 65px;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  transform: rotate(45deg);
+}
+#contact .con_wrap .phone .front span i {
+  position: relative;
+  top: 18px;
+  left: 0;
+  color: #3C5296;
+  font-size: 28px;
+  transform: rotate(-45deg);
 }/*# sourceMappingURL=main.css.map */

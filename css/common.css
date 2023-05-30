@@ -7,14 +7,14 @@
 }
 body {
   font-family: "RIDIBatang", "맑은 고딕", sans-serif;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #333;
 }
 
 a {
   text-decoration: none;
   color: #333;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .hidden {
@@ -39,7 +39,7 @@ header nav .gnb {
 header nav .gnb a {
   position: relative;
   color: #fff;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 header .h_sns a {
   color: #fff;
@@ -53,24 +53,20 @@ footer {
   /* 탑버튼 서식 */
 }
 footer .t_btn {
+  display: none;
   position: fixed;
   right: 30px;
   bottom: 50px;
-  z-index: 9999;
-  display: none;
-}
-footer .t_btn i.fas {
+  width: 40px;
+  height: 40px;
   background: #fff;
   color: #3C5296;
-  padding: 20px;
-  border: 2px solid #3C5296;
-  border-radius: 50%;
-  font-size: 18px;
+  font-size: 1.125rem;
+  z-index: 9999;
 }
-footer .t_btn i.fas:hover {
-  background: #3C5296;
-  color: #fff;
-  border: 2px solid #fff;
+footer .t_btn i.fas {
+  display: block;
+  color: #3C5296;
 }
 footer address {
   color: #fff;

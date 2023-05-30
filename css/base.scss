@@ -5,11 +5,11 @@
   font-style: normal;
 }
 
-$fontSize: 12px;
-$fontSize01: 16px;
-$fontSize02: 18px;
-$fontSize03: 20px;
-$fontSize04: 28px;
+$fontSize: 0.750rem; // 12px
+$fontSize01: 0.875rem; // 14px
+$fontSize02: 1.125rem; // 18px
+$fontSize03: 1.250rem; // 20px
+$fontSize04: 1.750rem; // 28px
 
 $m_color: #3C5296;
 $t_color: #333;
@@ -55,6 +55,7 @@ a {
   flex-direction: column;
   align-items: flex-start;
   gap: 30px;
+  padding-right: 28vw;
 
   h3 {
     display: inline-block;
@@ -77,11 +78,9 @@ a {
   }
 
   .a_con {
-    width: 32vw;
-
     p {
       font-size: $fontSize01;
-      line-height: 26px;
+      line-height: 24px;
     }
   }
 
