@@ -6,22 +6,51 @@
   height: calc(100vh - 100px);
   background: $m_color;
 
-  p {
-    position: absolute;
-    font-size: 2.6vw;
-    color: white;
-    z-index: 1;
+  div:not(.wave) {
+    p {
+      position: absolute;
+      font-size: 2.6vw;
+      color: white;
+      z-index: 1;
+    }
+
+    p:first-of-type {
+      top: 30%;
+      left: 25%;
+    }
+
+    p:last-of-type {
+      top: 30%;
+      left: 55%;
+    }
   }
 
-  p:first-of-type {
-    top: 30%;
-    left: 25%;
+  .wave {
+    p {
+      position: absolute;
+      bottom: 100px;
+      font-size: 80px;
+      font-weight: bold;
+      color: $t_color01;
+    }
+
+    p:first-child {
+      left: 15%;
+    }
+
+    p:nth-child(2) {
+      left: 40%;
+    }
+
+    p:nth-child(3) {
+      left: 65%;
+    }
+
+    p:last-child {
+      left: 85%;
+    }
   }
 
-  p:last-of-type {
-    top: 50%;
-    left: 55%;
-  }
 }
 
 canvas {
@@ -63,6 +92,10 @@ canvas {
         justify-content: space-evenly;
         gap: 2vw;
         margin: 2vw;
+
+        li:nth-child(2n) {
+          margin-top: 20px;
+        }
 
         img {
           height: 65px;
@@ -117,7 +150,6 @@ canvas {
     padding: 20px 35px;
     background: $m_color;
     border-radius: 500px 500px 0px 0px;
-    text-align: center;
     z-index: 9;
 
     .arch_con:not(.profile) {
@@ -135,12 +167,6 @@ canvas {
     }
 
     .skil {
-      p {
-        display: none;
-        font-size: $fontSize01;
-        line-height: 28px;
-      }
-
       .skil_t {
         font-size: $fontSize02;
         line-height: 28px;
@@ -150,6 +176,27 @@ canvas {
           font-size: $fontSize03;
           color: $m_color;
           font-weight: bold;
+        }
+      }
+
+      div {
+        display: none;
+        margin: 0 15px;
+        font-size: $fontSize01;
+        line-height: 28px;
+
+        p {
+
+          &::before {
+            content: '';
+            display: block;
+            width: 6px;
+            height: 1px;
+            position: relative;
+            top: 15px;
+            left: -12px;
+            background: #bbb;
+          }
         }
       }
     }
@@ -494,8 +541,6 @@ canvas {
         background-image: url(../images/me2.jpg);
         background-size: cover;
       }
-
-      .back {}
     }
 
     .email {
@@ -531,7 +576,6 @@ canvas {
         }
       }
 
-      .back {}
     }
   }
 }

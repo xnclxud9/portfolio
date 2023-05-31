@@ -26,19 +26,38 @@ a {
   height: calc(100vh - 100px);
   background: #3C5296;
 }
-#main_visu p {
+#main_visu div:not(.wave) p {
   position: absolute;
   font-size: 2.6vw;
   color: white;
   z-index: 1;
 }
-#main_visu p:first-of-type {
+#main_visu div:not(.wave) p:first-of-type {
   top: 30%;
   left: 25%;
 }
-#main_visu p:last-of-type {
-  top: 50%;
+#main_visu div:not(.wave) p:last-of-type {
+  top: 30%;
   left: 55%;
+}
+#main_visu .wave p {
+  position: absolute;
+  bottom: 100px;
+  font-size: 80px;
+  font-weight: bold;
+  color: #fff;
+}
+#main_visu .wave p:first-child {
+  left: 15%;
+}
+#main_visu .wave p:nth-child(2) {
+  left: 40%;
+}
+#main_visu .wave p:nth-child(3) {
+  left: 65%;
+}
+#main_visu .wave p:last-child {
+  left: 85%;
 }
 
 canvas {
@@ -103,6 +122,9 @@ canvas {
   gap: 2vw;
   margin: 2vw;
 }
+#about .swiper-wrapper .skil ul li:nth-child(2n) {
+  margin-top: 20px;
+}
 #about .swiper-wrapper .skil ul img {
   height: 65px;
   transition: 0.4s;
@@ -144,7 +166,6 @@ canvas {
   padding: 20px 35px;
   background: #3C5296;
   border-radius: 500px 500px 0px 0px;
-  text-align: center;
   z-index: 9;
 }
 #about .arch .arch_con:not(.profile) {
@@ -162,11 +183,6 @@ canvas {
   -o-object-fit: cover;
      object-fit: cover;
 }
-#about .arch .skil p {
-  display: none;
-  font-size: 0.875rem;
-  line-height: 28px;
-}
 #about .arch .skil .skil_t {
   font-size: 1.125rem;
   line-height: 28px;
@@ -176,6 +192,22 @@ canvas {
   font-size: 1.25rem;
   color: #3C5296;
   font-weight: bold;
+}
+#about .arch .skil div {
+  display: none;
+  margin: 0 15px;
+  font-size: 0.875rem;
+  line-height: 28px;
+}
+#about .arch .skil div p::before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 1px;
+  position: relative;
+  top: 15px;
+  left: -12px;
+  background: #bbb;
 }
 #about .arch .logo img {
   width: 100px;
