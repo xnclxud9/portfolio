@@ -103,3 +103,30 @@ a {
   justify-content: space-between;
   align-items: flex-end;
 }
+
+// 프로젝트 컬러
+@mixin p_color($span, $color01, $color02, $color03) {
+  @if($span==2) {
+    span:nth-child(2) {
+      background: $color01;
+    }
+
+    span:nth-child(3) {
+      background: $color02;
+    }
+  }
+
+  @else if($span==3) {
+    span:nth-child(2) {
+      background: $color01;
+    }
+
+    span:nth-child(3) {
+      background: $color02;
+    }
+
+    span:nth-child(4) {
+      background: $color03;
+    }
+  }
+}

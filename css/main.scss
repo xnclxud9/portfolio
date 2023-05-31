@@ -89,16 +89,17 @@ canvas {
       ul {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
-        gap: 2vw;
-        margin: 2vw;
+        justify-content: center;
+        column-gap: 4vw;
+        row-gap: 2vw;
+        margin: 1vw;
 
         li:nth-child(2n) {
           margin-top: 20px;
         }
 
         img {
-          height: 65px;
+          height: 70px;
           transition: .4s;
           cursor: pointer;
 
@@ -154,7 +155,7 @@ canvas {
 
     .arch_con:not(.profile) {
       @include arch_con;
-      padding: 120px 40px;
+      padding: 7vw 40px 0 40px;
       background: $t_color01;
       border: 1px solid $m_color;
     }
@@ -170,10 +171,10 @@ canvas {
       .skil_t {
         font-size: $fontSize02;
         line-height: 28px;
-        margin-bottom: 50px;
+        margin-bottom: 2vw;
 
         span {
-          font-size: $fontSize03;
+          font-size: $fontSize04;
           color: $m_color;
           font-weight: bold;
         }
@@ -183,17 +184,18 @@ canvas {
         display: none;
         margin: 0 15px;
         font-size: $fontSize01;
-        line-height: 28px;
+        line-height: 22px;
 
         p {
+          margin-bottom: 12px;
 
           &::before {
             content: '';
             display: block;
             width: 6px;
-            height: 1px;
+            height: 2px;
             position: relative;
-            top: 15px;
+            top: 12px;
             left: -12px;
             background: #bbb;
           }
@@ -229,7 +231,7 @@ canvas {
 
     .line {
       position: absolute;
-      height: 2px;
+      height: 1.5px;
       top: 12px;
       background: #333;
       transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -382,17 +384,7 @@ canvas {
     .tgi {
       .p_bottom {
         .color {
-          span:nth-child(2) {
-            background: #B60000;
-          }
-
-          span:nth-child(3) {
-            background: #242422;
-          }
-
-          span:last-child {
-            background: #F2EDE4;
-          }
+          @include p_color(3, #B60000, #242422, #F2EDE4);
         }
       }
     }
@@ -400,12 +392,9 @@ canvas {
     .freitag {
       .p_bottom {
         .color {
-          span:nth-child(2) {
-            background: #000;
-          }
+          @include p_color(2, #000, #fff, #fff);
 
           span:nth-child(3) {
-            background: #fff;
             border: 1px solid #333;
           }
         }
@@ -415,13 +404,7 @@ canvas {
     .emart {
       .p_bottom {
         .color {
-          span:nth-child(2) {
-            background: #FCB416;
-          }
-
-          span:nth-child(3) {
-            background: #484C55;
-          }
+          @include p_color(2, #FCB416, #484C55, #fff);
         }
       }
     }
@@ -429,17 +412,7 @@ canvas {
     .petfriends {
       .p_bottom {
         .color {
-          span:nth-child(2) {
-            background: #998F86;
-          }
-
-          span:nth-child(3) {
-            background: #D6D2C9;
-          }
-
-          span:nth-child(4) {
-            background: #E2DFDA;
-          }
+          @include p_color(3, #998F86, #D6D2C9, #E2DFDA);
         }
       }
     }
@@ -447,17 +420,7 @@ canvas {
     .canon {
       .p_bottom {
         .color {
-          span:nth-child(2) {
-            background: #DE0010;
-          }
-
-          span:nth-child(3) {
-            background: #38373C;
-          }
-
-          span:nth-child(4) {
-            background: #E6E6E6;
-          }
+          @include p_color(3, #DE0010, #38373C, #E6E6E6);
         }
       }
     }

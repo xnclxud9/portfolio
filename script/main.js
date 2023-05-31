@@ -1,3 +1,4 @@
+// 스크롤 이벤트
 AOS.init();
 
 // 어바웃
@@ -17,7 +18,7 @@ const swiper = new Swiper(".mySwiper", {
   },
   on: { // 아치 내용 변경
     slideChange: function () {
-      arch_con.forEach(function (item) {
+      arch_con.forEach((item) => {
         item.classList.add("hidden");
       });
       arch_con[this.realIndex].classList.remove("hidden");
@@ -26,10 +27,10 @@ const swiper = new Swiper(".mySwiper", {
 });
 
 // 스킬 이름 변경
-skil.forEach(function (item, idx) {
+skil.forEach((item, idx) => {
   item.addEventListener("mouseenter", function () {
     skilText.innerHTML = this.dataset.skil;
-    arch_p.forEach(function (item) {
+    arch_p.forEach((item) => {
       item.style.display = "none"
     });
     arch_p[idx].style.display = "block"
@@ -72,7 +73,7 @@ const actStyle = (num) => {
   let newWidth = tab[num].offsetWidth;
   line.style.left = newLeft + "px";
   line.style.width = newWidth + "px";
-  tab.forEach(function (item) {
+  tab.forEach((item) => {
     item.style.fontWeight = "normal";
   });
   tab[num].style.fontWeight = "bold";

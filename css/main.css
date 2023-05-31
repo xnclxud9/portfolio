@@ -118,15 +118,17 @@ canvas {
 #about .swiper-wrapper .skil ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 2vw;
-  margin: 2vw;
+  justify-content: center;
+  -moz-column-gap: 4vw;
+       column-gap: 4vw;
+  row-gap: 2vw;
+  margin: 1vw;
 }
 #about .swiper-wrapper .skil ul li:nth-child(2n) {
   margin-top: 20px;
 }
 #about .swiper-wrapper .skil ul img {
-  height: 65px;
+  height: 70px;
   transition: 0.4s;
   cursor: pointer;
 }
@@ -172,7 +174,7 @@ canvas {
   width: 18vw;
   height: 500px;
   border-radius: 500px 500px 0px 0px;
-  padding: 120px 40px;
+  padding: 7vw 40px 0 40px;
   background: #fff;
   border: 1px solid #3C5296;
 }
@@ -186,10 +188,10 @@ canvas {
 #about .arch .skil .skil_t {
   font-size: 1.125rem;
   line-height: 28px;
-  margin-bottom: 50px;
+  margin-bottom: 2vw;
 }
 #about .arch .skil .skil_t span {
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   color: #3C5296;
   font-weight: bold;
 }
@@ -197,15 +199,18 @@ canvas {
   display: none;
   margin: 0 15px;
   font-size: 0.875rem;
-  line-height: 28px;
+  line-height: 22px;
+}
+#about .arch .skil div p {
+  margin-bottom: 12px;
 }
 #about .arch .skil div p::before {
   content: "";
   display: block;
   width: 6px;
-  height: 1px;
+  height: 2px;
   position: relative;
-  top: 15px;
+  top: 12px;
   left: -12px;
   background: #bbb;
 }
@@ -235,7 +240,7 @@ canvas {
 }
 #projects .category .line {
   position: absolute;
-  height: 2px;
+  height: 1.5px;
   top: 12px;
   background: #333;
   transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -368,7 +373,7 @@ canvas {
 #projects .project .tgi .p_bottom .color span:nth-child(3) {
   background: #242422;
 }
-#projects .project .tgi .p_bottom .color span:last-child {
+#projects .project .tgi .p_bottom .color span:nth-child(4) {
   background: #F2EDE4;
 }
 #projects .project .freitag .p_bottom .color span:nth-child(2) {
@@ -376,6 +381,8 @@ canvas {
 }
 #projects .project .freitag .p_bottom .color span:nth-child(3) {
   background: #fff;
+}
+#projects .project .freitag .p_bottom .color span:nth-child(3) {
   border: 1px solid #333;
 }
 #projects .project .emart .p_bottom .color span:nth-child(2) {
