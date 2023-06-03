@@ -23,16 +23,19 @@
   <!-- 스크롤 이벤트 -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- css 애니메이션 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <!-- swiper slide -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <!-- <script src="./script/canvas.js" defer></script> -->
   <script src="./script/main.js" defer></script>
+  <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+  <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
 </head>
 
 <body>
   <!-- 헤더 -->
-  <header>
+  <header class="animate__animated animate__fadeInDown">
     <h1>
       <a href="index.html" title="메인으로 바로가기"><img src="./images/logo.png" alt="상단 로고"></a>
     </h1>
@@ -51,15 +54,13 @@
   <!-- 메인 -->
   <main>
     <article id="main_visu">
-      <div>
-        <p>파도의 <span>꾸준함을 닮은</span></p>
-        <p>이승아입니다.</p>
-      </div>
-      <div class="wave">
-        <p>W</p>
-        <p>A</p>
-        <p>V</p>
-        <p>E</p>
+      <div id="scroll-down">
+        <span class="arrow-down">
+          <!-- css generated icon -->
+        </span>
+        <span id="scroll-title">
+          scroll
+        </span>
       </div>
     </article>
 
@@ -88,17 +89,18 @@
         <!-- 내 소개 -->
         <section class="profile swiper-slide">
           <h3>ME</h3>
-          <div class="a_title">
+          <div class="a_title" data-aos="fade-up" data-aos-duration="1000">
             <p>안녕하세요!</p>
-            <p><span>프론트엔드 </span>개발자를 꿈꾸는</p>
+            <p><span>프론트엔드</span> 개발자를 꿈꾸는
+            </p>
             <p>이승아입니다.</p>
           </div>
           <div class="a_con">
             <p>저는 호기심이 많습니다.</p>
             <p>항상 ‘왜?’라는 질문을 하며, 의문을 품고 궁금증이 해결되어야 직성이 풀립니다.</p>
-            <p>이러한 제 성향이 끊임없이 탐구하고 배워야 하는 개발 직군과 잘 맞는다고 생각했고,</p>
-            <p>그중에서도 사용자와 가장 가까운 프론트엔드에 매력을 느꼈습니다.</p>
-            <p>저의 호기심을 기반으로 프론트엔드 개발자로서 성장하고 싶습니다.</p>
+            <p>이러한 제 성향이 끊임없이 탐구하고 배워야 하는 개발 직군에 적합하다 생각했고,</p>
+            <p>그중에서도 사용자와 가장 가까운 프론트엔드에 매력을 느끼고 관련 언어를 공부해왔습니다.</p>
+            <p>이제는 저의 호기심을 기반으로 프론트엔드 개발자로서 성장하고 싶습니다.</p>
           </div>
           <div class="tag">
             <span>#호기심</span>
@@ -132,7 +134,7 @@
         <!-- 로고 -->
         <section class="logo swiper-slide">
           <h3>LOGO</h3>
-          <div class="a_title">
+          <div class="a_title" data-aos="fade-up" data-aos-duration="1000">
             <p>바다에</p>
             <p>꾸준하게</p>
             <p>이는 물결 <span>'파도'</span></p>
@@ -150,7 +152,7 @@
       <!-- 아치형 공간 -->
       <div class="arch">
         <!-- 소개 -->
-        <div class="arch_con profile">
+        <div class="arch_con profile" data-aos="fade-down-right" data-aos-duration="1000">
           <img src="./images/me.jpg" alt="내사진">
         </div>
         <!-- 스킬 -->
@@ -249,8 +251,8 @@
               <p class="color"><span>컬러</span><span></span><span></span><span></span></p>
               <p><span>키워드</span>#즐거운 #소통하는 #신뢰적인</p>
             </div>
-            <a href="http://endingfairy.dothome.co.kr/Ending_fairy/intro.php" target="_blank" title="프로젝트 자세히보기">VIEW
-              the PROJECT</a>
+            <a href="http://endingfairy.dothome.co.kr/Ending_fairy/intro.php" title="프로젝트 자세히보기" target="_blank"
+              rel="noopener noreferrer">website</a>
           </div>
         </section>
 
@@ -273,8 +275,8 @@
               <p class="color"><span>컬러</span><span></span><span></span><span></span></p>
               <p><span>키워드</span>#즐거운 #소통하는 #신뢰적인</p>
             </div>
-            <a href="http://endingfairy.dothome.co.kr/Ending_fairy/intro.php" target="_blank" title="프로젝트 자세히보기">VIEW
-              the PROJECT</a>
+            <a href="http://endingfairy.dothome.co.kr/Ending_fairy/intro.php" title="프로젝트 자세히보기" target="_blank"
+              rel="noopener noreferrer">website</a>
           </div>
         </section>
 
@@ -297,7 +299,8 @@
               <p class="color"><span>컬러</span><span></span><span></span><span></span></p>
               <p><span>키워드</span>#차분한 #안정된 #은은한</p>
             </div>
-            <a href="http://xnclxud9.dothome.co.kr/PETFRIENDS/" target="_blank" title="프로젝트 자세히보기">VIEW the PROJECT</a>
+            <a href="http://xnclxud9.dothome.co.kr/PETFRIENDS/" title="프로젝트 자세히보기" target="_blank"
+              rel="noopener noreferrer">website</a>
           </div>
         </section>
 
@@ -320,7 +323,8 @@
               <p class="color"><span>컬러</span><span></span><span></span></p>
               <p><span>키워드</span>#트렌디한 #따뜻한 #친근한</p>
             </div>
-            <a href="#none" target="_blank" title="프로젝트 자세히보기">VIEW the PROJECT</a>
+            <a href="http://xnclxud9.dothome.co.kr/EMART/" title="프로젝트 자세히보기" target="_blank"
+              rel="noopener noreferrer">website</a>
           </div>
         </section>
 
@@ -332,7 +336,7 @@
             <p>Personal Project / 23.02.09 ~ 23.02.15</p>
           </div>
           <div class="p_img">
-            <a href="#none" title="프로젝트 자세히보기">
+            <a href="project.html#tgi1" title="프로젝트 자세히보기">
               <img src="./images/freitag.jpg" alt="freitag 목업" class="mockup">
               <span class="arrow"><img src="./images/arrow.png" alt=""></span>
             </a>
@@ -343,7 +347,8 @@
               <p class="color"><span>컬러</span><span></span><span></span></p>
               <p><span>키워드</span>#도시적인 #실용적인 #심플한</p>
             </div>
-            <a href="http://xnclxud9.dothome.co.kr/FREITAG/" target="_blank" title="프로젝트 자세히보기">VIEW the PROJECT</a>
+            <a href="http://xnclxud9.dothome.co.kr/FREITAG/" title="프로젝트 자세히보기" target="_blank"
+              rel="noopener noreferrer">website</a>
           </div>
         </section>
 
@@ -366,7 +371,8 @@
               <p class="color"><span>컬러</span><span></span><span></span><span></span></p>
               <p><span>키워드</span>#모던한 #친근한 #소통하는</p>
             </div>
-            <a href="https://xnclxud9.github.io/TGI/" target="_blank" title="프로젝트 자세히보기">VIEW the PROJECT</a>
+            <a href="https://xnclxud9.github.io/TGI/" title="프로젝트 자세히보기" target="_blank"
+              rel="noopener noreferrer">website</a>
           </div>
         </section>
       </div>

@@ -9,6 +9,7 @@ body {
   font-family: "RIDIBatang", "맑은 고딕", sans-serif;
   font-size: 0.75rem;
   color: #333;
+  overflow-x: hidden;
 }
 
 a {
@@ -22,12 +23,13 @@ a {
 }
 
 header {
+  position: relative;
   width: 100%;
   height: 100px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: #3C5296;
+  z-index: 9999;
 }
 header img {
   width: 50px;
@@ -40,6 +42,30 @@ header nav .gnb a {
   position: relative;
   color: #fff;
   font-size: 1.25rem;
+  padding: 7px;
+}
+header nav .gnb a:before,
+header nav .gnb a:after {
+  position: absolute;
+  opacity: 0;
+  width: 0%;
+  height: 1px;
+  content: "";
+  background: #FFF;
+  transition: all 0.3s;
+}
+header nav .gnb a:before {
+  left: 0px;
+  top: 0px;
+}
+header nav .gnb a:after {
+  right: 0px;
+  bottom: 0px;
+}
+header nav .gnb a:hover:before,
+header nav .gnb a:hover:after {
+  opacity: 1;
+  width: 100%;
 }
 header .h_sns a {
   color: #fff;

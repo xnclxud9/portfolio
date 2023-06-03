@@ -19,6 +19,7 @@ body {
   font-family: 'RIDIBatang', '맑은 고딕', sans-serif;
   font-size: $fontSize;
   color: $t_color;
+  overflow-x: hidden;
 }
 
 a {
@@ -59,7 +60,7 @@ a {
 
   h3 {
     display: inline-block;
-    padding: 8px 16px;
+    padding: 10px 16px 7px;
     font-size: $fontSize02;
     background: $m_color;
     color: $t_color01;
