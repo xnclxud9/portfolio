@@ -1,0 +1,132 @@
+@import 'base';
+
+.projects {
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 83px;
+    width: 40px;
+    height: 40px;
+    color: $t_color;
+  }
+
+  .swiper-button-prev {
+    left: 100px;
+  }
+
+  .swiper-button-next {
+    right: 70px;
+  }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    position: relative;
+    font-size: 20px;
+  }
+
+  .swiper-button-prev::after {
+    left: -45px;
+  }
+
+  .swiper-button-next::after {
+    right: -10px;
+  }
+
+  .project {
+    padding: 50px;
+
+    h2 {
+      padding: 20px 0;
+      font-size: $fontSize03;
+      text-align: center;
+      border-top: 1px solid $t_color;
+      border-bottom: 1px solid $t_color;
+    }
+
+
+
+    .sub_wrap {
+      padding: 30px;
+      display: flex;
+      gap: 50px;
+
+      img {
+        width: 60%;
+        height: 600px;
+        object-fit: cover;
+      }
+
+      .sub {
+        margin: 20px 0;
+
+        span {
+          @include span;
+        }
+
+        dl {
+          margin: 30px 0;
+
+          dt {
+            margin: 15px 0 5px 0;
+            font-size: $fontSize01;
+            font-weight: bold;
+          }
+
+          dd {
+            line-height: 1.6;
+            font-size: $fontSize01;
+          }
+        }
+
+
+        a {
+          display: inline-block;
+          position: relative;
+          margin-right: 10px;
+          padding: 10px 18px 8px 18px;
+          border-radius: 10px;
+          overflow: hidden;
+          transition: .5s;
+          font-size: $fontSize01;
+          border: 1px solid $m_color;
+          color: $m_color;
+          z-index: 1;
+        }
+
+        a::before,
+        a::after {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 50px;
+          height: 50px;
+          transform: translate(-50%, -50%);
+          border-radius: 50%;
+          background-color: $m_color;
+          transition: 1s ease;
+          z-index: -1;
+        }
+
+        a::before {
+          top: -20px;
+          left: -20px;
+        }
+
+        a::after {
+          left: calc(100% + 20px);
+          top: calc(100% + 20px);
+        }
+
+        a:hover::before,
+        a:hover::after {
+          height: 410px;
+          width: 410px;
+        }
+
+        a:hover {
+          color: $t_color01
+        }
+      }
+    }
+  }
+}

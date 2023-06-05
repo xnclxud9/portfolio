@@ -84,10 +84,6 @@ a {
       line-height: 24px;
     }
   }
-
-  a>img {
-    margin-left: 5px;
-  }
 }
 
 // 아치형 컨텐츠
@@ -130,4 +126,13 @@ a {
       background: $color03;
     }
   }
+}
+
+// span
+@mixin span {
+  margin-right: 10px;
+  padding: 4px 8px 3px 8px;
+  color: $m_color;
+  border: 1px solid $m_color;
+  border-radius: 11px;
 }

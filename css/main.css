@@ -140,14 +140,14 @@ canvas {
   font-size: 0.875rem;
   line-height: 24px;
 }
-#about .swiper-wrapper .swiper-slide a > img {
-  margin-left: 5px;
-}
 #about .swiper-wrapper .profile .tag {
   margin-bottom: 6vw;
 }
 #about .swiper-wrapper .profile .tag span {
   margin-right: 5px;
+}
+#about .swiper-wrapper .profile > a img {
+  margin-left: 8px;
 }
 #about .swiper-wrapper .skil ul {
   display: flex;
@@ -172,24 +172,23 @@ canvas {
 #about .swiper-wrapper .logo .a_con {
   margin-bottom: 11vw;
 }
-#about .swiper-button-next,
-#about .swiper-button-prev {
+#about .swiper-button-prev,
+#about .swiper-button-next {
   top: 80%;
   width: 40px;
   height: 40px;
   border: 1px solid #3C5296;
   border-radius: 50%;
 }
-#about .swiper-button-next {
-  left: auto;
-  right: 70px;
-}
 #about .swiper-button-prev {
   left: auto;
   right: 120px;
 }
-#about .swiper-button-next::after,
-#about .swiper-button-prev::after {
+#about .swiper-button-next {
+  right: 70px;
+}
+#about .swiper-button-prev::after,
+#about .swiper-button-next::after {
   color: #3C5296;
   font-size: 20px;
 }

@@ -13,12 +13,13 @@
   <!-- 기본서식, 공통서식 -->
   <link rel="stylesheet" href="./css/base.css" type="text/css">
   <link rel="stylesheet" href="./css/common.css" type="text/css">
-  <link rel="stylesheet" href="./css/wave.css" type="text/css">
-  <!-- 콘텐츠영역서식 -->
-  <link rel="stylesheet" href="./css/main.css" type="text/css">
-  <!-- 폰트어썸 주소 -->
+  <!-- 프로젝트서식 -->
+  <link rel="stylesheet" href="./css/project.css" type="text/css">
+  <!-- 폰트어썸 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-  <!-- 제이쿼리 라이브러리 -->
+  <!-- css 애니메이션 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- 제이쿼리 -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <!-- 스크롤 이벤트 -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -26,54 +27,262 @@
   <!-- swiper slide -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <script src="./script/main.js" defer></script>
+  <!-- 프로젝트 스크립트 -->
+  <script src="./script/project.js" defer></script>
 </head>
 
 <body>
-  <main class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <!-- 티지아이 -->
-      <section id="tgi" class="swiper-slide">
-        <h2>TGI FRIDAYS 홈페이지 리뉴얼</h2>
-        <p>프로젝트 설명 - 1차프로젝트</p>
-        <p>프로젝트 기간</p>
-        <p>개발 언어</p>
-        <p>주요 역할</p>
-        <p>느낀점</p>
-        <img src="./images/tgi.jpg" alt="tgi 목업">
+  <main class="projects swiper mySwiper">
+    <div class="swiper-button-prev">prev</div>
+    <div class="swiper-button-next">next</div>
+    <div class="project_wrap swiper-wrapper">
+      <!-- 캐논아카데미 사용자 -->
+      <section id="canon_user" class="project swiper-slide">
+        <h2>캐논아카데미 홈페이지 리뉴얼 프로젝트</h2>
+        <div class="sub_wrap">
+          <img src="./images/canon_user.jpg" alt="캐논 사용자 목업">
+          <div class="sub">
+            <span>2023.04.27 ~ 2023.05.19</span><span>팀 프로젝트</span><span>반응형</span>
+            <dl>
+              <dt>프로젝트 개요</dt>
+              <dd>브랜드를 선정하여 기존 홈페이지를 트렌드에 맞게 반응형 웹으로 리뉴얼</dd>
+              <dt>프로젝트 목적</dt>
+              <dd>반응형 웹 제작 능력 함양</dd>
+              <dd>팀원들과의 협업 경험으로 커뮤니케이션 능력 향상</dd>
+              <dd>javascript를 사용한 슬라이드 활용</dd>
+              <dd>디바이스별 테스트, 웹 표준 검사, 크로스 브라우징, 접근성 검사 경험</dd>
+
+              <dt>사용 언어</dt>
+              <dd>HTML5, CSS3, javascript, php</dd>
+              <dt>역할&middot;업무</dt>
+              <dd>전체적인 디자인</dd>
+              <dd>메인 페이지의 멤버십 - 마우스 오버 시 전체 이미지 변경 기능 구현</dd>
+              <dd>메인 페이지의 이벤트 - 자동 슬라이드 기능 구현</dd>
+              <dd>로그인 페이지 배너 - 자동 슬라이드 기능 구현</dd>
+              <dd>전체적인 반응형 작업</dd>
+              <dd>다른 팀원이 작성한 코드 취합 및 오류 수정</dd>
+              <dt>느낀 점</dt>
+              <dd>
+                처음으로 기획부터 개발까지 모든 프로세스를 경험하며 협업에 대해 배움 <br>
+                팀원이 작성한 코드를 수정하는 작업을 하며 디버깅 능력을 키움
+              </dd>
+            </dl>
+            <a href="./file/canon_user.pdf" title="프로젝트 자료" target="_blank" rel="noopener noreferrer">프로젝트 자료</a>
+            <a href="http://endingfairy.dothome.co.kr/Ending_fairy/intro.php" title="웹사이트
+              링크" target="_blank" rel="noopener noreferrer">웹사이트
+              링크</a>
+          </div>
+        </div>
+        <div class="con">
+
+        </div>
+      </section>
+
+      <!-- 캐논아카데미 관리자 -->
+      <section id="canon_admin" class="project swiper-slide">
+        <h2>캐논아카데미 홈페이지 리뉴얼 프로젝트</h2>
+        <div class="sub_wrap">
+          <img src="./images/canon_admin.jpg" alt="캐논 관리자 목업">
+          <div class="sub">
+            <span>2023.03.28 ~ 2023.04.18</span><span>팀 프로젝트</span><span>적응형</span>
+            <dl>
+              <dt>프로젝트 개요</dt>
+              <dd>브랜드를 선정하여 기존 홈페이지를 트렌드에 맞게 반응형 웹으로 리뉴얼</dd>
+              <dt>프로젝트 목적</dt>
+              <dd>반응형 웹 제작 능력 함양</dd>
+              <dd>팀원들과의 협업 경험으로 커뮤니케이션 능력 향상</dd>
+              <dd>javascript를 사용한 슬라이드 활용</dd>
+              <dd>디바이스별 테스트, 웹 표준 검사, 크로스 브라우징, 접근성 검사 경험</dd>
+
+              <dt>사용 언어</dt>
+              <dd>HTML5, CSS3, javascript</dd>
+              <dt>역할&middot;업무</dt>
+              <dd>전체적인 디자인</dd>
+              <dd>메인 페이지의 멤버십 - 마우스 오버 시 전체 이미지 변경 기능 구현</dd>
+              <dd>메인 페이지의 이벤트 - 자동 슬라이드 기능 구현</dd>
+              <dd>로그인 페이지 배너 - 자동 슬라이드 기능 구현</dd>
+              <dd>전체적인 반응형 작업</dd>
+              <dd>다른 팀원이 작성한 코드 취합 및 오류 수정</dd>
+              <dt>느낀 점</dt>
+              <dd>
+                처음으로 기획부터 개발까지 모든 프로세스를 경험하며 협업에 대해 배움 <br>
+                팀원이 작성한 코드를 수정하는 작업을 하며 디버깅 능력을 키움
+              </dd>
+            </dl>
+            <a href="./file/canon_admin.pdf" title="프로젝트 자료" target="_blank" rel="noopener noreferrer">프로젝트 자료</a>
+            <a href="http://endingfairy.dothome.co.kr/Ending_fairy/intro.php" title="웹사이트
+              링크" target="_blank" rel="noopener noreferrer">웹사이트
+              링크</a>
+          </div>
+        </div>
+        <div class="con">
+
+        </div>
+      </section>
+      <!-- 펫프렌즈 -->
+      <section id="petfriends" class="project swiper-slide">
+        <h2>펫프렌즈 홈페이지 리뉴얼 프로젝트</h2>
+        <div class="sub_wrap">
+          <img src="./images/petfriends.jpg" alt="펫프렌즈 목업">
+          <div class="sub">
+            <span>2022.12.20 ~ 2023.01.20</span><span>개인 프로젝트</span><span>적응형</span>
+            <dl>
+              <dt>프로젝트 개요</dt>
+              <dd>브랜드를 선정하여 기존 홈페이지를 트렌드에 맞게 반응형 웹으로 리뉴얼</dd>
+              <dt>프로젝트 목적</dt>
+              <dd>반응형 웹 제작 능력 함양</dd>
+              <dd>팀원들과의 협업 경험으로 커뮤니케이션 능력 향상</dd>
+              <dd>javascript를 사용한 슬라이드 활용</dd>
+              <dd>디바이스별 테스트, 웹 표준 검사, 크로스 브라우징, 접근성 검사 경험</dd>
+
+              <dt>사용 언어</dt>
+              <dd>HTML5, CSS3, javascript</dd>
+              <dt>역할&middot;업무</dt>
+              <dd>전체적인 디자인</dd>
+              <dd>메인 페이지의 멤버십 - 마우스 오버 시 전체 이미지 변경 기능 구현</dd>
+              <dd>메인 페이지의 이벤트 - 자동 슬라이드 기능 구현</dd>
+              <dd>로그인 페이지 배너 - 자동 슬라이드 기능 구현</dd>
+              <dd>전체적인 반응형 작업</dd>
+              <dd>다른 팀원이 작성한 코드 취합 및 오류 수정</dd>
+              <dt>느낀 점</dt>
+              <dd>
+                처음으로 기획부터 개발까지 모든 프로세스를 경험하며 협업에 대해 배움 <br>
+                팀원이 작성한 코드를 수정하는 작업을 하며 디버깅 능력을 키움
+              </dd>
+            </dl>
+            <a href="http://xnclxud9.dothome.co.kr/PETFRIENDS/" title="웹사이트
+              링크" target="_blank" rel="noopener noreferrer">웹사이트
+              링크</a>
+          </div>
+        </div>
+        <div class="con">
+
+        </div>
+      </section>
+
+      <!-- 이마트 -->
+      <section id="emart" class="project swiper-slide">
+        <h2>이마트 홈페이지 리뉴얼 프로젝트</h2>
+        <div class="sub_wrap">
+          <img src="./images/emart.jpg" alt="이마트 목업">
+          <div class="sub">
+            <span>2022.12.20 ~ 2023.01.20</span><span>팀 프로젝트</span><span>적응형</span>
+            <dl>
+              <dt>프로젝트 개요</dt>
+              <dd>브랜드를 선정하여 기존 홈페이지를 트렌드에 맞게 반응형 웹으로 리뉴얼</dd>
+              <dt>프로젝트 목적</dt>
+              <dd>반응형 웹 제작 능력 함양</dd>
+              <dd>팀원들과의 협업 경험으로 커뮤니케이션 능력 향상</dd>
+              <dd>javascript를 사용한 슬라이드 활용</dd>
+              <dd>디바이스별 테스트, 웹 표준 검사, 크로스 브라우징, 접근성 검사 경험</dd>
+
+              <dt>사용 언어</dt>
+              <dd>HTML5, CSS3, javascript</dd>
+              <dt>역할&middot;업무</dt>
+              <dd>전체적인 디자인</dd>
+              <dd>메인 페이지의 멤버십 - 마우스 오버 시 전체 이미지 변경 기능 구현</dd>
+              <dd>메인 페이지의 이벤트 - 자동 슬라이드 기능 구현</dd>
+              <dd>로그인 페이지 배너 - 자동 슬라이드 기능 구현</dd>
+              <dd>전체적인 반응형 작업</dd>
+              <dd>다른 팀원이 작성한 코드 취합 및 오류 수정</dd>
+              <dt>느낀 점</dt>
+              <dd>
+                처음으로 기획부터 개발까지 모든 프로세스를 경험하며 협업에 대해 배움 <br>
+                팀원이 작성한 코드를 수정하는 작업을 하며 디버깅 능력을 키움
+              </dd>
+            </dl>
+            <a href="./file/emart.pdf" title="프로젝트 자료" target="_blank" rel="noopener noreferrer">프로젝트 자료</a>
+            <a href="http://xnclxud9.dothome.co.kr/EMART/" title="웹사이트
+              링크" target="_blank" rel="noopener noreferrer">웹사이트
+              링크</a>
+          </div>
+        </div>
+        <div class="con">
+
+        </div>
+      </section>
+
+      <!-- 프라이탁 -->
+      <section id="freitag" class="project swiper-slide">
+        <h2>FREITAG 홈페이지 리뉴얼 프로젝트</h2>
+        <div class="sub_wrap">
+          <img src="./images/freitag.jpg" alt="freitag 목업">
+          <div class="sub">
+            <span>2023.02.09 ~ 2023.02.15</span><span>개인 프로젝트</span><span>적응형</span>
+            <dl>
+              <dt>프로젝트 개요</dt>
+              <dd>브랜드를 선정하여 기존 홈페이지를 트렌드에 맞게 반응형 웹으로 리뉴얼</dd>
+              <dt>프로젝트 목적</dt>
+              <dd>반응형 웹 제작 능력 함양</dd>
+              <dd>팀원들과의 협업 경험으로 커뮤니케이션 능력 향상</dd>
+              <dd>javascript를 사용한 슬라이드 활용</dd>
+              <dd>디바이스별 테스트, 웹 표준 검사, 크로스 브라우징, 접근성 검사 경험</dd>
+
+              <dt>사용 언어</dt>
+              <dd>HTML5, CSS3, javascript</dd>
+              <dt>역할&middot;업무</dt>
+              <dd>전체적인 디자인</dd>
+              <dd>메인 페이지의 멤버십 - 마우스 오버 시 전체 이미지 변경 기능 구현</dd>
+              <dd>메인 페이지의 이벤트 - 자동 슬라이드 기능 구현</dd>
+              <dd>로그인 페이지 배너 - 자동 슬라이드 기능 구현</dd>
+              <dd>전체적인 반응형 작업</dd>
+              <dd>다른 팀원이 작성한 코드 취합 및 오류 수정</dd>
+              <dt>느낀 점</dt>
+              <dd>
+                처음으로 기획부터 개발까지 모든 프로세스를 경험하며 협업에 대해 배움 <br>
+                팀원이 작성한 코드를 수정하는 작업을 하며 디버깅 능력을 키움
+              </dd>
+            </dl>
+            <a href="http://xnclxud9.dothome.co.kr/FREITAG/" title="웹사이트
+              링크" target="_blank" rel="noopener noreferrer">웹사이트
+              링크</a>
+          </div>
+        </div>
+        <div class="con">
+
+        </div>
       </section>
 
       <!-- 티지아이 -->
-      <section id="tgi1" class="swiper-slide">
-        <h2>TGI 1</h2>
-        <p>프로젝트 설명 - 1차프로젝트</p>
-        <p>프로젝트 기간</p>
-        <p>개발 언어</p>
-        <p>주요 역할</p>
-        <p>느낀점</p>
-        <img src="./images/tgi.jpg" alt="tgi 목업">
-      </section>
+      <section id="tgi" class="project swiper-slide">
+        <h2>TGI FRIDAYS 홈페이지 리뉴얼 프로젝트</h2>
+        <div class="sub_wrap">
+          <img src="./images/tgi.jpg" alt="tgi 목업">
+          <div class="sub">
+            <span>2022.12.20 ~ 2023.01.20</span><span>팀 프로젝트</span><span>반응형</span>
+            <dl>
+              <dt>프로젝트 개요</dt>
+              <dd>브랜드를 선정하여 기존 홈페이지를 트렌드에 맞게 반응형 웹으로 리뉴얼</dd>
+              <dt>프로젝트 목적</dt>
+              <dd>반응형 웹 제작 능력 함양</dd>
+              <dd>팀원들과의 협업 경험으로 커뮤니케이션 능력 향상</dd>
+              <dd>javascript를 사용한 슬라이드 활용</dd>
+              <dd>디바이스별 테스트, 웹 표준 검사, 크로스 브라우징, 접근성 검사 경험</dd>
 
-      <!-- 티지아이 -->
-      <section id="tgi2" class="swiper-slide">
-        <h2>TGI 2</h2>
-        <p>프로젝트 설명 - 1차프로젝트</p>
-        <p>프로젝트 기간</p>
-        <p>개발 언어</p>
-        <p>주요 역할</p>
-        <p>느낀점</p>
-        <img src="./images/tgi.jpg" alt="tgi 목업">
-      </section>
+              <dt>사용 언어</dt>
+              <dd>HTML5, CSS3, javascript</dd>
+              <dt>역할&middot;업무</dt>
+              <dd>전체적인 디자인</dd>
+              <dd>메인 페이지의 멤버십 - 마우스 오버 시 전체 이미지 변경 기능 구현</dd>
+              <dd>메인 페이지의 이벤트 - 자동 슬라이드 기능 구현</dd>
+              <dd>로그인 페이지 배너 - 자동 슬라이드 기능 구현</dd>
+              <dd>전체적인 반응형 작업</dd>
+              <dd>다른 팀원이 작성한 코드 취합 및 오류 수정</dd>
+              <dt>느낀 점</dt>
+              <dd>
+                처음으로 기획부터 개발까지 모든 프로세스를 경험하며 협업에 대해 배움 <br>
+                팀원이 작성한 코드를 수정하는 작업을 하며 디버깅 능력을 키움
+              </dd>
+            </dl>
+            <a href="./file/tgi.pdf" title="프로젝트 자료" target="_blank" rel="noopener noreferrer">프로젝트 자료</a>
+            <a href="https://xnclxud9.github.io/TGI/" title="웹사이트
+              링크" target="_blank" rel="noopener noreferrer">웹사이트
+              링크</a>
+          </div>
+        </div>
+        <div class="con">
 
-      <!-- 티지아이 -->
-      <section id="tgi3" class="swiper-slide">
-        <h2>TGI 3</h2>
-        <p>프로젝트 설명 - 1차프로젝트</p>
-        <p>프로젝트 기간</p>
-        <p>개발 언어</p>
-        <p>주요 역할</p>
-        <p>느낀점</p>
-        <img src="./images/tgi.jpg" alt="tgi 목업">
+        </div>
       </section>
     </div>
 

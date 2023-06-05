@@ -321,6 +321,12 @@ canvas {
           margin-right: 5px;
         }
       }
+
+      >a {
+        img {
+          margin-left: 8px;
+        }
+      }
     }
 
     .skil {
@@ -357,8 +363,8 @@ canvas {
     }
   }
 
-  .swiper-button-next,
-  .swiper-button-prev {
+  .swiper-button-prev,
+  .swiper-button-next {
     top: 80%;
     width: 40px;
     height: 40px;
@@ -366,18 +372,17 @@ canvas {
     border-radius: 50%;
   }
 
-  .swiper-button-next {
-    left: auto;
-    right: 70px;
-  }
-
   .swiper-button-prev {
     left: auto;
     right: 120px;
   }
 
-  .swiper-button-next::after,
-  .swiper-button-prev::after {
+  .swiper-button-next {
+    right: 70px;
+  }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
     color: $m_color;
     font-size: 20px;
   }

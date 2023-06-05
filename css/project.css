@@ -1,0 +1,133 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "RIDIBatang";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "RIDIBatang", "맑은 고딕", sans-serif;
+  font-size: 0.75rem;
+  color: #333;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.75rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.projects .swiper-button-prev,
+.projects .swiper-button-next {
+  top: 83px;
+  width: 40px;
+  height: 40px;
+  color: #333;
+}
+.projects .swiper-button-prev {
+  left: 100px;
+}
+.projects .swiper-button-next {
+  right: 70px;
+}
+.projects .swiper-button-prev::after,
+.projects .swiper-button-next::after {
+  position: relative;
+  font-size: 20px;
+}
+.projects .swiper-button-prev::after {
+  left: -45px;
+}
+.projects .swiper-button-next::after {
+  right: -10px;
+}
+.projects .project {
+  padding: 50px;
+}
+.projects .project h2 {
+  padding: 20px 0;
+  font-size: 1.25rem;
+  text-align: center;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+.projects .project .sub_wrap {
+  padding: 30px;
+  display: flex;
+  gap: 50px;
+}
+.projects .project .sub_wrap img {
+  width: 60%;
+  height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.projects .project .sub_wrap .sub {
+  margin: 20px 0;
+}
+.projects .project .sub_wrap .sub span {
+  margin-right: 10px;
+  padding: 4px 8px 3px 8px;
+  color: #3C5296;
+  border: 1px solid #3C5296;
+  border-radius: 11px;
+}
+.projects .project .sub_wrap .sub dl {
+  margin: 30px 0;
+}
+.projects .project .sub_wrap .sub dl dt {
+  margin: 15px 0 5px 0;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+.projects .project .sub_wrap .sub dl dd {
+  line-height: 1.6;
+  font-size: 0.875rem;
+}
+.projects .project .sub_wrap .sub a {
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+  padding: 10px 18px 8px 18px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.5s;
+  font-size: 0.875rem;
+  border: 1px solid #3C5296;
+  color: #3C5296;
+  z-index: 1;
+}
+.projects .project .sub_wrap .sub a::before,
+.projects .project .sub_wrap .sub a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #3C5296;
+  transition: 1s ease;
+  z-index: -1;
+}
+.projects .project .sub_wrap .sub a::before {
+  top: -20px;
+  left: -20px;
+}
+.projects .project .sub_wrap .sub a::after {
+  left: calc(100% + 20px);
+  top: calc(100% + 20px);
+}
+.projects .project .sub_wrap .sub a:hover::before,
+.projects .project .sub_wrap .sub a:hover::after {
+  height: 410px;
+  width: 410px;
+}
+.projects .project .sub_wrap .sub a:hover {
+  color: #fff;
+}/*# sourceMappingURL=project.css.map */
