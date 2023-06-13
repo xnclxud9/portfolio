@@ -36,7 +36,7 @@ header img {
 }
 header nav .gnb {
   display: flex;
-  gap: 50px;
+  gap: 2vw;
 }
 header nav .gnb a {
   position: relative;
@@ -44,8 +44,7 @@ header nav .gnb a {
   font-size: 1.25rem;
   padding: 7px;
 }
-header nav .gnb a:before,
-header nav .gnb a:after {
+header nav .gnb a:before, header nav .gnb a:after {
   content: "";
   position: absolute;
   width: 0%;
@@ -62,8 +61,7 @@ header nav .gnb a:after {
   right: 0px;
   bottom: 0px;
 }
-header nav .gnb a:hover:before,
-header nav .gnb a:hover:after {
+header nav .gnb a:hover:before, header nav .gnb a:hover:after {
   opacity: 1;
   width: 100%;
 }

@@ -28,20 +28,30 @@ a {
   top: -100px;
   background: #3C5296;
 }
-#main_visu #scroll-down {
-  display: block;
+#main_visu #scroll_down {
   position: relative;
   top: 75%;
   padding-top: 61px;
   text-align: center;
 }
-#main_visu .arrow-down {
+#main_visu #scroll_down::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  width: 2px;
+  height: 70px;
+  background: #fff;
+  margin-left: -1px;
+  animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;
+}
+#main_visu #scroll_down .arrow_down {
   display: block;
   margin: 0 auto;
   width: 10px;
   height: 38px;
 }
-#main_visu .arrow-down:after {
+#main_visu #scroll_down .arrow_down:after {
   content: "";
   display: block;
   margin: 0;
@@ -52,28 +62,11 @@ a {
   border-right: 2px solid #fff;
   transform: rotate(135deg);
 }
-#main_visu #scroll-title {
-  display: block;
-  text-transform: uppercase;
+#main_visu #scroll_down .scroll_title {
   color: #fff;
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: bold;
-  letter-spacing: 0.1em;
-}
-#main_visu #scroll-down::before {
-  /* Safari 4+ */
-  /* Fx 5+ */
-  /* Opera 12+ */
-  animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;
-  /* IE 10+, Fx 29+ */
-  position: absolute;
-  top: 0px;
-  left: 50%;
-  margin-left: -1px;
-  width: 2px;
-  height: 70px;
-  background: #fff;
-  content: " ";
+  letter-spacing: 0.2rem;
 }
 @keyframes elasticus {
   0% {
@@ -92,14 +85,6 @@ a {
     transform-origin: 0% 100%;
     transform: scale(1, 0);
   }
-}
-
-canvas {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50%;
 }
 
 #about {
@@ -141,10 +126,51 @@ canvas {
   line-height: 24px;
 }
 #about .swiper-wrapper .profile .tag {
-  margin-bottom: 6vw;
+  margin-bottom: 4vw;
 }
 #about .swiper-wrapper .profile .tag span {
   margin-right: 5px;
+}
+#about .swiper-wrapper .profile > a {
+  transition: 0.5s ease;
+  background: url(../images/arrow_b.png) no-repeat center right;
+  border: none;
+  padding: 15px 60px 15px 20px;
+  text-transform: uppercase;
+  position: relative;
+}
+#about .swiper-wrapper .profile > a:hover {
+  background: url(../images/arrow_w.png) no-repeat center right;
+  color: #fff;
+  transition-delay: 0.5s;
+}
+#about .swiper-wrapper .profile > a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #3C5296;
+  transition: 0.5s ease;
+}
+#about .swiper-wrapper .profile > a:hover::before {
+  width: 100%;
+}
+#about .swiper-wrapper .profile > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background-color: #3C5296;
+  transition: 0.4s ease;
+  z-index: -1;
+}
+#about .swiper-wrapper .profile > a:hover::after {
+  height: 100%;
+  transition-delay: 0.4s;
 }
 #about .swiper-wrapper .profile > a img {
   margin-left: 8px;
@@ -300,7 +326,6 @@ canvas {
 #projects .project {
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 #projects .project input[type=radio] {
   display: none;

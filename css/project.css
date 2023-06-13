@@ -22,6 +22,10 @@ a {
   display: none;
 }
 
+header {
+  background: #3C5296;
+}
+
 .projects .swiper-button-prev,
 .projects .swiper-button-next {
   top: 83px;

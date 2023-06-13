@@ -6,297 +6,73 @@
   height: calc(100vh);
   top: -100px;
   background: $m_color;
-  // background-image: url(../images/bg.jpg);
-  // background-size: cover;
-  // background-position: center;
-  // background-attachment: fixed;
 
-  #scroll-down {
-    display: block;
+  #scroll_down {
     position: relative;
     top: 75%;
     padding-top: 61px;
     text-align: center;
-  }
 
-  .arrow-down {
-    display: block;
-    margin: 0 auto;
-    width: 10px;
-    height: 38px;
-  }
-
-  .arrow-down:after {
-    content: '';
-    display: block;
-    margin: 0;
-    padding: 0;
-    width: 8px;
-    height: 8px;
-    border-top: 2px solid $t_color01;
-    border-right: 2px solid $t_color01;
-    -moz-transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
-    -o-transform: rotate(135deg);
-    -ms-transform: rotate(135deg);
-    transform: rotate(135deg);
-  }
-
-  #scroll-title {
-    display: block;
-    text-transform: uppercase;
-    color: $t_color01;
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: .1em;
-  }
-
-  #scroll-down::before {
-    -webkit-animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;
-    /* Safari 4+ */
-
-    -moz-animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;
-    /* Fx 5+ */
-
-    -o-animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;
-    /* Opera 12+ */
-
-    animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;
-    /* IE 10+, Fx 29+ */
-
-    position: absolute;
-    top: 0px;
-    left: 50%;
-    margin-left: -1px;
-    width: 2px;
-    height: 70px;
-    background: $t_color01;
-    content: ' ';
-  }
-
-  @-webkit-keyframes elasticus {
-    0% {
-      -webkit-transform-origin: 0% 0%;
-      -ms-transform-origin: 0% 0%;
-      -moz-transform-origin: 0% 0%;
-      -o-transform-origin: 0% 0%;
-      transform-origin: 0% 0%;
-      -webkit-transform: scale(1, 0);
-      -ms-transform: scale(1, 0);
-      -moz-transform: scale(1, 0);
-      -o-transform: scale(1, 0);
-      transform: scale(1, 0);
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0px;
+      left: 50%;
+      width: 2px;
+      height: 70px;
+      background: $t_color01;
+      margin-left: -1px;
+      animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;
     }
 
-    50% {
-      -webkit-transform-origin: 0% 0%;
-      -ms-transform-origin: 0% 0%;
-      -moz-transform-origin: 0% 0%;
-      -o-transform-origin: 0% 0%;
-      transform-origin: 0% 0%;
-      -webkit-transform: scale(1, 1);
-      -ms-transform: scale(1, 1);
-      -moz-transform: scale(1, 1);
-      -o-transform: scale(1, 1);
-      transform: scale(1, 1);
+    .arrow_down {
+      display: block;
+      margin: 0 auto;
+      width: 10px;
+      height: 38px;
+
+      &:after {
+        content: '';
+        display: block;
+        margin: 0;
+        padding: 0;
+        width: 8px;
+        height: 8px;
+        border-top: 2px solid $t_color01;
+        border-right: 2px solid $t_color01;
+        transform: rotate(135deg);
+      }
     }
 
-    50.1% {
-      -webkit-transform-origin: 0% 100%;
-      -ms-transform-origin: 0% 100%;
-      -moz-transform-origin: 0% 100%;
-      -o-transform-origin: 0% 100%;
-      transform-origin: 0% 100%;
-      -webkit-transform: scale(1, 1);
-      -ms-transform: scale(1, 1);
-      -moz-transform: scale(1, 1);
-      -o-transform: scale(1, 1);
-      transform: scale(1, 1);
-    }
-
-    100% {
-      -webkit-transform-origin: 0% 100%;
-      -ms-transform-origin: 0% 100%;
-      -moz-transform-origin: 0% 100%;
-      -o-transform-origin: 0% 100%;
-      transform-origin: 0% 100%;
-      -webkit-transform: scale(1, 0);
-      -ms-transform: scale(1, 0);
-      -moz-transform: scale(1, 0);
-      -o-transform: scale(1, 0);
-      transform: scale(1, 0);
-    }
-  }
-
-  @-moz-keyframes elasticus {
-    0% {
-      -webkit-transform-origin: 0% 0%;
-      -ms-transform-origin: 0% 0%;
-      -moz-transform-origin: 0% 0%;
-      -o-transform-origin: 0% 0%;
-      transform-origin: 0% 0%;
-      -webkit-transform: scale(1, 0);
-      -ms-transform: scale(1, 0);
-      -moz-transform: scale(1, 0);
-      -o-transform: scale(1, 0);
-      transform: scale(1, 0);
-    }
-
-    50% {
-      -webkit-transform-origin: 0% 0%;
-      -ms-transform-origin: 0% 0%;
-      -moz-transform-origin: 0% 0%;
-      -o-transform-origin: 0% 0%;
-      transform-origin: 0% 0%;
-      -webkit-transform: scale(1, 1);
-      -ms-transform: scale(1, 1);
-      -moz-transform: scale(1, 1);
-      -o-transform: scale(1, 1);
-      transform: scale(1, 1);
-    }
-
-    50.1% {
-      -webkit-transform-origin: 0% 100%;
-      -ms-transform-origin: 0% 100%;
-      -moz-transform-origin: 0% 100%;
-      -o-transform-origin: 0% 100%;
-      transform-origin: 0% 100%;
-      -webkit-transform: scale(1, 1);
-      -ms-transform: scale(1, 1);
-      -moz-transform: scale(1, 1);
-      -o-transform: scale(1, 1);
-      transform: scale(1, 1);
-    }
-
-    100% {
-      -webkit-transform-origin: 0% 100%;
-      -ms-transform-origin: 0% 100%;
-      -moz-transform-origin: 0% 100%;
-      -o-transform-origin: 0% 100%;
-      transform-origin: 0% 100%;
-      -webkit-transform: scale(1, 0);
-      -ms-transform: scale(1, 0);
-      -moz-transform: scale(1, 0);
-      -o-transform: scale(1, 0);
-      transform: scale(1, 0);
-    }
-  }
-
-  @-o-keyframes elasticus {
-    0% {
-      -webkit-transform-origin: 0% 0%;
-      -ms-transform-origin: 0% 0%;
-      -moz-transform-origin: 0% 0%;
-      -o-transform-origin: 0% 0%;
-      transform-origin: 0% 0%;
-      -webkit-transform: scale(1, 0);
-      -ms-transform: scale(1, 0);
-      -moz-transform: scale(1, 0);
-      -o-transform: scale(1, 0);
-      transform: scale(1, 0);
-    }
-
-    50% {
-      -webkit-transform-origin: 0% 0%;
-      -ms-transform-origin: 0% 0%;
-      -moz-transform-origin: 0% 0%;
-      -o-transform-origin: 0% 0%;
-      transform-origin: 0% 0%;
-      -webkit-transform: scale(1, 1);
-      -ms-transform: scale(1, 1);
-      -moz-transform: scale(1, 1);
-      -o-transform: scale(1, 1);
-      transform: scale(1, 1);
-    }
-
-    50.1% {
-      -webkit-transform-origin: 0% 100%;
-      -ms-transform-origin: 0% 100%;
-      -moz-transform-origin: 0% 100%;
-      -o-transform-origin: 0% 100%;
-      transform-origin: 0% 100%;
-      -webkit-transform: scale(1, 1);
-      -ms-transform: scale(1, 1);
-      -moz-transform: scale(1, 1);
-      -o-transform: scale(1, 1);
-      transform: scale(1, 1);
-    }
-
-    100% {
-      -webkit-transform-origin: 0% 100%;
-      -ms-transform-origin: 0% 100%;
-      -moz-transform-origin: 0% 100%;
-      -o-transform-origin: 0% 100%;
-      transform-origin: 0% 100%;
-      -webkit-transform: scale(1, 0);
-      -ms-transform: scale(1, 0);
-      -moz-transform: scale(1, 0);
-      -o-transform: scale(1, 0);
-      transform: scale(1, 0);
+    .scroll_title {
+      color: $t_color01;
+      font-size: 1rem;
+      font-weight: bold;
+      letter-spacing: .2rem;
     }
   }
 
   @keyframes elasticus {
     0% {
-      -webkit-transform-origin: 0% 0%;
-      -ms-transform-origin: 0% 0%;
-      -moz-transform-origin: 0% 0%;
-      -o-transform-origin: 0% 0%;
       transform-origin: 0% 0%;
-      -webkit-transform: scale(1, 0);
-      -ms-transform: scale(1, 0);
-      -moz-transform: scale(1, 0);
-      -o-transform: scale(1, 0);
       transform: scale(1, 0);
     }
 
     50% {
-      -webkit-transform-origin: 0% 0%;
-      -ms-transform-origin: 0% 0%;
-      -moz-transform-origin: 0% 0%;
-      -o-transform-origin: 0% 0%;
       transform-origin: 0% 0%;
-      -webkit-transform: scale(1, 1);
-      -ms-transform: scale(1, 1);
-      -moz-transform: scale(1, 1);
-      -o-transform: scale(1, 1);
       transform: scale(1, 1);
     }
 
     50.1% {
-      -webkit-transform-origin: 0% 100%;
-      -ms-transform-origin: 0% 100%;
-      -moz-transform-origin: 0% 100%;
-      -o-transform-origin: 0% 100%;
       transform-origin: 0% 100%;
-      -webkit-transform: scale(1, 1);
-      -ms-transform: scale(1, 1);
-      -moz-transform: scale(1, 1);
-      -o-transform: scale(1, 1);
       transform: scale(1, 1);
     }
 
     100% {
-      -webkit-transform-origin: 0% 100%;
-      -ms-transform-origin: 0% 100%;
-      -moz-transform-origin: 0% 100%;
-      -o-transform-origin: 0% 100%;
       transform-origin: 0% 100%;
-      -webkit-transform: scale(1, 0);
-      -ms-transform: scale(1, 0);
-      -moz-transform: scale(1, 0);
-      -o-transform: scale(1, 0);
       transform: scale(1, 0);
     }
   }
-}
-
-canvas {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50%;
 }
 
 // 상단 비주얼 끝
@@ -315,7 +91,7 @@ canvas {
 
     .profile {
       .tag {
-        margin-bottom: 6vw;
+        margin-bottom: 4vw;
 
         span {
           margin-right: 5px;
@@ -323,6 +99,52 @@ canvas {
       }
 
       >a {
+        transition: .5s ease;
+        background: url(../images/arrow_b.png) no-repeat center right;
+        border: none;
+        padding: 15px 60px 15px 20px;
+        text-transform: uppercase;
+        position: relative;
+
+        &:hover {
+          background: url(../images/arrow_w.png) no-repeat center right;
+          color: $t_color01;
+          transition-delay: .5s;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: 2px;
+          width: 0;
+          background-color: $m_color;
+          transition: .5s ease;
+        }
+
+
+        &:hover::before {
+          width: 100%;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: 0;
+          width: 100%;
+          background-color: $m_color;
+          transition: .4s ease;
+          z-index: -1;
+        }
+
+        &:hover::after {
+          height: 100%;
+          transition-delay: 0.4s;
+        }
+
         img {
           margin-left: 8px;
         }
@@ -507,7 +329,6 @@ canvas {
   .project {
     display: flex;
     flex-direction: column;
-    gap: 20px;
 
     input[type=radio] {
       display: none;

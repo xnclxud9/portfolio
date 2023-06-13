@@ -18,20 +18,37 @@
   <!-- 폰트어썸 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <!-- css 애니메이션 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <!-- 제이쿼리 -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <!-- 스크롤 이벤트 -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <!-- swiper slide -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <!-- 프로젝트 스크립트 -->
   <script src="./script/project.js" defer></script>
 </head>
 
 <body>
+  <!-- 헤더 -->
+  <header class="animate__animated animate__fadeInDown">
+    <h1>
+      <a href="index.html" title="메인으로 바로가기"><img src="./images/logo.png" alt="상단 로고"></a>
+    </h1>
+    <nav>
+      <ul class="gnb">
+        <li><a href="index.html#about" title="about">About</a></li>
+        <li><a href="index.html#projects" title="projects">Projects</a></li>
+        <li><a href="index.html#contact" title="contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="h_sns">
+      <a href="https://github.com/xnclxud9" title="깃허브" target="_blank"><i class="fas fab fa-github"></i></a>
+    </div>
+  </header>
+
   <main class="projects swiper mySwiper">
     <div class="swiper-button-prev">prev</div>
     <div class="swiper-button-next">next</div>
@@ -285,8 +302,20 @@
         </div>
       </section>
     </div>
-
   </main>
+
+  <!-- 푸터 -->
+  <footer>
+    <!-- 탑버튼 -->
+    <a href="#" title="상단으로 가기" class="t_btn">
+      <i class="fas fa-angle-up"></i>
+      TOP
+    </a>
+    <address>
+      본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.<br>
+      copyrightⓒ 2023 LEE SEUNGA All rights reserved.
+    </address>
+  </footer>
 </body>
 
 </html>

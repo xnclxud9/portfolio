@@ -18,40 +18,40 @@ header {
   nav {
     .gnb {
       display: flex;
-      gap: 50px;
+      gap: 2vw;
 
       a {
         position: relative;
         color: $t_color01;
         font-size: $fontSize03;
         padding: 7px;
-      }
 
-      a:before,
-      a:after {
-        content: '';
-        position: absolute;
-        width: 0%;
-        height: 1px;
-        background: #FFF;
-        opacity: 0;
-        transition: all 0.3s;
-      }
+        &:before,
+        &:after {
+          content: '';
+          position: absolute;
+          width: 0%;
+          height: 1px;
+          background: #FFF;
+          opacity: 0;
+          transition: all 0.3s;
+        }
 
-      a:before {
-        left: 0px;
-        top: 0px;
-      }
+        &:before {
+          left: 0px;
+          top: 0px;
+        }
 
-      a:after {
-        right: 0px;
-        bottom: 0px;
-      }
+        &:after {
+          right: 0px;
+          bottom: 0px;
+        }
 
-      a:hover:before,
-      a:hover:after {
-        opacity: 1;
-        width: 100%;
+        &:hover:before,
+        &:hover:after {
+          opacity: 1;
+          width: 100%;
+        }
       }
     }
   }
