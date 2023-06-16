@@ -47,12 +47,11 @@ header {
       border-bottom: 1px solid $t_color;
     }
 
-
-
     .sub_wrap {
       padding: 30px;
       display: flex;
-      gap: 50px;
+      gap: 3vw;
+      border-bottom: 1px solid $t_color;
 
       img {
         width: 60%;
@@ -61,7 +60,7 @@ header {
       }
 
       .sub {
-        margin: 20px 0;
+        margin-top: 10px;
 
         span {
           @include span;
@@ -129,6 +128,37 @@ header {
 
         a:hover {
           color: $t_color01
+        }
+      }
+    }
+
+    .con{
+      height: 100%;
+      padding: 50px 0;
+      >p{
+        text-align: center;
+        font-size: $fontSize03;
+        padding-bottom: 50px;
+      }
+      ul{
+        display: flex;
+        flex-direction: column;
+        gap: 150px;
+        width: 100%;
+        li{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 40px;
+          line-height: 24px;
+          img{
+            width: 50%;
+            border: 1px solid;
+          }
+          h3{
+            font-size: $fontSize01;
+            font-weight: bold;
+          }
         }
       }
     }

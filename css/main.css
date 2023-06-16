@@ -200,7 +200,8 @@ a {
 }
 #about .swiper-button-prev,
 #about .swiper-button-next {
-  top: 80%;
+  top: auto;
+  bottom: 13%;
   width: 40px;
   height: 40px;
   border: 1px solid #3C5296;
@@ -273,8 +274,22 @@ a {
   left: -12px;
   background: #bbb;
 }
+#about .arch .logo {
+  text-align: center;
+}
 #about .arch .logo img {
   width: 100px;
+}
+#about .arch .logo dl {
+  margin: 30px 0;
+  line-height: 18px;
+}
+#about .arch .logo dl dt {
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+#about .arch .logo dl dd {
+  margin-bottom: 10px;
 }
 
 #projects {

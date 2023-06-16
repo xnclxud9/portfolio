@@ -63,7 +63,8 @@ header {
 .projects .project .sub_wrap {
   padding: 30px;
   display: flex;
-  gap: 50px;
+  gap: 3vw;
+  border-bottom: 1px solid #333;
 }
 .projects .project .sub_wrap img {
   width: 60%;
@@ -72,10 +73,11 @@ header {
      object-fit: cover;
 }
 .projects .project .sub_wrap .sub {
-  margin: 20px 0;
+  margin-top: 10px;
 }
 .projects .project .sub_wrap .sub span {
-  margin-right: 10px;
+  display: inline-block;
+  margin: 0 10px 0 5px;
   padding: 4px 8px 3px 8px;
   color: #3C5296;
   border: 1px solid #3C5296;
@@ -134,4 +136,34 @@ header {
 }
 .projects .project .sub_wrap .sub a:hover {
   color: #fff;
+}
+.projects .project .con {
+  height: 100%;
+  padding: 50px 0;
+}
+.projects .project .con > p {
+  text-align: center;
+  font-size: 1.25rem;
+  padding-bottom: 50px;
+}
+.projects .project .con ul {
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+  width: 100%;
+}
+.projects .project .con ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  line-height: 24px;
+}
+.projects .project .con ul li img {
+  width: 50%;
+  border: 1px solid;
+}
+.projects .project .con ul li h3 {
+  font-size: 0.875rem;
+  font-weight: bold;
 }/*# sourceMappingURL=project.css.map */
