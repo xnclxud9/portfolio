@@ -132,30 +132,35 @@ header {
       }
     }
 
-    .con{
+    .con {
       height: 100%;
       padding: 50px 0;
-      >p{
+
+      >p {
         text-align: center;
         font-size: $fontSize03;
         padding-bottom: 50px;
       }
-      ul{
+
+      ul {
         display: flex;
         flex-direction: column;
         gap: 150px;
         width: 100%;
-        li{
+
+        li {
           display: flex;
           justify-content: center;
           align-items: center;
           gap: 40px;
           line-height: 24px;
-          img{
+
+          img {
             width: 50%;
             border: 1px solid;
           }
-          h3{
+
+          h3 {
             font-size: $fontSize01;
             font-weight: bold;
           }

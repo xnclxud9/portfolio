@@ -223,7 +223,7 @@
 
     .arch_con:not(.profile) {
       @include arch_con;
-      padding: 7vw 40px 0 40px;
+      padding: 0 40px;
       background: $t_color01;
       border: 1px solid $m_color;
     }
@@ -236,9 +236,11 @@
     }
 
     .skil {
+      padding-top: 7vw !important;
+
       .skil_t {
         font-size: $fontSize02;
-        line-height: 28px;
+        line-height: 30px;
         margin-bottom: 2vw;
 
         span {
@@ -272,19 +274,26 @@
     }
 
     .logo {
+      padding-top: 5vw !important;
       text-align: center;
+
       img {
         width: 100px;
       }
-      dl{
+
+      dl {
         margin: 30px 0;
         line-height: 18px;
-        dt{
+        text-align: left;
+
+        dt {
+          margin-bottom: 5px;
           font-size: $fontSize01;
           font-weight: bold;
         }
-        dd{
-          margin-bottom: 10px;
+
+        dd {
+          margin-bottom: 15px;
         }
       }
     }
@@ -553,7 +562,6 @@
         border-radius: 300px;
         backface-visibility: hidden;
         transition: 1s;
-        cursor: pointer;
       }
 
       .front {

@@ -3,6 +3,7 @@ const swiper = new Swiper(".mySwiper", {
   slidesPerView: "1",
   spaceBetween: 0,
   loop: true,
+  autoHeight: true, slideToClickedSlide: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",

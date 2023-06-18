@@ -1,13 +1,10 @@
-// 스크롤 이벤트
-AOS.init();
-
 // 어바웃
 let arch_con = document.querySelectorAll(".arch_con");
 let arch_p = document.querySelectorAll(".arch_con div");
 let skil = document.querySelectorAll(".skil li");
 let skilText = document.querySelector(".arch .skil_t span");
 
-// 슬라이드
+// 어바웃 슬라이드
 const swiper = new Swiper(".mySwiper", {
   slidesPerView: "1",
   spaceBetween: 60,
@@ -35,30 +32,6 @@ skil.forEach((item, idx) => {
     });
     arch_p[idx].style.display = "block"
   });
-});
-
-
-
-// 탑버튼
-let t_btn = document.querySelector(".t_btn");
-
-t_btn.addEventListener("click", (e) => {
-  e.preventDefault();
-  window.scrollTo({
-    top: 0,
-    left: 0,
-    behavior: "smooth"
-  });
-});
-
-window.addEventListener("scroll", () => {
-  let ws = window.scrollY;
-  // console.log(ws);
-  if (ws >= 800) {
-    t_btn.style.display = "block";
-  } else {
-    t_btn.style.display = "none";
-  }
 });
 
 
