@@ -211,19 +211,17 @@
   }
 
   .arch {
+    @include arch_con;
     position: absolute;
     top: 120px;
     right: 12vw;
-    width: 18vw;
-    height: 500px;
     padding: 20px 35px;
     background: $m_color;
-    border-radius: 500px 500px 0px 0px;
     z-index: 9;
 
     .arch_con:not(.profile) {
       @include arch_con;
-      padding: 0 40px;
+      padding: 0 2vw;
       background: $t_color01;
       border: 1px solid $m_color;
     }

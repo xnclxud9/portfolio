@@ -220,21 +220,21 @@ a {
   font-size: 20px;
 }
 #about .arch {
+  width: 18vw;
+  height: 500px;
+  border-radius: 500px 500px 0px 0px;
   position: absolute;
   top: 120px;
   right: 12vw;
-  width: 18vw;
-  height: 500px;
   padding: 20px 35px;
   background: #3C5296;
-  border-radius: 500px 500px 0px 0px;
   z-index: 9;
 }
 #about .arch .arch_con:not(.profile) {
   width: 18vw;
   height: 500px;
   border-radius: 500px 500px 0px 0px;
-  padding: 0 40px;
+  padding: 0 2vw;
   background: #fff;
   border: 1px solid #3C5296;
 }
