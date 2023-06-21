@@ -3,10 +3,25 @@
 // 상단 비주얼
 #main_visu {
   position: relative;
-  height: calc(100vh);
+  height: 100vh;
   top: -100px;
   background: $m_color;
 
+  h2{
+    position: absolute;
+    top: 38%;
+    color: $t_color01;
+    font-size: 100px;
+  }
+
+  nav {
+    @include nav;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
   #scroll_down {
     position: relative;
     top: 75%;
@@ -589,6 +604,13 @@
       .front {
         background-image: url(../images/me2.jpg);
         background-size: cover;
+        P{
+          position: absolute;
+          top: 63%;
+          left: 18%;
+          color: $t_color01;
+          font-style: italic;
+        }
       }
     }
 

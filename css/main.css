@@ -28,6 +28,49 @@ a {
   top: -100px;
   background: #3C5296;
 }
+#main_visu h2 {
+  position: absolute;
+  top: 38%;
+  color: #fff;
+  font-size: 100px;
+}
+#main_visu nav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#main_visu nav .gnb {
+  display: flex;
+  gap: 2vw;
+}
+#main_visu nav .gnb a {
+  position: relative;
+  color: #fff;
+  font-size: 1.25rem;
+  padding: 7px;
+}
+#main_visu nav .gnb a:before, #main_visu nav .gnb a:after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  background: #FFF;
+  opacity: 0;
+  transition: all 0.3s;
+}
+#main_visu nav .gnb a:before {
+  left: 0px;
+  top: 0px;
+}
+#main_visu nav .gnb a:after {
+  right: 0px;
+  bottom: 0px;
+}
+#main_visu nav .gnb a:hover:before, #main_visu nav .gnb a:hover:after {
+  opacity: 1;
+  width: 100%;
+}
 #main_visu #scroll_down {
   position: relative;
   top: 75%;
@@ -558,6 +601,13 @@ a {
 #contact .con_wrap .resume .front {
   background-image: url(../images/me2.jpg);
   background-size: cover;
+}
+#contact .con_wrap .resume .front P {
+  position: absolute;
+  top: 63%;
+  left: 18%;
+  color: #fff;
+  font-style: italic;
 }
 #contact .con_wrap .email .front {
   background-image: url(../images/con02.png);

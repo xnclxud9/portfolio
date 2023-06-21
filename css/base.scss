@@ -32,11 +32,46 @@ a {
   display: none;
 }
 
-// 아티클 제목
-@mixin title {
-  font-size: $fontSize03;
-  text-align: center;
-  margin-bottom: 50px;
+// 내비 서식
+@mixin nav {
+  .gnb {
+    display: flex;
+    gap: 2vw;
+
+    a {
+      position: relative;
+      color: $t_color01;
+      font-size: $fontSize03;
+      padding: 7px;
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        width: 0%;
+        height: 1px;
+        background: #FFF;
+        opacity: 0;
+        transition: all 0.3s;
+      }
+
+      &:before {
+        left: 0px;
+        top: 0px;
+      }
+
+      &:after {
+        right: 0px;
+        bottom: 0px;
+      }
+
+      &:hover:before,
+      &:hover:after {
+        opacity: 1;
+        width: 100%;
+      }
+    }
+  }
 }
 
 // 아티클
@@ -46,7 +81,9 @@ a {
   margin: 0 auto;
 
   h2 {
-    @include title;
+    font-size: $fontSize03;
+    text-align: center;
+    margin-bottom: 50px;
   }
 }
 
@@ -128,7 +165,7 @@ a {
   }
 }
 
-// span
+// 프로젝트 span
 @mixin span {
   display: inline-block;
   margin-right: 10px;

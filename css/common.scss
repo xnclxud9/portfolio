@@ -8,57 +8,10 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  // background: $m_color;
   z-index: 9999;
 
   img {
     width: 50px;
-  }
-
-  nav {
-    .gnb {
-      display: flex;
-      gap: 2vw;
-
-      a {
-        position: relative;
-        color: $t_color01;
-        font-size: $fontSize03;
-        padding: 7px;
-
-        &:before,
-        &:after {
-          content: '';
-          position: absolute;
-          width: 0%;
-          height: 1px;
-          background: #FFF;
-          opacity: 0;
-          transition: all 0.3s;
-        }
-
-        &:before {
-          left: 0px;
-          top: 0px;
-        }
-
-        &:after {
-          right: 0px;
-          bottom: 0px;
-        }
-
-        &:hover:before,
-        &:hover:after {
-          opacity: 1;
-          width: 100%;
-        }
-      }
-    }
-  }
-
-  .h_sns a {
-    color: $t_color01;
-    font-size: 24px;
   }
 }
 

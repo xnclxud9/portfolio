@@ -2,6 +2,9 @@
 
 header {
   background: $m_color;
+  nav{
+    @include nav;
+  }
 }
 
 .projects {
@@ -128,6 +131,12 @@ header {
 
         a:hover {
           color: $t_color01
+        }
+
+        p{
+          display: inline-block;
+          vertical-align: top;
+          line-height: 32px;
         }
       }
     }

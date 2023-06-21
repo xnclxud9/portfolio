@@ -25,6 +25,37 @@ a {
 header {
   background: #3C5296;
 }
+header nav .gnb {
+  display: flex;
+  gap: 2vw;
+}
+header nav .gnb a {
+  position: relative;
+  color: #fff;
+  font-size: 1.25rem;
+  padding: 7px;
+}
+header nav .gnb a:before, header nav .gnb a:after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  background: #FFF;
+  opacity: 0;
+  transition: all 0.3s;
+}
+header nav .gnb a:before {
+  left: 0px;
+  top: 0px;
+}
+header nav .gnb a:after {
+  right: 0px;
+  bottom: 0px;
+}
+header nav .gnb a:hover:before, header nav .gnb a:hover:after {
+  opacity: 1;
+  width: 100%;
+}
 
 .projects .swiper-button-prev,
 .projects .swiper-button-next {
@@ -136,6 +167,11 @@ header {
 }
 .projects .project .sub_wrap .sub a:hover {
   color: #fff;
+}
+.projects .project .sub_wrap .sub p {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 32px;
 }
 .projects .project .con {
   height: 100%;
