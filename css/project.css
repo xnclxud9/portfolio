@@ -77,14 +77,14 @@ header {
 }
 .projects .project .sub_wrap .sub span {
   display: inline-block;
-  margin: 0 10px 0 5px;
+  margin-right: 10px;
   padding: 4px 8px 3px 8px;
   color: #3C5296;
   border: 1px solid #3C5296;
   border-radius: 11px;
 }
 .projects .project .sub_wrap .sub dl {
-  margin: 30px 0;
+  margin: 20px 0;
 }
 .projects .project .sub_wrap .sub dl dt {
   margin: 15px 0 5px 0;
@@ -99,7 +99,7 @@ header {
   display: inline-block;
   position: relative;
   margin-right: 10px;
-  padding: 10px 18px 8px 18px;
+  padding: 10px 20px 8px 20px;
   border-radius: 10px;
   overflow: hidden;
   transition: 0.5s;
