@@ -7,7 +7,7 @@
   top: -100px;
   background: $m_color;
 
-  h2{
+  h2 {
     position: absolute;
     top: 38%;
     left: 25%;
@@ -22,7 +22,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  
+
   #scroll_down {
     position: relative;
     top: 75%;
@@ -96,9 +96,9 @@
 
 // 어바웃
 #about {
-  @include box(70%);
+  @include box;
   position: relative;
-  padding: 50px 3vw 100px 3vw;
+  padding: 50px 4vw 100px 4vw;
 
   .swiper-wrapper {
     .swiper-slide {
@@ -174,7 +174,7 @@
         justify-content: center;
         column-gap: 4vw;
         row-gap: 2vw;
-        margin: 1vw;
+        margin: 1vw 2vw;
 
         li {
           &:hover {
@@ -204,7 +204,7 @@
   .swiper-button-prev,
   .swiper-button-next {
     top: auto;
-    bottom: 13%;
+    bottom: 100px;
     width: 40px;
     height: 40px;
     border: 1px solid $m_color;
@@ -213,11 +213,11 @@
 
   .swiper-button-prev {
     left: auto;
-    right: 120px;
+    right: 150px;
   }
 
   .swiper-button-next {
-    right: 70px;
+    right: 100px;
   }
 
   .swiper-button-prev::after,
@@ -230,8 +230,8 @@
     @include arch_con;
     position: absolute;
     top: 120px;
-    right: 12vw;
-    padding: 20px 35px;
+    right: 16vw;
+    padding: 1.2vw 2vw;
     background: $m_color;
     z-index: 9;
 
@@ -319,7 +319,7 @@
 
 // 프로젝트
 #projects {
-  @include box(70%);
+  @include box;
 
   .category {
     position: relative;
@@ -548,7 +548,7 @@
 
 // 컨택트
 #contact {
-  @include box(70%);
+  @include box;
 
   .con_wrap {
     width: 100%;
@@ -605,7 +605,8 @@
       .front {
         background-image: url(../images/me2.jpg);
         background-size: cover;
-        P{
+
+        P {
           position: absolute;
           top: 63%;
           left: 18%;

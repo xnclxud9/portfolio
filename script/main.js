@@ -7,7 +7,7 @@ let skilText = document.querySelector(".arch .skil_t span");
 // 어바웃 슬라이드
 const swiper = new Swiper(".mySwiper", {
   slidesPerView: "1",
-  spaceBetween: 60,
+  spaceBetween: 500,
   loop: true,
   navigation: {
     nextEl: ".swiper-button-next",

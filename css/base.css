@@ -18,6 +18,10 @@ a {
   font-size: 0.75rem;
 }
 
+button {
+  font-family: "RIDIBatang", "맑은 고딕", sans-serif;
+}
+
 .hidden {
   display: none;
 }/*# sourceMappingURL=base.css.map */

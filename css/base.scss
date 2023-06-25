@@ -28,6 +28,10 @@ a {
   font-size: $fontSize;
 }
 
+button {
+  font-family: 'RIDIBatang', '맑은 고딕', sans-serif;
+}
+
 .hidden {
   display: none;
 }
@@ -75,8 +79,8 @@ a {
 }
 
 // 아티클
-@mixin box($width) {
-  width: $width;
+@mixin box {
+  width: 75%;
   padding: 50px 0 100px 0;
   margin: 0 auto;
 
@@ -89,11 +93,13 @@ a {
 
 // 어바웃
 @mixin about_slide {
+  width: 100%;
+  height: 500px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 30px;
-  padding-right: 28vw;
+  padding-right: 30vw;
 
   h3 {
     display: inline-block;
@@ -173,4 +179,8 @@ a {
   color: $m_color;
   border: 1px solid $m_color;
   border-radius: 11px;
+}
+
+@mixin active {
+  filter: brightness(1);
 }

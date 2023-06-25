@@ -24,9 +24,9 @@
   <!-- 스크롤 이벤트 -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <!-- swiper slide -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <!-- slick slide -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <!-- 공통 스크립트 -->
   <script src="./script/common.js" defer></script>
   <!-- 프로젝트 스크립트 -->
@@ -49,12 +49,10 @@
   </header>
 
   <!-- 메인 -->
-  <main class="projects swiper mySwiper">
-    <div class="swiper-button-prev">prev</div>
-    <div class="swiper-button-next">next</div>
-    <div class="project_wrap swiper-wrapper">
+  <main>
+    <div class="project_wrap">
       <!-- 캐논아카데미 사용자 -->
-      <section id="canon_user" class="project swiper-slide">
+      <section id="canon_user" class="project">
         <h2>캐논아카데미 홈페이지(사용자) 리뉴얼 프로젝트</h2>
         <div class="sub_wrap">
           <img src="./images/canon_user.jpg" alt="캐논 사용자 목업">
@@ -92,7 +90,7 @@
       </section>
 
       <!-- 캐논아카데미 관리자 -->
-      <section id="canon_admin" class="project swiper-slide">
+      <section id="canon_admin" class="project">
         <h2>캐논아카데미 홈페이지(관리자) 리뉴얼 프로젝트</h2>
         <div class="sub_wrap">
           <img src="./images/canon_admin.jpg" alt="캐논 관리자 목업">
@@ -119,7 +117,7 @@
               <dd>url 파라미터 값으로 페이지 이동을 제어할 수 있는 방법을 배움</dd>
             </dl>
             <a href="./file/canon_admin.pdf" title="PDF" target="_blank" rel="noopener noreferrer">PDF</a>
-            <a href="http://endingfairy.dothome.co.kr/Ending_fairy/adm/index.php" title="링크 바로가기" target="_blank"
+            <a href="http://xnclxud9.dothome.co.kr/CANON/adm/index.php" title="링크 바로가기" target="_blank"
               rel="noopener noreferrer">Demo Link</a>
             <p>관리자 ID : admin, PASS : admin</p>
           </div>
@@ -131,7 +129,7 @@
       </section>
 
       <!-- 펫프렌즈 -->
-      <section id="petfriends" class="project swiper-slide">
+      <section id="petfriends" class="project">
         <h2>펫프렌즈 홈페이지 리뉴얼 프로젝트</h2>
         <div class="sub_wrap">
           <img src="./images/petfriends.jpg" alt="펫프렌즈 목업">
@@ -162,12 +160,37 @@
         </div>
         <div class="con">
           <p>Preview</p>
-
+          <ul>
+            <li>
+              <img src="./images/petfriends01.gif" alt="">
+              <div>
+                <h3>메인 페이지의 메뉴</h3>
+                <p>기능 구현</p>
+                <p>- </p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3>메인 페이지의 신제품</h3>
+                <p>카테고리 분류 기능 구현</p>
+                <p>- </p>
+              </div>
+              <img src="./images/petfriends03.gif" alt="">
+            </li>
+            <li>
+              <img src="./images/petfriends03.gif" alt="">
+              <div>
+                <h3>로그인 페이지</h3>
+                <p>로그인, 아이디 저장 기능 구현</p>
+                <p>- </p>
+              </div>
+            </li>
+          </ul>
         </div>
       </section>
 
       <!-- 이마트 -->
-      <section id="emart" class="project swiper-slide">
+      <section id="emart" class="project">
         <h2>이마트 홈페이지 리뉴얼 프로젝트</h2>
         <div class="sub_wrap">
           <img src="./images/emart.jpg" alt="이마트 목업">
@@ -234,10 +257,10 @@
       </section>
 
       <!-- 프라이탁 -->
-      <section id="freitag" class="project swiper-slide">
+      <section id="freitag" class="project">
         <h2>FREITAG 홈페이지 리뉴얼 프로젝트</h2>
         <div class="sub_wrap">
-          <img src="./images/freitag.jpg" alt="freitag 목업">
+          <img src="./images/freitag.jpg" alt="프라이탁 목업">
           <div class="sub">
             <span>2023.02.08 ~ 2023.02.15</span><span>개인 프로젝트</span><span>적응형</span>
             <dl>
@@ -299,10 +322,10 @@
       </section>
 
       <!-- 티지아이 -->
-      <section id="tgi" class="project swiper-slide">
+      <section id="tgi" class="project">
         <h2>TGI FRIDAYS 홈페이지 리뉴얼 프로젝트</h2>
         <div class="sub_wrap">
-          <img src="./images/tgi.jpg" alt="tgi 목업">
+          <img src="./images/tgi.jpg" alt="티지아이 목업">
           <div class="sub">
             <span>2022.12.20 ~ 2023.01.20</span><span>팀 프로젝트</span><span>반응형</span>
             <dl>
@@ -362,6 +385,34 @@
         </div>
       </section>
     </div>
+
+    <!-- 슬라이드 내비 -->
+    <ul class="slide_nav">
+      <li>
+        <p>캐논아카데미 홈페이지(사용자) 리뉴얼 프로젝트</p>
+        <img src="./images/canon_user.jpg" alt="캐논 사용자 목업">
+      </li>
+      <li>
+        <p>캐논아카데미 홈페이지(관리자) 리뉴얼 프로젝트</p>
+        <img src="./images/canon_admin.jpg" alt="캐논 관리자 목업">
+      </li>
+      <li>
+        <p>펫프렌즈 홈페이지 리뉴얼 프로젝트</p>
+        <img src="./images/petfriends.jpg" alt="펫프렌즈 목업">
+      </li>
+      <li>
+        <p>이마트 홈페이지 리뉴얼 프로젝트</p>
+        <img src="./images/emart.jpg" alt="이마트 목업">
+      </li>
+      <li>
+        <p>FREITAG 홈페이지 리뉴얼 프로젝트</p>
+        <img src="./images/freitag.jpg" alt="프라이탁 목업">
+      </li>
+      <li>
+        <p>TGI FRIDAYS 홈페이지 리뉴얼 프로젝트</p>
+        <img src="./images/tgi.jpg" alt="티지아이 목업">
+      </li>
+    </ul>
   </main>
 
   <!-- 푸터 -->
