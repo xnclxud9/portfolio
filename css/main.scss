@@ -6,22 +6,30 @@
   height: 100vh;
   top: -100px;
   background: $m_color;
+  color: $t_color01;
 
-  h2 {
+  p {
     position: absolute;
     top: 35%;
     left: 50%;
     transform: translateX(-50%);
-    color: $t_color01;
+    font-size: 20px;
+  }
+
+  h2 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 100px;
   }
 
   nav {
     @include nav;
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
   }
 
   #scroll_down {
@@ -62,7 +70,6 @@
     }
 
     .scroll_title {
-      color: $t_color01;
       font-size: 1rem;
       font-weight: bold;
       letter-spacing: .2rem;
@@ -392,6 +399,7 @@
       width: 100%;
       height: 480px;
       margin: 50px 0;
+      cursor: pointer;
 
       &::after {
         content: '';
@@ -401,6 +409,19 @@
         height: 1px;
         bottom: -50px;
         background: $t_color;
+      }
+
+      &:hover {
+        .p_img {
+          >img {
+            scale: .98;
+            border-radius: 25% 0 25% 0;
+          }
+
+          .arrow {
+            animation: arrow 1s ease-in-out infinite;
+          }
+        }
       }
 
       .p_img {
@@ -422,22 +443,7 @@
         }
 
         .arrow {
-          position: absolute;
-          display: inline-block;
-          transform: translate(-40px, 225px);
-        }
-
-        &:hover {
-          a {
-            >img {
-              scale: .98;
-              border-radius: 25% 0 25% 0;
-            }
-
-            .arrow {
-              animation: arrow 1s ease-in-out infinite;
-            }
-          }
+          transform: translate(-40px, 0px);
         }
       }
 
@@ -532,15 +538,15 @@
 
 @keyframes arrow {
   0% {
-    transform: translate(-40px, 225px);
+    transform: translate(-40px, 0px);
   }
 
   50% {
-    transform: translate(-30px, 225px);
+    transform: translate(-30px, 0px);
   }
 
   100% {
-    transform: translate(-40px, 225px);
+    transform: translate(-40px, 0px);
   }
 }
 

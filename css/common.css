@@ -52,9 +52,12 @@ footer .t_btn {
   bottom: 50px;
   width: 40px;
   height: 40px;
+  padding: 5px;
+  border-radius: 50%;
   background: #fff;
   color: #3C5296;
   font-size: 1.125rem;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2039215686);
   z-index: 9999;
 }
 footer .t_btn i.fas {

@@ -29,9 +29,12 @@ footer {
     bottom: 50px;
     width: 40px;
     height: 40px;
+    padding: 5px;
+    border-radius: 50%;
     background: $t_color01;
     color: $m_color;
     font-size: $fontSize02;
+    box-shadow: 1px 1px 5px 1px #00000034;
     z-index: 9999;
   }
 

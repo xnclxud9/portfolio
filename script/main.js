@@ -58,3 +58,14 @@ tab.forEach((item, idx) => {
     actStyle(idx);
   });
 });
+
+
+// 프로젝트 주소 연결
+const project = document.querySelectorAll('.unit');
+
+project.forEach((item) => {
+  item.addEventListener('click', () => {
+    const link = item.dataset.id;
+    location.href = `project.html?${link}`;
+  });
+});
