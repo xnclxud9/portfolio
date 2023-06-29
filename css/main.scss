@@ -9,8 +9,9 @@
 
   h2 {
     position: absolute;
-    top: 38%;
-    left: 25%;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
     color: $t_color01;
     font-size: 100px;
   }

@@ -172,7 +172,7 @@ header {
 
 .slide_nav {
   width: 100%;
-  margin-bottom: 50px;
+  margin: 50px 0;
 
   li {
     margin: 0 10px;
@@ -181,11 +181,15 @@ header {
     cursor: pointer;
 
     p {
+      width: 100%;
+      padding: 20px 0;
       background: #ffffff9f;
       font-size: $fontSize01;
       text-align: center;
-      line-height: 50px;
-      transform: translateY(125px);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
     }
 
     img {
