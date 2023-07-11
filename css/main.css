@@ -314,6 +314,7 @@ button {
   font-size: 1.75rem;
   color: #3C5296;
   font-weight: bold;
+  text-transform: uppercase;
 }
 #about .arch .skil div {
   display: none;
@@ -535,6 +536,12 @@ button {
 #projects .project .petfriends .p_bottom .color span:nth-child(4) {
   background: #E2DFDA;
 }
+#projects .project .vibe .p_bottom .color span:nth-child(2) {
+  background: linear-gradient(135deg, #fe0929, #a805ad 50%, #7601f9);
+}
+#projects .project .vibe .p_bottom .color span:nth-child(3) {
+  background: #000;
+}
 #projects .project .canon .p_bottom .color span:nth-child(2) {
   background: #DE0010;
 }
@@ -623,14 +630,14 @@ button {
   font-style: italic;
 }
 #contact .con_wrap .email .front {
-  background-image: url(../images/con02.png);
+  background-image: url(../images/email.png);
   background-size: cover;
 }
 #contact .con_wrap .phone {
   left: -2.7vw;
 }
 #contact .con_wrap .phone .front {
-  background-image: url(../images/con01.jpg);
+  background-image: url(../images/phone.jpg);
   background-size: cover;
 }
 #contact .con_wrap .phone .front span {
