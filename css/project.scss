@@ -40,12 +40,13 @@ header {
     .sub_wrap {
       padding: 30px;
       display: flex;
+      align-items: center;
       gap: 3vw;
       border-bottom: 1px solid $t_color;
 
       img {
         width: 60%;
-        height: 600px;
+        height: 620px;
         object-fit: cover;
       }
 
@@ -57,16 +58,16 @@ header {
         }
 
         dl {
-          margin: 20px 0;
+          margin: 15px 0;
 
           dt {
-            margin: 15px 0 5px 0;
+            margin: 12px 0 5px 0;
             font-size: $fontSize01;
             font-weight: bold;
           }
 
           dd {
-            line-height: 1.6;
+            line-height: 1.5;
             font-size: $fontSize01;
           }
         }
@@ -163,6 +164,10 @@ header {
           h3 {
             font-size: $fontSize01;
             font-weight: bold;
+          }
+
+          p {
+            font-size: $fontSize01;
           }
         }
       }

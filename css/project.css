@@ -88,12 +88,13 @@ header nav .gnb a:hover:before, header nav .gnb a:hover:after {
 .project_wrap .project .sub_wrap {
   padding: 30px;
   display: flex;
+  align-items: center;
   gap: 3vw;
   border-bottom: 1px solid #333;
 }
 .project_wrap .project .sub_wrap img {
   width: 60%;
-  height: 600px;
+  height: 620px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -109,15 +110,15 @@ header nav .gnb a:hover:before, header nav .gnb a:hover:after {
   border-radius: 11px;
 }
 .project_wrap .project .sub_wrap .sub dl {
-  margin: 20px 0;
+  margin: 15px 0;
 }
 .project_wrap .project .sub_wrap .sub dl dt {
-  margin: 15px 0 5px 0;
+  margin: 12px 0 5px 0;
   font-size: 0.875rem;
   font-weight: bold;
 }
 .project_wrap .project .sub_wrap .sub dl dd {
-  line-height: 1.6;
+  line-height: 1.5;
   font-size: 0.875rem;
 }
 .project_wrap .project .sub_wrap .sub a {
@@ -200,6 +201,9 @@ header nav .gnb a:hover:before, header nav .gnb a:hover:after {
 .project_wrap .project .con ul li h3 {
   font-size: 0.875rem;
   font-weight: bold;
+}
+.project_wrap .project .con ul li p {
+  font-size: 0.875rem;
 }
 
 .slide_nav {

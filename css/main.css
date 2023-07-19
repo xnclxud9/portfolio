@@ -38,14 +38,14 @@ button {
   top: 35%;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 20px;
+  font-size: 1.3vw;
 }
 #main_visu h2 {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 100px;
+  font-size: 6vw;
 }
 #main_visu nav {
   position: absolute;
