@@ -8,6 +8,7 @@ $(function () {
     asNavFor: '.slide_nav',
   });
 
+  // 내비 슬라이드
   $('.slide_nav').slick({
     slidesToShow: 3,
     arrows: false,
@@ -16,15 +17,24 @@ $(function () {
     asNavFor: '.project_wrap',
   });
 
-  $('.slide_nav').on('afterChange', function () {
+  $('.project_wrap').on('afterChange', function () {
     $('html, body').animate({
       scrollTop: 100
     }, 300);
+
+    // 슬라이드 높이 변경
+    let currentSlide = $('.project_wrap').slick('slickCurrentSlide');
+
+    s_h = $('.project_wrap .slick-slide').eq(currentSlide + 1).outerHeight();
+
+    $('.project_wrap .slick-list').height(s_h);
+    // console.log(s_h);
+
     return false;
   });
 
   p_id = $(location).attr('href').split('?')[1];
-  console.log(p_id);
+  // console.log(p_id);
 
   switch (p_id) {
     case "canon_admin":
