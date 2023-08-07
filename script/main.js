@@ -1,3 +1,25 @@
+// 메인 상단
+const heading = document.querySelector('.heading');
+const characters = heading.textContent.match(/[\w\W]/g);
+heading.textContent = '';
+
+characters.forEach(char => {
+  const span = document.createElement('span');
+  span.textContent = char;
+  heading.appendChild(span);
+});
+
+let char = 0;
+let timer = setInterval(setChar, 100);
+
+function setChar() {
+  const spanChar = document.querySelectorAll('span')[char];
+  spanChar.className = 'fade';
+  char++;
+  char === characters.length && clearInterval(timer);
+};
+
+
 // 어바웃
 let arch_con = document.querySelectorAll(".arch_con");
 let arch_p = document.querySelectorAll(".arch_con div");

@@ -47,6 +47,16 @@ button {
   transform: translateX(-50%);
   font-size: 6vw;
 }
+#main_visu h2 span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: all 0.4s ease-in-out;
+}
+#main_visu h2 .fade {
+  opacity: 1;
+  transform: translateY(0);
+}
 #main_visu nav {
   position: absolute;
   top: 55%;
@@ -439,6 +449,7 @@ button {
   background: #333;
 }
 #projects .project .unit:hover .p_img > img {
+  filter: brightness(0.6);
   scale: 0.98;
   border-radius: 25% 0 25% 0;
 }

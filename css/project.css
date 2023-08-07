@@ -105,7 +105,7 @@ header nav .gnb a:hover:before, header nav .gnb a:hover:after {
 .project_wrap .project .sub_wrap .sub span {
   display: inline-block;
   margin-right: 10px;
-  padding: 4px 8px 3px 8px;
+  padding: 5px 8px 3px 8px;
   color: #3C5296;
   border: 1px solid #3C5296;
   border-radius: 11px;

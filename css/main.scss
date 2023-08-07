@@ -22,6 +22,18 @@
     left: 50%;
     transform: translateX(-50%);
     font-size: 6vw;
+
+    span {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(-100%);
+      transition: all 0.4s ease-in-out
+    }
+
+    .fade {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   nav {
@@ -415,6 +427,7 @@
       &:hover {
         .p_img {
           >img {
+            filter: brightness(0.6);
             scale: .98;
             border-radius: 25% 0 25% 0;
           }
