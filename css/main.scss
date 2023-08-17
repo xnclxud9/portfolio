@@ -159,7 +159,6 @@
           transition: .5s ease;
         }
 
-
         &:hover::before {
           width: 100%;
         }
@@ -188,6 +187,9 @@
     }
 
     .skil {
+      p{
+        font-size: $fontSize01;
+      }
       ul {
         display: flex;
         flex-wrap: wrap;

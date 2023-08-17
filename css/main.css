@@ -242,6 +242,9 @@ button {
 #about .swiper-wrapper .profile > a img {
   margin-left: 8px;
 }
+#about .swiper-wrapper .skil p {
+  font-size: 0.875rem;
+}
 #about .swiper-wrapper .skil ul {
   display: flex;
   flex-wrap: wrap;
