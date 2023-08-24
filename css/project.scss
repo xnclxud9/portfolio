@@ -159,7 +159,6 @@ header {
             max-height: 500px;
             border: 1px solid;
             object-fit: contain;
-
           }
 
           h3 {
@@ -211,6 +210,86 @@ header {
 
     &:hover {
       @include active;
+    }
+  }
+}
+
+@include mobile {
+  .project_wrap {
+    button {
+      top: 77px;
+
+      &.slick-prev {
+        left: 20px;
+      }
+
+      &.slick-next {
+        right: 20px;
+      }
+    }
+
+    .project {
+      padding: 50px 6vw 0 6vw;
+
+      h2 {
+        padding: 20px 60px;
+        font-size: $fontSize02;
+      }
+
+      .sub_wrap {
+        display: block;
+        padding: 30px 0;
+
+        img {
+          width: 100%;
+          height: 200px;
+        }
+
+        .sub {
+          width: 100%;
+
+          span {
+            margin-right: 4px;
+          }
+        }
+      }
+
+      .con {
+        >p {
+          padding: 30px 0;
+        }
+
+        ul {
+          gap: 100px;
+
+          li {
+            padding: 0;
+            flex-direction: column;
+            gap: 20px;
+
+            &:nth-child(2) {
+              flex-direction: column-reverse;
+            }
+
+            img {
+              max-width: 100%;
+              max-height: 100%;
+            }
+
+            div {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .slide_nav {
+    li {
+      img {
+        height: 150px;
+      }
     }
   }
 }

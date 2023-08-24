@@ -791,6 +791,7 @@ button {
     gap: 4px;
   }
   #projects .project .unit .p_img {
+    width: 100%;
     top: 34px;
     left: 0;
     z-index: -9;
@@ -827,7 +828,7 @@ button {
   }
   #contact .con_wrap .con {
     width: 34%;
-    height: 142px;
+    height: 44vw;
   }
   #contact .con_wrap .con a {
     font-size: 0.875rem;
@@ -840,5 +841,13 @@ button {
     top: 30px;
     left: 10px;
     text-align: left;
+  }
+  #contact .con_wrap .phone .front span {
+    width: 40px;
+    height: 40px;
+  }
+  #contact .con_wrap .phone .front span i {
+    top: 10px;
+    font-size: 1.25rem;
   }
 }/*# sourceMappingURL=main.css.map */

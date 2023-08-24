@@ -15,6 +15,15 @@ $(function () {
     centerMode: true,
     focusOnSelect: true,
     asNavFor: '.project_wrap',
+    responsive: [ // 반응형 웹 구현 옵션
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+
   });
 
   $('.project_wrap').on('afterChange', function () {

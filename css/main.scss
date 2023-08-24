@@ -867,6 +867,7 @@
         }
 
         .p_img {
+          width: 100%;
           top: 34px;
           left: 0;
           z-index: -9;
@@ -918,7 +919,7 @@
 
       .con {
         width: calc(170%/5);
-        height: 142px;
+        height: 44vw;
 
         a {
           font-size: $fontSize01;
@@ -937,6 +938,20 @@
           }
         }
 
+      }
+
+      .phone {
+        .front {
+          span {
+            width: 40px;
+            height: 40px;
+
+            i {
+              top: 10px;
+              font-size: $fontSize03;
+            }
+          }
+        }
       }
     }
   }
