@@ -10,6 +10,7 @@ $fontSize01: 0.875rem; // 14px
 $fontSize02: 1.125rem; // 18px
 $fontSize03: 1.250rem; // 20px
 $fontSize04: 1.750rem; // 28px
+$fontSize05: 2rem; // 32px
 
 $m_color: #3C5296;
 $t_color: #333;
@@ -34,6 +35,29 @@ button {
 
 .hidden {
   display: none;
+}
+
+// 반응형
+$breakpoint-mobile: 0px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+@mixin mobile {
+  @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$breakpoint-desktop}) {
+    @content;
+  }
 }
 
 // 내비 서식
@@ -112,7 +136,7 @@ button {
   .a_title {
     p {
       font-size: 22px;
-      line-height: 32px;
+      line-height: $fontSize05;
 
       span {
         color: $m_color;

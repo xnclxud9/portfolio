@@ -30,6 +30,7 @@ let skilText = document.querySelector(".arch .skil_t span");
 const swiper = new Swiper(".mySwiper", {
   slidesPerView: "1",
   spaceBetween: 500,
+  autoHeight: true,
   loop: true,
   navigation: {
     nextEl: ".swiper-button-next",
@@ -47,7 +48,7 @@ const swiper = new Swiper(".mySwiper", {
 
 // 스킬 이름 변경
 skil.forEach((item, idx) => {
-  item.addEventListener("mouseenter", function () {
+  item.addEventListener("click", function () {
     skilText.innerHTML = this.dataset.skil;
     arch_p.forEach((item) => {
       item.style.display = "none"

@@ -9,6 +9,8 @@
   color: $t_color01;
 
   p {
+    width: 100%;
+    text-align: center;
     position: absolute;
     top: 35%;
     left: 50%;
@@ -17,6 +19,8 @@
   }
 
   h2 {
+    width: 100%;
+    text-align: center;
     position: absolute;
     top: 40%;
     left: 50%;
@@ -187,9 +191,10 @@
     }
 
     .skil {
-      p{
+      p {
         font-size: $fontSize01;
       }
+
       ul {
         display: flex;
         flex-wrap: wrap;
@@ -202,23 +207,17 @@
           &:hover {
             animation: rubberBand 1s infinite;
           }
-        }
 
-        li:nth-child(2n) {
-          margin-top: 20px;
-        }
+          &:nth-child(2n) {
+            margin-top: 20px;
+          }
 
-        img {
-          height: 70px;
-          transition: .4s;
-          cursor: pointer;
+          img {
+            height: 70px;
+            transition: .4s;
+            cursor: pointer;
+          }
         }
-      }
-    }
-
-    .logo {
-      .a_con {
-        margin-bottom: 11vw;
       }
     }
   }
@@ -289,7 +288,7 @@
 
       div {
         display: none;
-        margin: 0 15px;
+        margin: 0 0 0 15px;
         font-size: $fontSize01;
         line-height: 22px;
 
@@ -440,13 +439,27 @@
         }
       }
 
+      h3 {
+        display: inline-block;
+        position: relative;
+        top: 32px;
+        padding: 8px 12px;
+        background: #ffffff9f;
+        z-index: 999;
+        font-size: $fontSize05;
+      }
+
+      .p_top {
+        @include p_detail;
+        order: -1;
+      }
+
       .p_img {
         position: absolute;
         display: flex;
         align-items: center;
         top: 0;
         left: 14vw;
-        cursor: pointer;
 
         .mockup {
           width: 42vw;
@@ -461,21 +474,6 @@
         .arrow {
           transform: translate(-40px, 0px);
         }
-      }
-
-      h3 {
-        display: inline-block;
-        position: relative;
-        top: 32px;
-        padding: 8px 12px;
-        background: #ffffff9f;
-        z-index: 999;
-        font-size: 32px;
-      }
-
-      .p_top {
-        @include p_detail;
-        order: -1;
       }
 
       .p_bottom {
@@ -685,3 +683,265 @@
 }
 
 // 컨택트 끝
+
+
+// 모바일 시작
+@include mobile {
+
+  //상단 비주얼
+  #main_visu {
+    p {
+      top: max(15%, 100px);
+      font-size: 5vw;
+    }
+
+    h2 {
+      top: max(20%, 130px);
+      font-size: 15vw;
+    }
+
+    nav {
+      top: max(45%, 230px);
+
+      .gnb {
+        gap: 6vw;
+        flex-direction: column;
+        align-items: center;
+
+        a {
+          font-size: $fontSize05;
+        }
+      }
+    }
+  }
+
+  // 상단 비주얼 끝
+
+
+  // 어바웃
+  #about {
+    width: 100%;
+    padding: 50px 6vw 100px 6vw;
+
+    .swiper-wrapper {
+      .swiper-slide {
+        height: auto;
+        gap: 15px;
+        padding-right: 0;
+
+        .a_title {
+          p {
+            font-size: $fontSize02;
+            line-height: $fontSize04;
+          }
+        }
+
+        .a_con {
+          p {
+            font-size: $fontSize;
+            line-height: $fontSize03;
+          }
+        }
+      }
+
+      .profile {
+        .tag {
+          span {
+            line-height: $fontSize02;
+          }
+        }
+
+        >a {
+          padding: 0 60px 0 0;
+        }
+      }
+
+      .skil {
+        ul {
+          margin: 0;
+          justify-content: space-between;
+
+          li {
+            img {
+              height: 60px;
+            }
+          }
+
+        }
+      }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      bottom: 20px;
+    }
+
+    .swiper-button-prev {
+      left: 30px;
+    }
+
+    .swiper-button-next {
+      left: 80px;
+    }
+
+    .arch {
+      position: static;
+      width: 85%;
+      height: 350px;
+      margin: 20px 0 0 10px;
+      padding: 5vw 0 0 7vw;
+
+      .arch_con:not(.profile) {
+        width: 110%;
+        height: 350px;
+      }
+
+      .profile {
+        img {
+          width: 110%;
+          height: 350px;
+        }
+      }
+
+      .skil {
+        .skil_t {
+          text-align: center;
+          font-size: $fontSize02;
+          line-height: $fontSize04;
+          margin: 20px 0;
+
+          span {
+            font-size: $fontSize03;
+          }
+        }
+
+        div {
+          line-height: $fontSize03;
+        }
+      }
+
+      .logo {
+        img {
+          width: 70px;
+        }
+
+        dl {
+          margin: 25px 5px;
+        }
+      }
+    }
+  }
+
+  // 어바웃 끝
+
+  // 프로젝트
+  #projects {
+    width: 100%;
+    padding: 50px 6vw 100px 6vw;
+
+    .year {
+      display: none;
+    }
+
+    .project {
+      .unit {
+        height: 350px;
+        margin: 30px 0;
+
+        &::after {
+          bottom: -30px;
+        }
+
+        h3 {
+          position: static;
+          width: 100%;
+          padding: 15px 0;
+          text-align: center;
+          font-size: $fontSize03;
+        }
+
+        .p_top {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 4px;
+        }
+
+        .p_img {
+          top: 34px;
+          left: 0;
+          z-index: -9;
+
+          .mockup {
+            width: 100%;
+            height: 230px;
+          }
+
+          .arrow {
+            display: none;
+          }
+        }
+
+        .p_bottom {
+          display: block;
+
+          div {
+            p {
+              margin: 6px 0;
+            }
+          }
+
+          >p {
+            margin-top: 10px;
+            text-align: right;
+            font-weight: bold;
+
+            &::after {
+              content: '>';
+              display: inline-block;
+              margin-left: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // 프로젝트 끝
+
+  // 컨택트
+  #contact {
+    width: 100%;
+    padding: 0 6vw 100px 6vw;
+
+    .con_wrap {
+      display: flex;
+
+      .con {
+        width: calc(170%/5);
+        height: 142px;
+
+        a {
+          font-size: $fontSize01;
+        }
+      }
+
+      .resume {
+        .front {
+          background-size: 180%;
+          background-position: bottom;
+
+          p {
+            top: 30px;
+            left: 10px;
+            text-align: left;
+          }
+        }
+
+      }
+    }
+  }
+
+  // 컨택트 끝
+}
+
+// 모바일 끝
