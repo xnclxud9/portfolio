@@ -1,567 +1,842 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이승아 포트폴리오</title>
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.jpg" />
+    <!-- 초기화 -->
+    <link rel="stylesheet" href="./css/reset.css" type="text/css" />
+    <!-- 기본서식, 공통서식 -->
+    <link rel="stylesheet" href="./css/base.css" type="text/css" />
+    <link rel="stylesheet" href="./css/common.css" type="text/css" />
+    <!-- 프로젝트서식 -->
+    <link rel="stylesheet" href="./css/project.css" type="text/css" />
+    <!-- 폰트어썸 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <!-- css 애니메이션 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- 제이쿼리 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!-- 스크롤 이벤트 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- slick slide -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- 공통 스크립트 -->
+    <script src="./script/common.js" defer></script>
+    <!-- 프로젝트 스크립트 -->
+    <script src="./script/project.js" defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>이승아 포트폴리오</title>
-  <!-- 파비콘 -->
-  <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.jpg">
-  <!-- 초기화 -->
-  <link rel="stylesheet" href="./css/reset.css" type="text/css">
-  <!-- 기본서식, 공통서식 -->
-  <link rel="stylesheet" href="./css/base.css" type="text/css">
-  <link rel="stylesheet" href="./css/common.css" type="text/css">
-  <!-- 프로젝트서식 -->
-  <link rel="stylesheet" href="./css/project.css" type="text/css">
-  <!-- 폰트어썸 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-  <!-- css 애니메이션 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-  <!-- 제이쿼리 -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <!-- 스크롤 이벤트 -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <!-- slick slide -->
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-  <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <!-- 공통 스크립트 -->
-  <script src="./script/common.js" defer></script>
-  <!-- 프로젝트 스크립트 -->
-  <script src="./script/project.js" defer></script>
-</head>
+  <body>
+    <!-- 헤더 -->
+    <header class="animate__animated animate__fadeInDown">
+      <h1>
+        <a href="index.html" title="메인으로 바로가기"
+          ><img src="./images/logo.png" alt="상단 로고"
+        /></a>
+      </h1>
+      <nav>
+        <ul class="gnb">
+          <li><a href="index.html#about" title="about">About</a></li>
+          <li><a href="index.html#projects" title="projects">Projects</a></li>
+          <li><a href="index.html#contact" title="contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-<body>
-  <!-- 헤더 -->
-  <header class="animate__animated animate__fadeInDown">
-    <h1>
-      <a href="index.html" title="메인으로 바로가기"><img src="./images/logo.png" alt="상단 로고"></a>
-    </h1>
-    <nav>
-      <ul class="gnb">
-        <li><a href="index.html#about" title="about">About</a></li>
-        <li><a href="index.html#projects" title="projects">Projects</a></li>
-        <li><a href="index.html#contact" title="contact">Contact</a></li>
+    <!-- 메인 -->
+    <main>
+      <div class="project_wrap">
+        <!-- 투두 -->
+        <section id="todo" class="project">
+          <h2>투두 리스트 제작 프로젝트</h2>
+          <div class="sub_wrap">
+            <img src="./images/todo.jpg" alt="투두 목업" />
+            <div class="sub">
+              <span>2024.01.26</span><span>개인 프로젝트</span>
+              <dl>
+                <dt>프로젝트 개요</dt>
+                <dd>리액트 컴포넌트를 활용하여 목록을 관리하는 페이지 제작</dd>
+                <dt>프로젝트 목적</dt>
+                <dd>React 활용 능력 함양</dd>
+                <dd>useState, useEffect를 통한 상태관리로 목록 기능 구현</dd>
+                <dd>Context를 통한 전역 데이터 관리 경험</dd>
+                <dd>PostCSS 사용 경험</dd>
+                <dt>사용 언어</dt>
+                <dd>React, PostCSS</dd>
+                <dt>주요 기능</dt>
+                <dd>목록 추가, 삭제 기능 구현</dd>
+                <dd>전체, 진행 중, 완료 카테고리 구현</dd>
+                <dd>다크모드 구현</dd>
+                <dd>페이지 새로고침 시 데이터 유지 기능 구현</dd>
+                <dt>트러블슈팅 경험</dt>
+                <dd>
+                  문제: 모든 label 클릭 시 첫 번째 항목의 checkbox가 체크되는
+                  현상 발생
+                </dd>
+                <dd>
+                  해결: 항목 생성 시 동일한 id를 사용하여 발생한 오류로, uuid를
+                  통해 랜덤 값을 id로 부여하여 해결
+                </dd>
+                <dt>느낀 점</dt>
+                <dd>
+                  useState 사용 시 컴포넌트가 리렌더링될 때마다 초깃값이 다시
+                  전달되기 때문에 함수를 콜백함수로 호출해야 한단 걸 깨달음
+                </dd>
+                <dd>
+                  useEffect을 사용하여 JSON으로 변환한 데이터를 LocalStorage에
+                  저장하여 유지하는 법을 배움
+                </dd>
+                <dd>Context를 사용하여 전역 데이터를 관리하는 경험을 함</dd>
+                <dd>
+                  PostCSS를 통해 css를 모듈화하여 오버라이딩을 방지하는 법을
+                  배움
+                </dd>
+              </dl>
+              <a
+                href="https://gorgeous-creponne-1208dc.netlify.app/"
+                title="링크 바로가기"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Demo Link</a
+              >
+            </div>
+          </div>
+          <div class="con">
+            <p>Preview</p>
+            <ul>
+              <li>
+                <img src="./images/todo01.gif" alt="todo 추가" />
+                <div>
+                  <h3>메인 페이지</h3>
+                  <p>- 할 일 추가, 삭제 기능 구현</p>
+                  <p>- 입력된 값을 객체로 만들어서 배열 데이터에 추가하기</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>메인 페이지</h3>
+                  <p>- 다크모드 구현</p>
+                  <p>
+                    - Context로 전역 데이터를 관리하여 다크모드 구현하고 상태
+                    유지하기
+                  </p>
+                </div>
+                <img src="./images/todo02.gif" alt="todo 수정" />
+              </li>
+              <li>
+                <img src="./images/todo03.gif" alt="todo 삭제" />
+                <div>
+                  <h3>메인 페이지</h3>
+                  <p>- 페이지 새로고침 시 데이터 유지 기능 구현</p>
+                  <p>
+                    - useEffect를 사용하여 JSON으로 변환한 데이터를
+                    LocalStorage에 저장하여 유지하기
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- 캐논아카데미 사용자 -->
+        <section id="canon_user" class="project">
+          <h2>캐논아카데미 홈페이지(사용자) 리뉴얼 프로젝트</h2>
+          <div class="sub_wrap">
+            <img src="./images/canon_user.jpg" alt="캐논 사용자 목업" />
+            <div class="sub">
+              <span>2023.04.27 ~ 2023.05.19</span><span>팀 프로젝트</span
+              ><span>MOBILE버전</span>
+              <dl>
+                <dt>프로젝트 개요</dt>
+                <dd>
+                  학습자를 위한 MOBILE에 최적화된 LMS(학습지원시스템) 웹 사이트
+                  개발
+                </dd>
+                <dt>프로젝트 목적</dt>
+                <dd>페르소나 설정을 통해 UI/UX분석 경험</dd>
+                <dd>학습자용 정보구조, 화면구조, 데이터베이스 설계 경험</dd>
+                <dd>PHP, SQL 데이터베이스를 사용한 장바구니 기능 구현</dd>
+                <dd>오픈 라이브러리와 API 사용 경험</dd>
+                <dt>사용 언어</dt>
+                <dd>HTML, CSS, SASS, JavaScript, jQuery, PHP, MySQL</dd>
+                <dt>맡은 역할&middot;기능</dt>
+                <dd>메인 페이지, 강의, 검색 페이지 개발</dd>
+                <dd>메인 페이지 강의 - 이중 탭메뉴 기능 구현</dd>
+                <dd>메인 페이지 수강평 - 자동 슬라이드 기능 구현</dd>
+                <dd>강의 페이지 리스트 - 탭메뉴로 목록 출력 기능 구현</dd>
+                <dd>강의 페이지 상세보기 - 강의 데이터 출력 기능 구현</dd>
+                <dd>검색 페이지 - 태그 검색 기능 구현</dd>
+                <dt>트러블슈팅 경험</dt>
+                <dd>
+                  문제: 메인 강의에 이중 탭메뉴가 각각 동작하지 않고 중복으로
+                  작동되는 현상 발생
+                </dd>
+                <dd>
+                  해결: 첫 번째 탭메뉴는 라디오버튼을 활용한 css로, 두 번째
+                  탭메뉴는 자바스크립트로 구현하여 따로 동작하도록 해결
+                </dd>
+                <dt>느낀 점</dt>
+                <dd>
+                  게시판 글쓰기와 챗봇 기능을 구현하며 다양한 라이브러리와 API
+                  사용법을 배움
+                </dd>
+                <dd>
+                  PHP 정규 표현식을 사용하며 문자열을 표현하는 방법을 배움
+                </dd>
+              </dl>
+              <a
+                href="./file/canon_user.pdf"
+                title="PDF"
+                target="_blank"
+                rel="noopener noreferrer"
+                >프로젝트 PDF</a
+              >
+              <a
+                href="http://endingfairy.dothome.co.kr/Ending_fairy/index.php"
+                title="링크 바로가기"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Demo Link</a
+              >
+              <p>사용자 ID : qwer, PASS : 1234</p>
+            </div>
+          </div>
+          <div class="con">
+            <p>Preview</p>
+            <ul>
+              <li>
+                <img src="./images/canon_user01.gif" alt="canon 강의" />
+                <div>
+                  <h3>메인 페이지의 강의</h3>
+                  <p>
+                    - 사용자의 편의를 위해 강의 목록을 이중 탭메뉴와 swiper.js
+                    플러그인을 사용하여 슬라이드로 구현
+                  </p>
+                  <p>
+                    - 두 개의 탭메뉴를 라디오버튼과 자바스크립트로 나눠서 각각
+                    동작하게 하기
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>메인 페이지의 수강평</h3>
+                  <p>
+                    - 정보 제공을 위한 수강평을 swiper.js 플러그인을 사용하여
+                    슬라이드로 구현
+                  </p>
+                  <p>
+                    - preg_replace를 활용한 정규 표현식 변환으로 회원 이름을
+                    별표 처리하기
+                  </p>
+                  <p>
+                    - 빈 별과 채워진 별 이미지를 겹친 후 별점에 따라 채워진 별
+                    이미지를 clip으로 잘라서 출력하기
+                  </p>
+                </div>
+                <img src="./images/canon_user02.gif" alt="canon 수강평" />
+              </li>
+              <li>
+                <img src="./images/canon_user03.gif" alt="canon 검색" />
+                <div>
+                  <h3>검색 페이지</h3>
+                  <p>- form 태그를 사용하여 검색 기능 구현</p>
+                  <p>
+                    - a의 title 속성을 활용해서 href를 변경하는 방법으로 검색
+                    결과 출력하기
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- 캐논아카데미 관리자 -->
+        <section id="canon_admin" class="project">
+          <h2>캐논아카데미 홈페이지(관리자) 리뉴얼 프로젝트</h2>
+          <div class="sub_wrap">
+            <img src="./images/canon_admin.jpg" alt="캐논 관리자 목업" />
+            <div class="sub">
+              <span>2023.03.28 ~ 2023.04.18</span><span>팀 프로젝트</span
+              ><span>PC버전</span>
+              <dl>
+                <dt>프로젝트 개요</dt>
+                <dd>
+                  관리자를 위한 PC에 최적화된 LMS(학습지원시스템) 웹 사이트 개발
+                </dd>
+                <dt>프로젝트 목적</dt>
+                <dd>관리자용 정보구조, 화면구조, 데이터베이스 설계 경험</dd>
+                <dd>관계형 데이터베이스 경험</dd>
+                <dd>오픈 API 사용 경험</dd>
+                <dt>사용 언어</dt>
+                <dd>HTML, CSS, JavaScript, jQuery, PHP, MySQL</dd>
+                <dt>맡은 역할&middot;기능</dt>
+                <dd>
+                  1:1문의, 쿠폰 관리 페이지와 로그인, 회원가입 페이지 개발
+                </dd>
+                <dd>각 페이지의 탭메뉴와 검색, 페이지네이션 기능 구현</dd>
+                <dd>
+                  1:1문의 관리 페이지 - 답변 여부에 따라 나누어서 출력, 답변
+                  기능 구현
+                </dd>
+                <dd>쿠폰 관리 페이지 - 쿠폰 목록 출력, 관리 기능 구현</dd>
+                <dd>로그인 페이지 - 아이디 저장, 로그인 기능 구현</dd>
+                <dd>회원가입 페이지 - 아이디 중복 확인, 회원가입 기능 구현</dd>
+                <dt>트러블슈팅 경험</dt>
+                <dd>
+                  문제: 탭메뉴와 페이지네이션의 동작 방식 차이 때문에 페이지가
+                  새로고침되는 현상 발생
+                </dd>
+                <dd>
+                  해결: 탭메뉴 li에 parameter 값을 부여해서 클릭 시 url 값을
+                  변경하여 이동하는 방식으로 해결하며 페이지를 제어하는 방식을
+                  배움
+                </dd>
+                <dt>느낀 점</dt>
+                <dd>
+                  관계형 데이터베이스를 통해 여러개의 테이블을 효율적으로
+                  관리하는 능력을 키움
+                </dd>
+                <dd>
+                  PHP에서 조건문을 사용하여 다양하게 데이터를 출력하는 경험을 함
+                </dd>
+                <dd>url 파라미터 값으로 페이지 이동을 제어하는 방법을 배움</dd>
+              </dl>
+              <a
+                href="./file/canon_admin.pdf"
+                title="PDF"
+                target="_blank"
+                rel="noopener noreferrer"
+                >프로젝트 PDF</a
+              >
+              <a
+                href="http://xnclxud9.dothome.co.kr/CANON/adm/index.php"
+                title="링크 바로가기"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Demo Link</a
+              >
+              <p>관리자 ID : admin, PASS : admin</p>
+            </div>
+          </div>
+          <div class="con">
+            <p>Preview</p>
+            <ul>
+              <li>
+                <img src="./images/canon_admin01.gif" alt="canon 목록" />
+                <div>
+                  <h3>모든 페이지</h3>
+                  <p>- 탭메뉴와 검색, 페이지네이션 기능 구현</p>
+                  <p>
+                    - 탭메뉴 li에 parameter 값을 부여해서 클릭 시 페이지의 url
+                    값을 변경하여 해당하는 목록 보이게 하기
+                  </p>
+                  <p>- form 태그를 사용하여 검색 기능</p>
+                  <p>
+                    - 한 페이지당 원하는 만큼의 데이터를 불러오는 pagination
+                    구현
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>1:1문의 페이지</h3>
+                  <p>- 답변 등록 기능 구현</p>
+                  <p>
+                    - MySQL에서 하나의 테이블에 문의와 답변을 입력 받고 질문의
+                    아이디 컬럼을 이용하여 질문이면 공백, 답변이면 질문의
+                    아이디를 부여하는 방식으로 구분
+                  </p>
+                  <p>
+                    - 답변이 등록되어 질문의 아이디를 가진 답변이 생기는 질문은
+                    답변완료 상태로 출력하기
+                  </p>
+                </div>
+                <img src="./images/canon_admin02.gif" alt="canon 답변" />
+              </li>
+              <li>
+                <img src="./images/canon_admin03.gif" alt="canon 로그인" />
+                <div>
+                  <h3>회원가입 페이지</h3>
+                  <p>- 아이디 중복 확인 기능 구현</p>
+                  <p>- 입력한 아이디와 중복되는 아이디가 있는지 확인하기</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- 펫프렌즈 -->
+        <section id="petfriends" class="project">
+          <h2>펫프렌즈 홈페이지 리뉴얼 프로젝트</h2>
+          <div class="sub_wrap">
+            <img src="./images/petfriends.jpg" alt="펫프렌즈 목업" />
+            <div class="sub">
+              <span>2023.03.20 ~ 2023.03.24</span><span>개인 프로젝트</span
+              ><span>PC버전</span>
+              <dl>
+                <dt>프로젝트 개요</dt>
+                <dd>선호하는 브랜드를 선정하여 기존 홈페이지를 리뉴얼</dd>
+                <dt>프로젝트 목적</dt>
+                <dd>PHP, SQL 데이터베이스를 사용한 로그인, 회원가입 구현</dd>
+                <dd>캐시, 쿠키 관리 경험</dd>
+                <dt>사용 언어</dt>
+                <dd>HTML, CSS, JavaScript, PHP</dd>
+                <dt>주요 기능</dt>
+                <dd>PC 메인 페이지와 로그인, 회원가입 페이지 개발</dd>
+                <dd>메인 페이지 GNB - 메뉴 클릭 시 나타나는 기능 구현</dd>
+                <dd>메인 페이지 상품 - 카테고리별 분류 기능 구현</dd>
+                <dd>메인 페이지 SNS - 캐러셀 슬라이드 기능 구현</dd>
+                <dd>로그인 페이지 - 아이디 저장, 로그인 기능 구현</dd>
+                <dd>회원가입 페이지 - 회원가입 기능 구현</dd>
+                <dt>느낀 점</dt>
+                <dd>회원가입 시 비밀번호를 암호화하여 저장하는 방법을 배움</dd>
+                <dd>
+                  아이디 저장과 로그아웃 기능을 구현하며 쿠키와 세션에 대해
+                  이해하게 됨
+                </dd>
+              </dl>
+              <a
+                href="http://xnclxud9.dothome.co.kr/PETFRIENDS/"
+                title="링크 바로가기"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Demo Link</a
+              >
+            </div>
+          </div>
+          <div class="con">
+            <p>Preview</p>
+            <ul>
+              <li>
+                <img src="./images/petfriends01.gif" alt="" />
+                <div>
+                  <h3>메인 페이지의 메뉴</h3>
+                  <p>- gnb 기능 구현</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>메인 페이지의 신제품</h3>
+                  <p>- 카테고리 분류 기능 구현</p>
+                </div>
+                <img src="./images/petfriends02.gif" alt="" />
+              </li>
+              <li>
+                <img src="./images/petfriends03.gif" alt="" />
+                <div>
+                  <h3>로그인 페이지</h3>
+                  <p>- 로그인, 아이디 저장 기능 구현</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- 이마트 -->
+        <section id="emart" class="project">
+          <h2>이마트 홈페이지 리뉴얼 프로젝트</h2>
+          <div class="sub_wrap">
+            <img src="./images/emart.jpg" alt="이마트 목업" />
+            <div class="sub">
+              <span>2023.02.06 ~ 2023.03.15</span><span>팀 프로젝트</span
+              ><span>적응형</span>
+              <dl>
+                <dt>프로젝트 개요</dt>
+                <dd>
+                  시가총액 100대 기업 중 한 곳을 선정하여 기존 홈페이지를 적응형
+                  웹으로 리뉴얼
+                </dd>
+                <dt>프로젝트 목적</dt>
+                <dd>적응형 웹 제작 능력 함양</dd>
+                <dd>Git, GitHub를 통한 형상관리, 협업 경험</dd>
+                <dd>PHP, SQL 데이터베이스를 사용한 데이터 입력, 출력 경험</dd>
+                <dd>카카오 지도 API 활용</dd>
+                <dd>meta tag를 통한 SEO(검색엔진 최적화) 경험</dd>
+                <dt>사용 언어</dt>
+                <dd>HTML, CSS, JavaScript, jQuery, PHP, MySQL</dd>
+                <dt>맡은 역할&middot;기능</dt>
+                <dd>
+                  PC와 MOBILE 메인 페이지와 입사 지원, 지원 현황 페이지 개발
+                </dd>
+                <dd>메인 페이지 - 풀페이지 스크롤 기능 구현</dd>
+                <dd>
+                  메인 페이지 매장 정보 - 매장명 선택 시 정보 변경 기능 구현
+                </dd>
+                <dd>채용 페이지 지원하기 - 데이터 입력 기능 구현</dd>
+                <dd>채용 페이지 지원현황 - 데이터 출력 기능 구현</dd>
+                <dt>트러블슈팅 경험</dt>
+                <dd>
+                  문제: 모바일 GNB의 서브 메뉴를 연속으로 빠르게 탭하면 탭한만큼
+                  동작하는 현상 발생
+                </dd>
+                <dd>
+                  해결: stop 메서드를 추가하여 탭할 시에 이전 동작을 취소시켜서
+                  해결
+                </dd>
+                <dt>느낀 점</dt>
+                <dd>
+                  기획자, 디자이너의 요구대로 구현하기 위해 여러번 회의를 하며
+                  소통 능력을 키움
+                </dd>
+                <dd>GitHub를 통해 협업하며 버전 관리의 중요성을 느낌</dd>
+                <dd>
+                  MySQL로 테이블을 만들고 PHP로 데이터를 수집, 출력하며
+                  데이터베이스에 대해 이해하게 됨
+                </dd>
+              </dl>
+              <a
+                href="./file/emart.pdf"
+                title="PDF"
+                target="_blank"
+                rel="noopener noreferrer"
+                >프로젝트 PDF</a
+              >
+              <a
+                href="http://xnclxud9.dothome.co.kr/EMART/index.html"
+                title="링크 바로가기"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Demo Link - PC</a
+              >
+              <a
+                href="http://xnclxud9.dothome.co.kr/EMART/m_index.html"
+                title="링크 바로가기"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Demo Link - MOBILE</a
+              >
+            </div>
+          </div>
+          <div class="con">
+            <p>Preview</p>
+            <ul>
+              <li>
+                <img src="./images/emart01.gif" alt="이마트 풀페이지" />
+                <div>
+                  <h3>메인 페이지</h3>
+                  <p>
+                    - fullpage.js 플러그인 사용하여 풀페이지 스크롤 기능 구현
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>메인 페이지의 매장 정보</h3>
+                  <p>- JavaScript를 사용하여 정보 변경 기능 구현</p>
+                  <p>
+                    - 아이콘에 마우스 오버 시 replace로 파일 확장자를 변경하여
+                    움직이는 아이콘 출력
+                  </p>
+                </div>
+                <img src="./images/emart02.gif" alt="이마트 매장 정보" />
+              </li>
+              <li>
+                <img src="./images/emart03.gif" alt="이마트 지원하기" />
+                <div>
+                  <h3>메인 페이지의 지원하기</h3>
+                  <p>- PHP를 사용하여 데이터 입력, 출력 기능 구현</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- 프라이탁 -->
+        <section id="freitag" class="project">
+          <h2>FREITAG 홈페이지 리뉴얼 프로젝트</h2>
+          <div class="sub_wrap">
+            <img src="./images/freitag.jpg" alt="프라이탁 목업" />
+            <div class="sub">
+              <span>2023.02.08 ~ 2023.02.15</span><span>개인 프로젝트</span
+              ><span>적응형</span>
+              <dl>
+                <dt>프로젝트 개요</dt>
+                <dd>
+                  선호하는 브랜드를 선정하여 기존 홈페이지를 적응형 웹으로
+                  리뉴얼
+                </dd>
+                <dt>프로젝트 목적</dt>
+                <dd>적응형 웹 제작 능력 함양</dd>
+                <dd>장치 유형 식별을 위한 userAgent 사용 경험</dd>
+                <dd>JavaScript의 effect, event 메서드 활용</dd>
+                <dd>Ajax를 사용한 JSON 데이터 출력 경험</dd>
+                <dt>사용 언어</dt>
+                <dd>HTML, CSS, JavaScript, jQuery, Ajax</dd>
+                <dt>주요 기능</dt>
+                <dd>PC와 MOBILE 메인 페이지 개발</dd>
+                <dd>
+                  메인 페이지 상단 배너 - 자동 슬라이드, 내비게이션 버튼 기능
+                  구현
+                </dd>
+                <dd>메인 페이지 어바웃 - 탭메뉴 기능 구현</dd>
+                <dd>메인 페이지 아이템 - 아코디언 기능 구현</dd>
+                <dd>메인 페이지 이벤트 - 자동 슬라이드 기능 구현</dd>
+                <dd>메인 페이지 SNS - Ajax를 사용하여 더 보기 기능 구현</dd>
+                <dt>트러블슈팅 경험</dt>
+                <dd>
+                  문제: 메인 슬라이드를 처음 실행했을 때 fadeOut이 순차적으로
+                  처리되어 이미지가 깜빡이는 현상 발생
+                </dd>
+                <dd>
+                  해결: css에서 미리 첫 번째 슬라이드를 제외한 나머지의 display
+                  속성을 none 하는 방법으로 해결하며 자바스크립트의 비동기
+                  처리에 대해 이해함
+                </dd>
+                <dt>느낀 점</dt>
+                <dd>
+                  혼자 개발하는 과정에서 스스로 문제점을 찾고 해결하며 뿌듯함을
+                  느낌
+                </dd>
+                <dd>JavaScript로 여러 효과를 구현하며 응용 하는 능력을 키움</dd>
+                <dd>JSON으로 데이터를 쉽게 관리하는 방법을 배움</dd>
+              </dl>
+              <a
+                href="http://xnclxud9.dothome.co.kr/FREITAG/index.html"
+                title="링크 바로가기"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Demo Link - PC</a
+              >
+              <a
+                href="http://xnclxud9.dothome.co.kr/FREITAG/mindex.html"
+                title="링크 바로가기"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Demo Link - MOBILE</a
+              >
+            </div>
+          </div>
+          <div class="con">
+            <p>Preview</p>
+            <ul>
+              <li>
+                <img src="./images/freitag01.gif" alt="프라이탁 어바웃" />
+                <div>
+                  <h3>메인 페이지의 어바웃</h3>
+                  <p>- 사용자의 흥미를 유발하는 동적인 탭메뉴 기능 구현</p>
+                  <p>
+                    - JavaScript로 forEach문을 사용하여 클릭한 li에 해당하는
+                    콘텐츠만 display 속성 block 하기
+                  </p>
+                  <p>
+                    - offset 속성을 활용하여 li의 left와 width값을 구하고 클릭
+                    시 검정 배경이 이동하기
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>메인 페이지의 아이템</h3>
+                  <p>
+                    - 사용자가 원하는 콘텐츠만 볼 수 있는 아코디언 기능 구현
+                  </p>
+                  <p>
+                    - JavaScript로 for of문을 사용하여 클릭한 콘텐츠만 클래스
+                    부여하여 서식 바꾸기
+                  </p>
+                </div>
+                <img src="./images/freitag02.gif" alt="프라이탁 아이템" />
+              </li>
+              <li>
+                <img src="./images/freitag03.gif" alt="프라이탁 SNS" />
+                <div>
+                  <h3>메인 페이지의 SNS</h3>
+                  <p>- 웹페이지 속도 향상을 위한 더 보기 기능 구현</p>
+                  <p>
+                    - Ajax를 사용하여 비동기 방식으로 JSON 데이터를 불러오고 더
+                    보기 클릭 시 출력되게 하기
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- 티지아이 -->
+        <section id="tgi" class="project">
+          <h2>TGI FRIDAYS 홈페이지 리뉴얼 프로젝트</h2>
+          <div class="sub_wrap">
+            <img src="./images/tgi.jpg" alt="티지아이 목업" />
+            <div class="sub">
+              <span>2022.12.20 ~ 2023.01.20</span><span>팀 프로젝트</span
+              ><span>반응형</span>
+              <dl>
+                <dt>프로젝트 개요</dt>
+                <dd>
+                  홍보가 필요한 브랜드를 선정하여 기존 홈페이지를 트렌드에 맞게
+                  반응형 웹으로 리뉴얼
+                </dd>
+                <dt>프로젝트 목적</dt>
+                <dd>반응형 웹 제작 능력 함양</dd>
+                <dd>팀원들과의 협업 경험으로 커뮤니케이션 능력 향상</dd>
+                <dd>JavaScript를 사용하여 다양한 슬라이드 구현</dd>
+                <dd>
+                  디바이스별 테스트, 웹 표준 검사, 크로스 브라우징, 접근성 검사
+                  경험
+                </dd>
+                <dt>사용 언어</dt>
+                <dd>HTML, CSS, JavaScript, jQuery</dd>
+                <dt>맡은 역할&middot;기능</dt>
+                <dd>
+                  메인 페이지 멤버십 - 마우스 오버 시 배경 이미지 변경 기능 구현
+                </dd>
+                <dd>메인 페이지 이벤트 - 자동 슬라이드 기능 구현</dd>
+                <dd>로그인 페이지 배너 - 자동 슬라이드 기능 구현</dd>
+                <dd>반응형 작업</dd>
+                <dd>다른 팀원이 작성한 코드 취합 및 오류 수정</dd>
+                <dt>트러블슈팅 경험</dt>
+                <dd>
+                  문제: 멤버십 배너 li에 마우스 오버 시 다른 li의 가상 요소
+                  before가 안 보이는 현상 발생
+                </dd>
+                <dd>
+                  해결: 각 이미지에 z-index 값을 부여해서 해결하며 요소들의 쌓임
+                  맥락을 이해하게 됨
+                </dd>
+                <dt>느낀 점</dt>
+                <dd>
+                  처음으로 기획부터 개발까지 모든 프로세스를 경험하며 팀원들과
+                  소통하는 방법을 배움
+                </dd>
+                <dd>
+                  css와 JavaScript 선택자를 적절히 사용하여 효율적으로 코딩하는
+                  방법을 깨달음
+                </dd>
+                <dd>
+                  팀원이 작성한 코드를 수정하는 작업을 하며 디버깅 능력을 키움
+                </dd>
+              </dl>
+              <a
+                href="./file/tgi.pdf"
+                title="PDF"
+                target="_blank"
+                rel="noopener noreferrer"
+                >프로젝트 PDF</a
+              >
+              <a
+                href="https://xnclxud9.github.io/TGI/"
+                title="링크 바로가기"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Demo Link</a
+              >
+            </div>
+          </div>
+          <div class="con">
+            <p>Preview</p>
+            <ul>
+              <li>
+                <img src="./images/tgi01.gif" alt="tgi 멤버십" />
+                <div>
+                  <h3>메인 페이지의 멤버십</h3>
+                  <p>
+                    - 사용자의 흥미를 유발하는 동적인 효과를 위해 마우스 오버 시
+                    배경 이미지 변경 기능 구현
+                  </p>
+                  <p>
+                    - css로 이미지를 겹친 후 jQuery를 사용하여 li에 마우스 오버
+                    시 해당 이미지만 show하고 나머지 hide 하기
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>메인 페이지의 이벤트</h3>
+                  <p>
+                    - 사용자의 편의를 위해 3초마다 자동으로 넘어가는 슬라이드
+                    기능 구현
+                  </p>
+                  <p>
+                    - JavaScript를 사용하여 이미지 2장의 넓이를 구한 뒤 3초마다
+                    넓이만큼 왼쪽으로 이동하기
+                  </p>
+                </div>
+                <img src="./images/tgi02.gif" alt="tgi 이벤트" />
+              </li>
+              <li>
+                <img src="./images/tgi03.gif" alt="tgi 로그인" />
+                <div>
+                  <h3>로그인 페이지 배너</h3>
+                  <p>
+                    - 사용자의 편의를 위해 3초마다 자동으로 넘어가는 슬라이드
+                    기능 구현
+                  </p>
+                  <p>
+                    - jQuery를 사용하여 이미지 넓이를 구한 뒤 3초마다 넓이만큼
+                    왼쪽으로 이동하기
+                  </p>
+                  <p>
+                    - 반응형 작업에서 이미지 크기 변경을 위해 onresize 이벤트를
+                    사용하여 페이지가 reload되는 함수 추가
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <!-- 슬라이드 내비 -->
+      <ul class="slide_nav">
+        <li>
+          <p>바이브 노래 차트 페이지 제작 프로젝트</p>
+          <img src="./images/todo.jpg" alt="투두 목업" />
+        </li>
+        <li>
+          <p>캐논아카데미 홈페이지(사용자) 리뉴얼 프로젝트</p>
+          <img src="./images/canon_user.jpg" alt="캐논 사용자 목업" />
+        </li>
+        <li>
+          <p>캐논아카데미 홈페이지(관리자) 리뉴얼 프로젝트</p>
+          <img src="./images/canon_admin.jpg" alt="캐논 관리자 목업" />
+        </li>
+        <li>
+          <p>펫프렌즈 홈페이지 리뉴얼 프로젝트</p>
+          <img src="./images/petfriends.jpg" alt="펫프렌즈 목업" />
+        </li>
+        <li>
+          <p>이마트 홈페이지 리뉴얼 프로젝트</p>
+          <img src="./images/emart.jpg" alt="이마트 목업" />
+        </li>
+        <li>
+          <p>FREITAG 홈페이지 리뉴얼 프로젝트</p>
+          <img src="./images/freitag.jpg" alt="프라이탁 목업" />
+        </li>
+        <li>
+          <p>TGI FRIDAYS 홈페이지 리뉴얼 프로젝트</p>
+          <img src="./images/tgi.jpg" alt="티지아이 목업" />
+        </li>
       </ul>
-    </nav>
-  </header>
+    </main>
 
-  <!-- 메인 -->
-  <main>
-    <div class="project_wrap">
-      <!-- 캐논아카데미 사용자 -->
-      <section id="canon_user" class="project">
-        <h2>캐논아카데미 홈페이지(사용자) 리뉴얼 프로젝트</h2>
-        <div class="sub_wrap">
-          <img src="./images/canon_user.jpg" alt="캐논 사용자 목업">
-          <div class="sub">
-            <span>2023.04.27 ~ 2023.05.19</span><span>팀 프로젝트</span><span>MOBILE버전</span>
-            <dl>
-              <dt>프로젝트 개요</dt>
-              <dd>학습자를 위한 MOBILE에 최적화된 LMS(학습지원시스템) 웹 사이트 개발</dd>
-              <dt>프로젝트 목적</dt>
-              <dd>페르소나 설정을 통해 UI/UX분석 경험</dd>
-              <dd>학습자용 정보구조, 화면구조, 데이터베이스 설계 경험</dd>
-              <dd>PHP, SQL 데이터베이스를 사용한 장바구니 기능 구현</dd>
-              <dd>오픈 라이브러리와 API 사용 경험</dd>
-              <dt>사용 언어</dt>
-              <dd>HTML, CSS, SASS, JavaScript, jQuery, PHP, MySQL</dd>
-              <dt>맡은 역할&middot;기능</dt>
-              <dd>메인 페이지, 강의, 검색 페이지 개발</dd>
-              <dd>메인 페이지 강의 - 이중 탭메뉴 기능 구현</dd>
-              <dd>메인 페이지 수강평 - 자동 슬라이드 기능 구현</dd>
-              <dd>강의 페이지 리스트 - 탭메뉴로 목록 출력 기능 구현</dd>
-              <dd>강의 페이지 상세보기 - 강의 데이터 출력 기능 구현</dd>
-              <dd>검색 페이지 - 태그 검색 기능 구현</dd>
-              <dt>트러블슈팅 경험</dt>
-              <dd>문제: 메인 강의에 이중 탭메뉴가 각각 동작하지 않고 중복으로 작동되는 현상 발생</dd>
-              <dd>해결: 첫 번째 탭메뉴는 라디오버튼을 활용한 css로, 두 번째 탭메뉴는 자바스크립트로 구현하여 따로 동작하도록 해결</dd>
-              <dt>느낀 점</dt>
-              <dd>게시판 글쓰기와 챗봇 기능을 구현하며 다양한 라이브러리와 API 사용법을 배움</dd>
-              <dd>PHP 정규 표현식을 사용하며 문자열을 표현하는 방법을 배움</dd>
-            </dl>
-            <a href="./file/canon_user.pdf" title="PDF" target="_blank" rel="noopener noreferrer">프로젝트 PDF</a>
-            <a href="http://endingfairy.dothome.co.kr/Ending_fairy/index.php" title="링크 바로가기" target="_blank"
-              rel="noopener noreferrer">Demo Link</a>
-            <p>사용자 ID : qwer, PASS : 1234</p>
-          </div>
-        </div>
-        <div class="con">
-          <p>Preview</p>
-          <ul>
-            <li>
-              <img src="./images/canon_user01.gif" alt="canon 강의">
-              <div>
-                <h3>메인 페이지의 강의</h3>
-                <p>- 사용자의 편의를 위해 강의 목록을 이중 탭메뉴와 swiper.js 플러그인을 사용하여 슬라이드로 구현</p>
-                <p>- 두 개의 탭메뉴를 라디오버튼과 자바스크립트로 나눠서 각각 동작하게 하기</p>
-              </div>
-            </li>
-            <li>
-              <div>
-                <h3>메인 페이지의 수강평</h3>
-                <p>- 정보 제공을 위한 수강평을 swiper.js 플러그인을 사용하여 슬라이드로 구현</p>
-                <p>- preg_replace를 활용한 정규 표현식 변환으로 회원 이름을 별표 처리하기</p>
-                <p>- 빈 별과 채워진 별 이미지를 겹친 후 별점에 따라 채워진 별 이미지를 clip으로 잘라서 출력하기</p>
-              </div>
-              <img src="./images/canon_user02.gif" alt="canon 수강평">
-            </li>
-            <li>
-              <img src="./images/canon_user03.gif" alt="canon 검색">
-              <div>
-                <h3>검색 페이지</h3>
-                <p>- form 태그를 사용하여 검색 기능 구현</p>
-                <p>- a의 title 속성을 활용해서 href를 변경하는 방법으로 검색 결과 출력하기</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- 캐논아카데미 관리자 -->
-      <section id="canon_admin" class="project">
-        <h2>캐논아카데미 홈페이지(관리자) 리뉴얼 프로젝트</h2>
-        <div class="sub_wrap">
-          <img src="./images/canon_admin.jpg" alt="캐논 관리자 목업">
-          <div class="sub">
-            <span>2023.03.28 ~ 2023.04.18</span><span>팀 프로젝트</span><span>PC버전</span>
-            <dl>
-              <dt>프로젝트 개요</dt>
-              <dd>관리자를 위한 PC에 최적화된 LMS(학습지원시스템) 웹 사이트 개발</dd>
-              <dt>프로젝트 목적</dt>
-              <dd>관리자용 정보구조, 화면구조, 데이터베이스 설계 경험</dd>
-              <dd>관계형 데이터베이스 경험</dd>
-              <dd>오픈 API 사용 경험</dd>
-              <dt>사용 언어</dt>
-              <dd>HTML, CSS, JavaScript, jQuery, PHP, MySQL</dd>
-              <dt>맡은 역할&middot;기능</dt>
-              <dd>1:1문의, 쿠폰 관리 페이지와 로그인, 회원가입 페이지 개발</dd>
-              <dd>각 페이지의 탭메뉴와 검색, 페이지네이션 기능 구현</dd>
-              <dd>1:1문의 관리 페이지 - 답변 여부에 따라 나누어서 출력, 답변 기능 구현</dd>
-              <dd>쿠폰 관리 페이지 - 쿠폰 목록 출력, 관리 기능 구현</dd>
-              <dd>로그인 페이지 - 아이디 저장, 로그인 기능 구현</dd>
-              <dd>회원가입 페이지 - 아이디 중복 확인, 회원가입 기능 구현</dd>
-              <dt>트러블슈팅 경험</dt>
-              <dd>문제: 탭메뉴와 페이지네이션의 동작 방식 차이 때문에 페이지가 새로고침되는 현상 발생</dd>
-              <dd>해결: 탭메뉴 li에 parameter 값을 부여해서 클릭 시 url 값을 변경하여 이동하는 방식으로 해결하며 페이지를 제어하는 방식을 배움</dd>
-              <dt>느낀 점</dt>
-              <dd>관계형 데이터베이스를 통해 여러개의 테이블을 효율적으로 관리하는 능력을 키움</dd>
-              <dd>PHP에서 조건문을 사용하여 다양하게 데이터를 출력하는 경험을 함</dd>
-              <dd>url 파라미터 값으로 페이지 이동을 제어하는 방법을 배움</dd>
-            </dl>
-            <a href="./file/canon_admin.pdf" title="PDF" target="_blank" rel="noopener noreferrer">프로젝트 PDF</a>
-            <a href="http://xnclxud9.dothome.co.kr/CANON/adm/index.php" title="링크 바로가기" target="_blank"
-              rel="noopener noreferrer">Demo Link</a>
-            <p>관리자 ID : admin, PASS : admin</p>
-          </div>
-        </div>
-        <div class="con">
-          <p>Preview</p>
-          <ul>
-            <li>
-              <img src="./images/canon_admin01.gif" alt="canon 목록">
-              <div>
-                <h3>모든 페이지</h3>
-                <p>- 탭메뉴와 검색, 페이지네이션 기능 구현</p>
-                <p>- 탭메뉴 li에 parameter 값을 부여해서 클릭 시 페이지의 url 값을 변경하여 해당하는 목록 보이게 하기</p>
-                <p>- form 태그를 사용하여 검색 기능</p>
-                <p>- 한 페이지당 원하는 만큼의 데이터를 불러오는 pagination 구현</p>
-              </div>
-            </li>
-            <li>
-              <div>
-                <h3>1:1문의 페이지</h3>
-                <p>- 답변 등록 기능 구현</p>
-                <p>- MySQL에서 하나의 테이블에 문의와 답변을 입력 받고 질문의 아이디 컬럼을 이용하여 질문이면 공백, 답변이면 질문의 아이디를 부여하는 방식으로 구분</p>
-                <p>- 답변이 등록되어 질문의 아이디를 가진 답변이 생기는 질문은 답변완료 상태로 출력하기</p>
-              </div>
-              <img src="./images/canon_admin02.gif" alt="canon 답변">
-            </li>
-            <li>
-              <img src="./images/canon_admin03.gif" alt="canon 로그인">
-              <div>
-                <h3>회원가입 페이지</h3>
-                <p>- 아이디 중복 확인 기능 구현</p>
-                <p>- 입력한 아이디와 중복되는 아이디가 있는지 확인하기</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- 바이브 -->
-      <section id="vibe" class="project">
-        <h2>바이브 노래 차트 페이지 제작 프로젝트</h2>
-        <div class="sub_wrap">
-          <img src="./images/vibe.jpg" alt="바이브 목업">
-          <div class="sub">
-            <span>2023.03.27</span><span>개인 프로젝트</span><span>반응형</span>
-            <dl>
-              <dt>프로젝트 개요</dt>
-              <dd>리액트 컴포넌트를 활용하여 목록을 관리하는 페이지 제작</dd>
-              <dt>프로젝트 목적</dt>
-              <dd>React 활용 능력 함양</dd>
-              <dd>useState를 통한 상태관리로 목록 기능 구현</dd>
-              <dd>swiper.js 플러그인 사용 경험</dd>
-              <dd>map 함수를 이용한 배열 데이터 출력 경험</dd>
-              <dt>사용 언어</dt>
-              <dd>React, CSS</dd>
-              <dt>주요 기능</dt>
-              <dd>메인 페이지 개발</dd>
-              <dd>메인 페이지 배너 - 스와이퍼 슬라이드 기능 구현</dd>
-              <dd>메인 페이지 목록 - 노래 추가, 수정, 삭제 기능 구현</dd>
-              <dt>느낀 점</dt>
-              <dd>React에서 json 형식의 데이터를 불러오고 출력하는 경험을 함</dd>
-              <dd>useState를 사용하여 함수형 컴포넌트에서 State를 관리하며 상태관리에 대해 이해하게 됨</dd>
-              <dd>map 함수 사용하여 배열 데이터 출력하는 방법을 배움</dd>
-            </dl>
-            <a href="https://xnclxud9.github.io/vibe/" title="링크 바로가기" target="_blank" rel="noopener noreferrer">Demo
-              Link</a>
-          </div>
-        </div>
-        <div class="con">
-          <p>Preview</p>
-          <ul>
-            <li>
-              <img src="./images/vibe01.gif" alt="vibe 추가">
-              <div>
-                <h3>메인 페이지</h3>
-                <p>- 노래 추가 기능 구현</p>
-                <p>- 입력된 값을 객체로 만들어서 배열 데이터에 추가하기</p>
-              </div>
-            </li>
-            <li>
-              <div>
-                <h3>메인 페이지</h3>
-                <p>- 노래 수정 기능 구현</p>
-                <p>- state를 사용하여 값이 변경되는 함수 만들기</p>
-              </div>
-              <img src="./images/vibe02.gif" alt="vibe 수정">
-            </li>
-            <li>
-              <img src="./images/vibe03.gif" alt="vibe 삭제">
-              <div>
-                <h3>메인 페이지</h3>
-                <p>- 노래 삭제 기능 구현</p>
-                <p>- filter 메서드를 사용하여 데이터 삭제하기</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- 펫프렌즈 -->
-      <section id="petfriends" class="project">
-        <h2>펫프렌즈 홈페이지 리뉴얼 프로젝트</h2>
-        <div class="sub_wrap">
-          <img src="./images/petfriends.jpg" alt="펫프렌즈 목업">
-          <div class="sub">
-            <span>2023.03.20 ~ 2023.03.24</span><span>개인 프로젝트</span><span>PC버전</span>
-            <dl>
-              <dt>프로젝트 개요</dt>
-              <dd>선호하는 브랜드를 선정하여 기존 홈페이지를 리뉴얼</dd>
-              <dt>프로젝트 목적</dt>
-              <dd>PHP, SQL 데이터베이스를 사용한 로그인, 회원가입 구현</dd>
-              <dd>캐시, 쿠키 관리 경험</dd>
-              <dt>사용 언어</dt>
-              <dd>HTML, CSS, JavaScript, PHP</dd>
-              <dt>주요 기능</dt>
-              <dd>PC 메인 페이지와 로그인, 회원가입 페이지 개발</dd>
-              <dd>메인 페이지 GNB - 메뉴 클릭 시 나타나는 기능 구현</dd>
-              <dd>메인 페이지 상품 - 카테고리별 분류 기능 구현</dd>
-              <dd>메인 페이지 SNS - 캐러셀 슬라이드 기능 구현</dd>
-              <dd>로그인 페이지 - 아이디 저장, 로그인 기능 구현</dd>
-              <dd>회원가입 페이지 - 회원가입 기능 구현</dd>
-              <dt>느낀 점</dt>
-              <dd>회원가입 시 비밀번호를 암호화하여 저장하는 방법을 배움</dd>
-              <dd>아이디 저장과 로그아웃 기능을 구현하며 쿠키와 세션에 대해 이해하게 됨</dd>
-            </dl>
-            <a href="http://xnclxud9.dothome.co.kr/PETFRIENDS/" title="링크 바로가기" target="_blank"
-              rel="noopener noreferrer">Demo Link</a>
-          </div>
-        </div>
-        <div class="con">
-          <p>Preview</p>
-          <ul>
-            <li>
-              <img src="./images/petfriends01.gif" alt="">
-              <div>
-                <h3>메인 페이지의 메뉴</h3>
-                <p>- gnb 기능 구현</p>
-              </div>
-            </li>
-            <li>
-              <div>
-                <h3>메인 페이지의 신제품</h3>
-                <p>- 카테고리 분류 기능 구현</p>
-              </div>
-              <img src="./images/petfriends02.gif" alt="">
-            </li>
-            <li>
-              <img src="./images/petfriends03.gif" alt="">
-              <div>
-                <h3>로그인 페이지</h3>
-                <p>- 로그인, 아이디 저장 기능 구현</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- 이마트 -->
-      <section id="emart" class="project">
-        <h2>이마트 홈페이지 리뉴얼 프로젝트</h2>
-        <div class="sub_wrap">
-          <img src="./images/emart.jpg" alt="이마트 목업">
-          <div class="sub">
-            <span>2023.02.06 ~ 2023.03.15</span><span>팀 프로젝트</span><span>적응형</span>
-            <dl>
-              <dt>프로젝트 개요</dt>
-              <dd>시가총액 100대 기업 중 한 곳을 선정하여 기존 홈페이지를 적응형 웹으로 리뉴얼</dd>
-              <dt>프로젝트 목적</dt>
-              <dd>적응형 웹 제작 능력 함양</dd>
-              <dd>Git, GitHub를 통한 형상관리, 협업 경험</dd>
-              <dd>PHP, SQL 데이터베이스를 사용한 데이터 입력, 출력 경험</dd>
-              <dd>카카오 지도 API 활용</dd>
-              <dd>meta tag를 통한 SEO(검색엔진 최적화) 경험</dd>
-              <dt>사용 언어</dt>
-              <dd>HTML, CSS, JavaScript, jQuery, PHP, MySQL</dd>
-              <dt>맡은 역할&middot;기능</dt>
-              <dd>PC와 MOBILE 메인 페이지와 입사 지원, 지원 현황 페이지 개발</dd>
-              <dd>메인 페이지 - 풀페이지 스크롤 기능 구현</dd>
-              <dd>메인 페이지 매장 정보 - 매장명 선택 시 정보 변경 기능 구현</dd>
-              <dd>채용 페이지 지원하기 - 데이터 입력 기능 구현</dd>
-              <dd>채용 페이지 지원현황 - 데이터 출력 기능 구현</dd>
-              <dt>트러블슈팅 경험</dt>
-              <dd>문제: 모바일 GNB의 서브 메뉴를 연속으로 빠르게 탭하면 탭한만큼 동작하는 현상 발생</dd>
-              <dd>해결: stop 메서드를 추가하여 탭할 시에 이전 동작을 취소시켜서 해결</dd>
-              <dt>느낀 점</dt>
-              <dd>기획자, 디자이너의 요구대로 구현하기 위해 여러번 회의를 하며 소통 능력을 키움</dd>
-              <dd>GitHub를 통해 협업하며 버전 관리의 중요성을 느낌</dd>
-              <dd>MySQL로 테이블을 만들고 PHP로 데이터를 수집, 출력하며 데이터베이스에 대해 이해하게 됨</dd>
-            </dl>
-            <a href="./file/emart.pdf" title="PDF" target="_blank" rel="noopener noreferrer">프로젝트 PDF</a>
-            <a href="http://xnclxud9.dothome.co.kr/EMART/index.html" title="링크 바로가기" target="_blank"
-              rel="noopener noreferrer">Demo Link - PC</a>
-            <a href="http://xnclxud9.dothome.co.kr/EMART/m_index.html" title="링크 바로가기" target="_blank"
-              rel="noopener noreferrer">Demo Link - MOBILE</a>
-          </div>
-        </div>
-        <div class="con">
-          <p>Preview</p>
-          <ul>
-            <li>
-              <img src="./images/emart01.gif" alt="이마트 풀페이지">
-              <div>
-                <h3>메인 페이지</h3>
-                <p>- fullpage.js 플러그인 사용하여 풀페이지 스크롤 기능 구현</p>
-              </div>
-            </li>
-            <li>
-              <div>
-                <h3>메인 페이지의 매장 정보</h3>
-                <p>- JavaScript를 사용하여 정보 변경 기능 구현</p>
-                <p>- 아이콘에 마우스 오버 시 replace로 파일 확장자를 변경하여 움직이는 아이콘 출력</p>
-              </div>
-              <img src="./images/emart02.gif" alt="이마트 매장 정보">
-            </li>
-            <li>
-              <img src="./images/emart03.gif" alt="이마트 지원하기">
-              <div>
-                <h3>메인 페이지의 지원하기</h3>
-                <p>- PHP를 사용하여 데이터 입력, 출력 기능 구현</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- 프라이탁 -->
-      <section id="freitag" class="project">
-        <h2>FREITAG 홈페이지 리뉴얼 프로젝트</h2>
-        <div class="sub_wrap">
-          <img src="./images/freitag.jpg" alt="프라이탁 목업">
-          <div class="sub">
-            <span>2023.02.08 ~ 2023.02.15</span><span>개인 프로젝트</span><span>적응형</span>
-            <dl>
-              <dt>프로젝트 개요</dt>
-              <dd>선호하는 브랜드를 선정하여 기존 홈페이지를 적응형 웹으로 리뉴얼</dd>
-              <dt>프로젝트 목적</dt>
-              <dd>적응형 웹 제작 능력 함양</dd>
-              <dd>장치 유형 식별을 위한 userAgent 사용 경험</dd>
-              <dd>JavaScript의 effect, event 메서드 활용</dd>
-              <dd>Ajax를 사용한 JSON 데이터 출력 경험</dd>
-              <dt>사용 언어</dt>
-              <dd>HTML, CSS, JavaScript, jQuery, Ajax</dd>
-              <dt>주요 기능</dt>
-              <dd>PC와 MOBILE 메인 페이지 개발</dd>
-              <dd>메인 페이지 상단 배너 - 자동 슬라이드, 내비게이션 버튼 기능 구현</dd>
-              <dd>메인 페이지 어바웃 - 탭메뉴 기능 구현</dd>
-              <dd>메인 페이지 아이템 - 아코디언 기능 구현</dd>
-              <dd>메인 페이지 이벤트 - 자동 슬라이드 기능 구현</dd>
-              <dd>메인 페이지 SNS - Ajax를 사용하여 더 보기 기능 구현</dd>
-              <dt>트러블슈팅 경험</dt>
-              <dd>문제: 메인 슬라이드를 처음 실행했을 때 fadeOut이 순차적으로 처리되어 이미지가 깜빡이는 현상 발생</dd>
-              <dd>해결: css에서 미리 첫 번째 슬라이드를 제외한 나머지의 display 속성을 none 하는 방법으로 해결하며 자바스크립트의 비동기 처리에 대해 이해함</dd>
-              <dt>느낀 점</dt>
-              <dd>혼자 개발하는 과정에서 스스로 문제점을 찾고 해결하며 뿌듯함을 느낌</dd>
-              <dd>JavaScript로 여러 효과를 구현하며 응용 하는 능력을 키움</dd>
-              <dd>JSON으로 데이터를 쉽게 관리하는 방법을 배움</dd>
-            </dl>
-            <a href="http://xnclxud9.dothome.co.kr/FREITAG/index.html" title="링크 바로가기" target="_blank"
-              rel="noopener noreferrer">Demo Link - PC</a>
-            <a href="http://xnclxud9.dothome.co.kr/FREITAG/mindex.html" title="링크 바로가기" target="_blank"
-              rel="noopener noreferrer">Demo Link - MOBILE</a>
-          </div>
-        </div>
-        <div class="con">
-          <p>Preview</p>
-          <ul>
-            <li>
-              <img src="./images/freitag01.gif" alt="프라이탁 어바웃">
-              <div>
-                <h3>메인 페이지의 어바웃</h3>
-                <p>- 사용자의 흥미를 유발하는 동적인 탭메뉴 기능 구현</p>
-                <p>- JavaScript로 forEach문을 사용하여 클릭한 li에 해당하는 콘텐츠만 display 속성 block 하기</p>
-                <p>- offset 속성을 활용하여 li의 left와 width값을 구하고 클릭 시 검정 배경이 이동하기</p>
-              </div>
-            </li>
-            <li>
-              <div>
-                <h3>메인 페이지의 아이템</h3>
-                <p>- 사용자가 원하는 콘텐츠만 볼 수 있는 아코디언 기능 구현</p>
-                <p>- JavaScript로 for of문을 사용하여 클릭한 콘텐츠만 클래스 부여하여 서식 바꾸기</p>
-              </div>
-              <img src="./images/freitag02.gif" alt="프라이탁 아이템">
-            </li>
-            <li>
-              <img src="./images/freitag03.gif" alt="프라이탁 SNS">
-              <div>
-                <h3>메인 페이지의 SNS</h3>
-                <p>- 웹페이지 속도 향상을 위한 더 보기 기능 구현</p>
-                <p>- Ajax를 사용하여 비동기 방식으로 JSON 데이터를 불러오고 더 보기 클릭 시 출력되게 하기</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- 티지아이 -->
-      <section id="tgi" class="project">
-        <h2>TGI FRIDAYS 홈페이지 리뉴얼 프로젝트</h2>
-        <div class="sub_wrap">
-          <img src="./images/tgi.jpg" alt="티지아이 목업">
-          <div class="sub">
-            <span>2022.12.20 ~ 2023.01.20</span><span>팀 프로젝트</span><span>반응형</span>
-            <dl>
-              <dt>프로젝트 개요</dt>
-              <dd>홍보가 필요한 브랜드를 선정하여 기존 홈페이지를 트렌드에 맞게 반응형 웹으로 리뉴얼</dd>
-              <dt>프로젝트 목적</dt>
-              <dd>반응형 웹 제작 능력 함양</dd>
-              <dd>팀원들과의 협업 경험으로 커뮤니케이션 능력 향상</dd>
-              <dd>JavaScript를 사용하여 다양한 슬라이드 구현</dd>
-              <dd>디바이스별 테스트, 웹 표준 검사, 크로스 브라우징, 접근성 검사 경험</dd>
-              <dt>사용 언어</dt>
-              <dd>HTML, CSS, JavaScript, jQuery</dd>
-              <dt>맡은 역할&middot;기능</dt>
-              <dd>메인 페이지 멤버십 - 마우스 오버 시 배경 이미지 변경 기능 구현</dd>
-              <dd>메인 페이지 이벤트 - 자동 슬라이드 기능 구현</dd>
-              <dd>로그인 페이지 배너 - 자동 슬라이드 기능 구현</dd>
-              <dd>반응형 작업</dd>
-              <dd>다른 팀원이 작성한 코드 취합 및 오류 수정</dd>
-              <dt>트러블슈팅 경험</dt>
-              <dd>문제: 멤버십 배너 li에 마우스 오버 시 다른 li의 가상 요소 before가 안 보이는 현상 발생</dd>
-              <dd>해결: 각 이미지에 z-index 값을 부여해서 해결하며 요소들의 쌓임 맥락을 이해하게 됨</dd>
-              <dt>느낀 점</dt>
-              <dd>처음으로 기획부터 개발까지 모든 프로세스를 경험하며 팀원들과 소통하는 방법을 배움</dd>
-              <dd>css와 JavaScript 선택자를 적절히 사용하여 효율적으로 코딩하는 방법을 깨달음</dd>
-              <dd>팀원이 작성한 코드를 수정하는 작업을 하며 디버깅 능력을 키움</dd>
-            </dl>
-            <a href="./file/tgi.pdf" title="PDF" target="_blank" rel="noopener noreferrer">프로젝트 PDF</a>
-            <a href="https://xnclxud9.github.io/TGI/" title="링크 바로가기" target="_blank" rel="noopener noreferrer">Demo
-              Link</a>
-          </div>
-        </div>
-        <div class="con">
-          <p>Preview</p>
-          <ul>
-            <li>
-              <img src="./images/tgi01.gif" alt="tgi 멤버십">
-              <div>
-                <h3>메인 페이지의 멤버십</h3>
-                <p>- 사용자의 흥미를 유발하는 동적인 효과를 위해 마우스 오버 시 배경 이미지 변경 기능 구현</p>
-                <p>- css로 이미지를 겹친 후 jQuery를 사용하여 li에 마우스 오버 시 해당 이미지만 show하고 나머지 hide 하기</p>
-              </div>
-            </li>
-            <li>
-              <div>
-                <h3>메인 페이지의 이벤트</h3>
-                <p>- 사용자의 편의를 위해 3초마다 자동으로 넘어가는 슬라이드 기능 구현</p>
-                <p>- JavaScript를 사용하여 이미지 2장의 넓이를 구한 뒤 3초마다 넓이만큼 왼쪽으로 이동하기</p>
-              </div>
-              <img src="./images/tgi02.gif" alt="tgi 이벤트">
-            </li>
-            <li>
-              <img src="./images/tgi03.gif" alt="tgi 로그인">
-              <div>
-                <h3>로그인 페이지 배너</h3>
-                <p>- 사용자의 편의를 위해 3초마다 자동으로 넘어가는 슬라이드 기능 구현</p>
-                <p>- jQuery를 사용하여 이미지 넓이를 구한 뒤 3초마다 넓이만큼 왼쪽으로 이동하기</p>
-                <p>- 반응형 작업에서 이미지 크기 변경을 위해 onresize 이벤트를 사용하여 페이지가 reload되는 함수 추가</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-    </div>
-
-    <!-- 슬라이드 내비 -->
-    <ul class="slide_nav">
-      <li>
-        <p>캐논아카데미 홈페이지(사용자) 리뉴얼 프로젝트</p>
-        <img src="./images/canon_user.jpg" alt="캐논 사용자 목업">
-      </li>
-      <li>
-        <p>캐논아카데미 홈페이지(관리자) 리뉴얼 프로젝트</p>
-        <img src="./images/canon_admin.jpg" alt="캐논 관리자 목업">
-      </li>
-      <li>
-        <p>바이브 노래 차트 페이지 제작 프로젝트</p>
-        <img src="./images/vibe.jpg" alt="바이브 목업">
-      </li>
-      <li>
-        <p>펫프렌즈 홈페이지 리뉴얼 프로젝트</p>
-        <img src="./images/petfriends.jpg" alt="펫프렌즈 목업">
-      </li>
-      <li>
-        <p>이마트 홈페이지 리뉴얼 프로젝트</p>
-        <img src="./images/emart.jpg" alt="이마트 목업">
-      </li>
-      <li>
-        <p>FREITAG 홈페이지 리뉴얼 프로젝트</p>
-        <img src="./images/freitag.jpg" alt="프라이탁 목업">
-      </li>
-      <li>
-        <p>TGI FRIDAYS 홈페이지 리뉴얼 프로젝트</p>
-        <img src="./images/tgi.jpg" alt="티지아이 목업">
-      </li>
-    </ul>
-  </main>
-
-  <!-- 푸터 -->
-  <footer>
-    <!-- 탑버튼 -->
-    <a href="#" title="상단으로 가기" class="t_btn">
-      <i class="fas fa-angle-up"></i>
-      TOP
-    </a>
-    <address>
-      본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.<br>
-      copyrightⓒ 2023 LEE SEUNGA All rights reserved.
-    </address>
-  </footer>
-</body>
-
+    <!-- 푸터 -->
+    <footer>
+      <!-- 탑버튼 -->
+      <a href="#" title="상단으로 가기" class="t_btn">
+        <i class="fas fa-angle-up"></i>
+        TOP
+      </a>
+      <address>
+        본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.<br />
+        copyrightⓒ 2023 LEE SEUNGA All rights reserved.
+      </address>
+    </footer>
+  </body>
 </html>

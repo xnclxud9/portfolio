@@ -46,11 +46,11 @@ $(function () {
   // console.log(p_id);
 
   switch (p_id) {
-    case "canon_admin":
+    case "canon_user":
       $('.project_wrap').slick('slickGoTo', 1);
       break
 
-    case "vibe":
+    case "canon_admin":
       $('.project_wrap').slick('slickGoTo', 2);
       break
 

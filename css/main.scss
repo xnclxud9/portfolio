@@ -540,10 +540,10 @@
       }
     }
 
-    .vibe {
+    .todo {
       .p_bottom {
         .color {
-          @include p_color(2, linear-gradient(135deg, #fe0929, #a805ad 50%, #7601f9), #000, #fff);
+          @include p_color(3, #3C5296, #d1d1d1, #171717);
         }
       }
     }

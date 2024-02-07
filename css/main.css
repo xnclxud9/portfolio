@@ -550,11 +550,14 @@ button {
 #projects .project .petfriends .p_bottom .color span:nth-child(4) {
   background: #E2DFDA;
 }
-#projects .project .vibe .p_bottom .color span:nth-child(2) {
-  background: linear-gradient(135deg, #fe0929, #a805ad 50%, #7601f9);
+#projects .project .todo .p_bottom .color span:nth-child(2) {
+  background: #3C5296;
 }
-#projects .project .vibe .p_bottom .color span:nth-child(3) {
-  background: #000;
+#projects .project .todo .p_bottom .color span:nth-child(3) {
+  background: #d1d1d1;
+}
+#projects .project .todo .p_bottom .color span:nth-child(4) {
+  background: #171717;
 }
 #projects .project .canon .p_bottom .color span:nth-child(2) {
   background: #DE0010;
