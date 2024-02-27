@@ -54,20 +54,16 @@ $(function () {
       $('.project_wrap').slick('slickGoTo', 2);
       break
 
-    case "petfriends":
+    case "emart":
       $('.project_wrap').slick('slickGoTo', 3);
       break
 
-    case "emart":
+    case "freitag":
       $('.project_wrap').slick('slickGoTo', 4);
       break
 
-    case "freitag":
-      $('.project_wrap').slick('slickGoTo', 5);
-      break
-
     case "tgi":
-      $('.project_wrap').slick('slickGoTo', 6);
+      $('.project_wrap').slick('slickGoTo', 5);
       break
 
     default:

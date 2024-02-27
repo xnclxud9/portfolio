@@ -1,441 +1,564 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      property="og:image"
+      content="https://xnclxud9.github.io/portfolio/images/me.jpg"
+    />
+    <meta
+      property="og:description"
+      content="프론트엔드 개발자를 꿈꾸는 이승아입니다."
+    />
+    <title>이승아 포트폴리오</title>
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.jpg" />
+    <!-- 초기화 -->
+    <link rel="stylesheet" href="./css/reset.css" type="text/css" />
+    <!-- 기본서식, 공통서식 -->
+    <link rel="stylesheet" href="./css/base.css" type="text/css" />
+    <link rel="stylesheet" href="./css/common.css" type="text/css" />
+    <!-- 메인서식 -->
+    <link rel="stylesheet" href="./css/main.css" type="text/css" />
+    <!--  wave 서식 -->
+    <link rel="stylesheet" href="./css/wave.css" type="text/css" />
+    <!-- 폰트어썸 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <!-- css 애니메이션 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- 제이쿼리 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!-- 스크롤 이벤트 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- swiper slide -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- 공통 스크립트 -->
+    <script src="./script/common.js" defer></script>
+    <!-- 메인 스크립트 -->
+    <script src="./script/main.js" defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:image" content="https://xnclxud9.github.io/portfolio/images/me.jpg">
-  <meta property="og:description" content="프론트엔드 개발자를 꿈꾸는 이승아입니다.">
-  <title>이승아 포트폴리오</title>
-  <!-- 파비콘 -->
-  <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.jpg">
-  <!-- 초기화 -->
-  <link rel="stylesheet" href="./css/reset.css" type="text/css">
-  <!-- 기본서식, 공통서식 -->
-  <link rel="stylesheet" href="./css/base.css" type="text/css">
-  <link rel="stylesheet" href="./css/common.css" type="text/css">
-  <!-- 메인서식 -->
-  <link rel="stylesheet" href="./css/main.css" type="text/css">
-  <!--  wave 서식 -->
-  <link rel="stylesheet" href="./css/wave.css" type="text/css">
-  <!-- 폰트어썸 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-  <!-- css 애니메이션 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-  <!-- 제이쿼리 -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <!-- 스크롤 이벤트 -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <!-- swiper slide -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <!-- 공통 스크립트 -->
-  <script src="./script/common.js" defer></script>
-  <!-- 메인 스크립트 -->
-  <script src="./script/main.js" defer></script>
-</head>
+  <body>
+    <!-- 헤더 -->
+    <header class="animate__animated animate__fadeInDown">
+      <h1>
+        <a href="index.html" title="메인으로 바로가기">
+          <img src="./images/logo.png" alt="상단 로고" />
+        </a>
+      </h1>
+    </header>
 
-<body>
-  <!-- 헤더 -->
-  <header class="animate__animated animate__fadeInDown">
-    <h1>
-      <a href="index.html" title="메인으로 바로가기">
-        <img src="./images/logo.png" alt="상단 로고">
-      </a>
-    </h1>
-  </header>
-
-  <!-- 메인 -->
-  <main>
-    <!-- 메인 상단 비주얼 -->
-    <article id="main_visu">
-      <p>Web Developer LEE SEUNGA</p>
-      <h2 class="heading">PORTFOLIO</h2>
-      <nav>
-        <ul class="gnb">
-          <li><a href="#about" title="about">About</a></li>
-          <li><a href="project.html" title="projects">Projects</a></li>
-          <li><a href="#contact" title="contact">Contact</a></li>
-        </ul>
-      </nav>
-
-      <!-- 스크롤 애니메이션 -->
-      <div id="scroll_down">
-        <span class="arrow_down"></span>
-        <span class="scroll_title">SCROLL</span>
-      </div>
-    </article>
-
-    <!--Waves Container-->
-    <div>
-      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-        <defs>
-          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-        </defs>
-        <g class="parallax">
-          <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-          <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-          <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-          <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
-        </g>
-      </svg>
-    </div>
-    <!--Waves end-->
-
-    <!-- 어바웃 -->
-    <article id="about" class="swiper mySwiper">
-      <h2>ABOUT</h2>
-      <div class="swiper-wrapper">
-        <!-- 내 소개 -->
-        <section class="profile swiper-slide">
-          <h3>ME</h3>
-          <div class="a_title" data-aos="fade-up" data-aos-duration="1000">
-            <p>안녕하세요!</p>
-            <p><span>프론트엔드</span> 개발자를 꿈꾸는</p>
-            <p>이승아입니다.</p>
-          </div>
-          <div class="a_con">
-            <p>저는 호기심이 많습니다.</p>
-            <p>항상 ‘왜?’라는 질문을 하며, 의문을 품고 궁금증이 해결되어야 직성이 풀립니다.</p>
-            <p>이러한 제 성향이 끊임없이 탐구하고 배워야 하는 개발 직군에 적합하다고 생각했고,</p>
-            <p>그중에서도 사용자와 가장 가까운 프론트엔드에 매력을 느꼈습니다.</p>
-            <p>앞으로 저의 호기심을 기반으로 프론트엔드 개발자로서 성장하고 싶습니다.</p>
-          </div>
-          <div class="tag">
-            <span>#호기심</span>
-            <span>#꾸준함</span>
-            <span>#습득력</span>
-            <span>#섬세함</span>
-            <span>#창의력</span>
-            <span>#해결사</span>
-            <span>#탐구력</span>
-          </div>
-          <a href="./file/resume.pdf" title="이력서 보러가기">이력서 보러가기</a>
-        </section>
-        <!-- 스킬 -->
-        <section class="skil swiper-slide">
-          <h3>SKILL</h3>
-          <p>아이콘을 클릭해주세요.</p>
-          <ul>
-            <li data-skil="html"><img src="./images/html5.png" alt="html5 로고"></li>
-            <li data-skil="css"><img src="./images/css3.png" alt="css3 로고"></li>
-            <li data-skil="sass"><img src="./images/sass.png" alt="sass 로고"></li>
-            <li data-skil="javascript"><img src="./images/js.png" alt="js 로고"></li>
-            <li data-skil="jquery"><img src="./images/jquery.png" alt="jquery 로고"></li>
-            <li data-skil="react"><img src="./images/react.png" alt="react 로고"></li>
-            <li data-skil="bootstrap"><img src="./images/bootstrap.png" alt="bootstrap 로고"></li>
-            <li data-skil="php"><img src="./images/php.png" alt="php 로고"></li>
-            <li data-skil="mysql"><img src="./images/mysql.png" alt="mysql 로고"></li>
-            <li data-skil="github"><img src="./images/github.png" alt="github 로고"></li>
-            <li data-skil="figma"><img src="./images/figma.png" alt="figma 로고"></li>
+    <!-- 메인 -->
+    <main>
+      <!-- 메인 상단 비주얼 -->
+      <article id="main_visu">
+        <p>Web Developer LEE SEUNGA</p>
+        <h2 class="heading">PORTFOLIO</h2>
+        <nav>
+          <ul class="gnb">
+            <li><a href="#about" title="about">About</a></li>
+            <li><a href="project.html" title="projects">Projects</a></li>
+            <li><a href="#contact" title="contact">Contact</a></li>
           </ul>
-        </section>
-        <!-- 로고 -->
-        <section class="logo swiper-slide">
-          <h3>LOGO</h3>
-          <div class="a_title" data-aos="fade-up" data-aos-duration="1000">
-            <p>바다에</p>
-            <p>꾸준하게</p>
-            <p>이는 물결 <span>'파도'</span></p>
-          </div>
-          <div class="a_con">
-            <p>잔잔해 보이는 바다에도 파도는 존재합니다.</p>
-            <p>파도는 오랜 시간 동안 밀려왔다 밀려가기를 반복하며 모래사장이나 절벽을 만들고, <br> 바다를 썩지 않게 합니다.</p>
-            <p>이러한 파도의 꾸준함을 닮은 저를 로고로 표현하였습니다.</p>
-          </div>
-        </section>
+        </nav>
+
+        <!-- 스크롤 애니메이션 -->
+        <div id="scroll_down">
+          <span class="arrow_down"></span>
+          <span class="scroll_title">SCROLL</span>
+        </div>
+      </article>
+
+      <!--Waves Container-->
+      <div>
+        <svg
+          class="waves"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 28"
+          preserveAspectRatio="none"
+          shape-rendering="auto"
+        >
+          <defs>
+            <path
+              id="gentle-wave"
+              d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+            />
+          </defs>
+          <g class="parallax">
+            <use
+              xlink:href="#gentle-wave"
+              x="48"
+              y="0"
+              fill="rgba(255,255,255,0.7"
+            />
+            <use
+              xlink:href="#gentle-wave"
+              x="48"
+              y="3"
+              fill="rgba(255,255,255,0.5)"
+            />
+            <use
+              xlink:href="#gentle-wave"
+              x="48"
+              y="5"
+              fill="rgba(255,255,255,0.3)"
+            />
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+          </g>
+        </svg>
       </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-      <!-- 아치형 공간 -->
-      <div class="arch">
-        <!-- 소개 -->
-        <div class="arch_con profile" data-aos="fade-down-right" data-aos-duration="1000">
-          <img src="./images/me.jpg" alt="내사진">
+      <!--Waves end-->
+
+      <!-- 어바웃 -->
+      <article id="about" class="swiper mySwiper">
+        <h2>ABOUT</h2>
+        <div class="swiper-wrapper">
+          <!-- 내 소개 -->
+          <section class="profile swiper-slide">
+            <h3>ME</h3>
+            <div class="a_title" data-aos="fade-up" data-aos-duration="1000">
+              <p>안녕하세요!</p>
+              <p><span>프론트엔드</span> 개발자를 꿈꾸는</p>
+              <p>이승아입니다.</p>
+            </div>
+            <div class="a_con">
+              <p>저는 호기심이 많습니다.</p>
+              <p>
+                항상 ‘왜?’라는 질문을 하며, 의문을 품고 궁금증이 해결되어야
+                직성이 풀립니다.
+              </p>
+              <p>
+                이러한 제 성향이 끊임없이 탐구하고 배워야 하는 개발 직군에
+                적합하다고 생각했고,
+              </p>
+              <p>
+                그중에서도 사용자와 가장 가까운 프론트엔드에 매력을 느꼈습니다.
+              </p>
+              <p>
+                앞으로 저의 호기심을 기반으로 프론트엔드 개발자로서 성장하고
+                싶습니다.
+              </p>
+            </div>
+            <div class="tag">
+              <span>#호기심</span>
+              <span>#꾸준함</span>
+              <span>#습득력</span>
+              <span>#섬세함</span>
+              <span>#창의력</span>
+              <span>#해결사</span>
+              <span>#탐구력</span>
+            </div>
+            <a
+              href="https://github.com/xnclxud9"
+              title="깃허브 바로가기"
+              target="_blank"
+              rel="noopener noreferrer"
+              >깃허브 바로가기</a
+            >
+          </section>
+          <!-- 스킬 -->
+          <section class="skil swiper-slide">
+            <h3>SKILL</h3>
+            <p>아이콘을 클릭해주세요.</p>
+            <ul>
+              <li data-skil="html">
+                <img src="./images/html5.png" alt="html5 로고" />
+              </li>
+              <li data-skil="css">
+                <img src="./images/css3.png" alt="css3 로고" />
+              </li>
+              <li data-skil="sass">
+                <img src="./images/sass.png" alt="sass 로고" />
+              </li>
+              <li data-skil="javascript">
+                <img src="./images/js.png" alt="js 로고" />
+              </li>
+              <li data-skil="jquery">
+                <img src="./images/jquery.png" alt="jquery 로고" />
+              </li>
+              <li data-skil="react">
+                <img src="./images/react.png" alt="react 로고" />
+              </li>
+              <li data-skil="bootstrap">
+                <img src="./images/bootstrap.png" alt="bootstrap 로고" />
+              </li>
+              <li data-skil="php">
+                <img src="./images/php.png" alt="php 로고" />
+              </li>
+              <li data-skil="mysql">
+                <img src="./images/mysql.png" alt="mysql 로고" />
+              </li>
+              <li data-skil="github">
+                <img src="./images/github.png" alt="github 로고" />
+              </li>
+              <li data-skil="figma">
+                <img src="./images/figma.png" alt="figma 로고" />
+              </li>
+            </ul>
+          </section>
+          <!-- 로고 -->
+          <section class="logo swiper-slide">
+            <h3>LOGO</h3>
+            <div class="a_title" data-aos="fade-up" data-aos-duration="1000">
+              <p>바다에</p>
+              <p>꾸준하게</p>
+              <p>이는 물결 <span>'파도'</span></p>
+            </div>
+            <div class="a_con">
+              <p>잔잔해 보이는 바다에도 파도는 존재합니다.</p>
+              <p>
+                파도는 오랜 시간 동안 밀려왔다 밀려가기를 반복하며 모래사장이나
+                절벽을 만들고, <br />
+                바다를 썩지 않게 합니다.
+              </p>
+              <p>이러한 파도의 꾸준함을 닮은 저를 로고로 표현하였습니다.</p>
+            </div>
+          </section>
         </div>
-        <!-- 스킬 -->
-        <div class="arch_con skil hidden">
-          <h3 class="skil_t">저는<br><span>이런 것들</span>도<br>할 줄 압니다.</h3>
-          <div data-skil="html">
-            <p>웹 표준을 준수하여 마크업 합니다.</p>
-            <p>웹 접근성을 고려한 사용자 친화적인 웹사이트를 지향합니다.</p>
-            <p>주석을 활용하여 보기 편한 코드를 작성하기 위해 노력합니다.</p>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!-- 아치형 공간 -->
+        <div class="arch">
+          <!-- 소개 -->
+          <div
+            class="arch_con profile"
+            data-aos="fade-down-right"
+            data-aos-duration="1000"
+          >
+            <img src="./images/me.jpg" alt="내사진" />
           </div>
-          <div data-skil="css">
-            <p>미디어 쿼리를 사용하여 반응형 웹을 구현할 수 있습니다.</p>
-            <p>요소에 다양한 애니메이션을 적용할 수 있습니다.</p>
-          </div>
-          <div data-skil="sass">
-            <p>코드를 컴포넌트화하여 모듈 형태로 작업할 수 있습니다.</p>
-            <p>변수와 제어문 사용이 가능합니다.</p>
-          </div>
-          <div data-skil="javascript">
-            <p>es6문법 사용을 지향합니다.</p>
-            <p>event를 활용하여 동적인 효과를 적용할 수 있습니다.</p>
-            <p>javascript의 동기와 비동기 방식에 대해 이해하고 있습니다.</p>
-          </div>
-          <div data-skil="jquery">
-            <p>다양한 종류의 슬라이드, 모달창, 스크롤 이벤트, 아코디언 메뉴 등을 구현할 수 있습니다.</p>
-            <p>effect와 animate를 사용하여 동적인 효과를 적용할 수 있습니다.</p>
-            <p>Ajax를 사용하여 JSON 형식의 데이터 관리가 가능합니다.</p>
-          </div>
-          <div data-skil="react">
-            <p>재사용 가능한 컴포넌트를 통해 개발 생산성을 향상합니다.</p>
-            <p>Hook(useState, useEffect...)을 사용하여 함수형 컴포넌트로도 다양한 작업이 가능합니다.</p>
-            <p>REST API를 호출하여 CRUD 처리가 가능합니다.</p>
-          </div>
-          <div data-skil="bootstrap">
-            <p>그리드 레이아웃을 사용하여 화면을 구성할 수 있습니다.</p>
-            <p>테이블과 페이지네이션을 사용하여 게시판 디자인이 가능합니다.</p>
-          </div>
-          <div data-skil="php">
-            <p>데이터베이스에 연결하여 데이터를 수집하고 관리할 수 있습니다.</p>
-            <p>로그인, 회원가입 기능을 구현할 수 있습니다.</p>
-            <p>조건문을 사용하여 데이터를 출력할 수 있습니다.</p>
-          </div>
-          <div data-skil="mysql">
-            <p>관계형 데이터베이스를 통하여 데이터를 관리할 수 있습니다.</p>
-            <p>쿼리문을 작성하여 데이터 생성, 조회, 수정, 삭제가 가능합니다.</p>
-          </div>
-          <div data-skil="github">
-            <p>코드버전 관리와 협업을 할 수 있습니다.</p>
-          </div>
-          <div data-skil="figma">
-            <p>간단한 이미지 작업이 가능합니다.</p>
-            <p>스타일, 컴포넌트 사용과 프로토타입 제작이 가능합니다.</p>
-          </div>
-        </div>
-        <!-- 로고 -->
-        <div class="arch_con logo hidden">
-          <img src="./images/a_logo.png" alt="로고">
-          <dl>
-            <dt>바다</dt>
-            <dd>잔잔한 바다는 저의 차분한 성격을 의미합니다.</dd>
-            <dt>물결</dt>
-            <dd>어떤 장애물에도 멈추지 않고 흐르는 물결처럼, 목표를 향해 두려움 없이 정진하는 저의 성향을 의미합니다.</dd>
-            <dt>파도</dt>
-            <dd>오랜 시간 동안 돌을 깎아서 모래사장과 절벽을 만드는 파도처럼, 꾸준히 노력하며 발전하는 저를 의미합니다.</dd>
-          </dl>
-        </div>
-      </div>
-    </article>
-
-    <!-- 프로젝트 -->
-    <article id="projects">
-      <h2>PROJECTS</h2>
-      <div class="category">
-        <label for="all">ALL</label>
-        <label for="personal">PERSONAL</label>
-        <label for="team">TEAM</label>
-        <span class="line">&nbsp;</span>
-
-        <div class="year">
-          <span>2022</span>
-          <span>2023</span>
-        </div>
-      </div>
-
-      <div class="project">
-        <input type="radio" id="all" name="cate" checked>
-        <input type="radio" id="personal" name="cate">
-        <input type="radio" id="team" name="cate">
-
-        <!-- 투두 -->
-        <section class="unit personal todo" data-id="todo">
-          <h3>투두 리스트 페이지 제작</h3>
-          <div class="p_top">
-            <p>투두 리스트 관리 사이트 제작</p>
-            <p>Personal Project / 24.01.26</p>
-          </div>
-          <div class="p_img">
-            <img src="./images/todo.jpg" alt="투두 목업" class="mockup">
-            <span class="arrow"><img src="./images/arrow.png" alt="화살표"></span>
-          </div>
-          <div class="p_bottom">
-            <div>
-              <p><span>사용 언어</span>REACT CSS</p>
-              <p class="color"><span>컬러</span><span></span><span></span><span></span></p>
-              <p><span>키워드</span>#편안한 #심플한 #편리한</p>
+          <!-- 스킬 -->
+          <div class="arch_con skil hidden">
+            <h3 class="skil_t">
+              저는<br /><span>이런 것들</span>도<br />할 줄 압니다.
+            </h3>
+            <div data-skil="html">
+              <p>웹 표준을 준수하여 마크업 합니다.</p>
+              <p>웹 접근성을 고려한 사용자 친화적인 웹사이트를 지향합니다.</p>
+              <p>주석을 활용하여 보기 편한 코드를 작성하기 위해 노력합니다.</p>
             </div>
-            <p>More Detail</p>
-          </div>
-        </section>
-
-        <!-- 캐논아카데미 사용자 -->
-        <section class="unit team canon" data-id="canon_user">
-          <h3>캐논아카데미 홈페이지 리뉴얼</h3>
-          <div class="p_top">
-            <p>LMS 사용자 페이지 제작</p>
-            <p>Team Project / 23.04.27 - 23.05.19</p>
-          </div>
-          <div class="p_img">
-            <img src="./images/canon_user.jpg" alt="캐논 사용자 목업" class="mockup">
-            <span class="arrow"><img src="./images/arrow.png" alt="화살표"></span>
-          </div>
-          <div class="p_bottom">
-            <div>
-              <p><span>사용 언어</span>HTML CSS PHP JAVASCRIPT</p>
-              <p class="color"><span>컬러</span><span></span><span></span><span></span></p>
-              <p><span>키워드</span>#즐거운 #소통하는 #신뢰적인</p>
+            <div data-skil="css">
+              <p>미디어 쿼리를 사용하여 반응형 웹을 구현할 수 있습니다.</p>
+              <p>요소에 다양한 애니메이션을 적용할 수 있습니다.</p>
             </div>
-            <p>More Detail</p>
-          </div>
-        </section>
-
-        <!-- 캐논아카데미 관리자 -->
-        <section class="unit team canon" data-id="canon_admin">
-          <h3>캐논아카데미 홈페이지 리뉴얼</h3>
-          <div class="p_top">
-            <p>LMS 관리자 페이지 제작</p>
-            <p>Team Project / 23.03.28 - 23.04.18</p>
-          </div>
-          <div class="p_img">
-            <img src="./images/canon_admin.jpg" alt="캐논 관리자 목업" class="mockup">
-            <span class="arrow"><img src="./images/arrow.png" alt="화살표"></span>
-          </div>
-          <div class="p_bottom">
-            <div>
-              <p><span>사용 언어</span>HTML CSS PHP JAVASCRIPT</p>
-              <p class="color"><span>컬러</span><span></span><span></span><span></span></p>
-              <p><span>키워드</span>#즐거운 #소통하는 #신뢰적인</p>
+            <div data-skil="sass">
+              <p>코드를 컴포넌트화하여 모듈 형태로 작업할 수 있습니다.</p>
+              <p>변수와 제어문 사용이 가능합니다.</p>
             </div>
-            <p>More Detail</p>
-          </div>
-        </section>
-
-        <!-- 펫프렌즈 -->
-        <section class="unit personal petfriends" data-id="petfriends">
-          <h3>펫프렌즈 홈페이지 리뉴얼</h3>
-          <div class="p_top">
-            <p>쇼핑몰 사이트 제작</p>
-            <p>Personal Project / 23.03.20 - 23.03.24</p>
-          </div>
-          <div class="p_img">
-            <img src="./images/petfriends.jpg" alt="펫프렌즈 목업" class="mockup">
-            <span class="arrow"><img src="./images/arrow.png" alt="화살표"></span>
-          </div>
-          <div class="p_bottom">
-            <div>
-              <p><span>사용 언어</span>HTML CSS PHP JAVASCRIPT</p>
-              <p class="color"><span>컬러</span><span></span><span></span><span></span></p>
-              <p><span>키워드</span>#차분한 #안정된 #은은한</p>
+            <div data-skil="javascript">
+              <p>es6문법 사용을 지향합니다.</p>
+              <p>event를 활용하여 동적인 효과를 적용할 수 있습니다.</p>
+              <p>javascript의 동기와 비동기 방식에 대해 이해하고 있습니다.</p>
             </div>
-            <p>More Detail</p>
-          </div>
-        </section>
-
-        <!-- 이마트 -->
-        <section class="unit team emart" data-id="emart">
-          <h3>이마트 홈페이지 리뉴얼</h3>
-          <div class="p_top">
-            <p>대기업 사이트 적응형웹 제작</p>
-            <p>Team Project / 23.02.06 - 23.03.15</p>
-          </div>
-          <div class="p_img">
-            <img src="./images/emart.jpg" alt="이마트 목업" class="mockup">
-            <span class="arrow"><img src="./images/arrow.png" alt="화살표"></span>
-          </div>
-          <div class="p_bottom">
-            <div>
-              <p><span>사용 언어</span>HTML CSS PHP JAVASCRIPT</p>
-              <p class="color"><span>컬러</span><span></span><span></span></p>
-              <p><span>키워드</span>#트렌디한 #따뜻한 #친근한</p>
+            <div data-skil="jquery">
+              <p>
+                다양한 종류의 슬라이드, 모달창, 스크롤 이벤트, 아코디언 메뉴
+                등을 구현할 수 있습니다.
+              </p>
+              <p>
+                effect와 animate를 사용하여 동적인 효과를 적용할 수 있습니다.
+              </p>
+              <p>Ajax를 사용하여 JSON 형식의 데이터 관리가 가능합니다.</p>
             </div>
-            <p>More Detail</p>
-          </div>
-        </section>
-
-        <!-- 프라이탁 -->
-        <section class="unit personal freitag" data-id="freitag">
-          <h3>FREITAG 홈페이지 리뉴얼</h3>
-          <div class="p_top">
-            <p>브랜드 사이트 적응형웹 제작</p>
-            <p>Personal Project / 23.02.08 - 23.02.15</p>
-          </div>
-          <div class="p_img">
-            <img src="./images/freitag.jpg" alt="freitag 목업" class="mockup">
-            <span class="arrow"><img src="./images/arrow.png" alt="화살표"></span>
-          </div>
-          <div class="p_bottom">
-            <div>
-              <p><span>사용 언어</span>HTML CSS JAVASCRIPT</p>
-              <p class="color"><span>컬러</span><span></span><span></span></p>
-              <p><span>키워드</span>#도시적인 #실용적인 #심플한</p>
+            <div data-skil="react">
+              <p>재사용 가능한 컴포넌트를 통해 개발 생산성을 향상합니다.</p>
+              <p>
+                Hook(useState, useEffect...)을 사용하여 함수형 컴포넌트로도
+                다양한 작업이 가능합니다.
+              </p>
+              <p>REST API를 호출하여 CRUD 처리가 가능합니다.</p>
             </div>
-            <p>More Detail</p>
-          </div>
-        </section>
-
-        <!-- 티지아이 -->
-        <section class="unit team tgi" data-id="tgi">
-          <h3>TGI FRIDAYS 홈페이지 리뉴얼</h3>
-          <div class="p_top">
-            <p>브랜드 사이트 반응형웹 제작</p>
-            <p>Team Project / 22.12.20 - 23.01.20</p>
-          </div>
-          <div class="p_img">
-            <img src="./images/tgi.jpg" alt="tgi 목업" class="mockup">
-            <span class="arrow"><img src="./images/arrow.png" alt="화살표"></span>
-          </div>
-          <div class="p_bottom">
-            <div>
-              <p><span>사용 언어</span>HTML CSS JAVASCRIPT</p>
-              <p class="color"><span>컬러</span><span></span><span></span><span></span></p>
-              <p><span>키워드</span>#모던한 #친근한 #소통하는</p>
+            <div data-skil="bootstrap">
+              <p>그리드 레이아웃을 사용하여 화면을 구성할 수 있습니다.</p>
+              <p>
+                테이블과 페이지네이션을 사용하여 게시판 디자인이 가능합니다.
+              </p>
             </div>
-            <p>More Detail</p>
+            <div data-skil="php">
+              <p>
+                데이터베이스에 연결하여 데이터를 수집하고 관리할 수 있습니다.
+              </p>
+              <p>로그인, 회원가입 기능을 구현할 수 있습니다.</p>
+              <p>조건문을 사용하여 데이터를 출력할 수 있습니다.</p>
+            </div>
+            <div data-skil="mysql">
+              <p>관계형 데이터베이스를 통하여 데이터를 관리할 수 있습니다.</p>
+              <p>
+                쿼리문을 작성하여 데이터 생성, 조회, 수정, 삭제가 가능합니다.
+              </p>
+            </div>
+            <div data-skil="github">
+              <p>코드버전 관리와 협업을 할 수 있습니다.</p>
+            </div>
+            <div data-skil="figma">
+              <p>간단한 이미지 작업이 가능합니다.</p>
+              <p>스타일, 컴포넌트 사용과 프로토타입 제작이 가능합니다.</p>
+            </div>
           </div>
-        </section>
-      </div>
-    </article>
-
-    <!-- 컨택 -->
-    <article id="contact">
-      <h2>CONTACT</h2>
-      <div class="con_wrap">
-        <div class="con resume">
-          <div class="card front">
-            <p>contact me!</p>
-          </div>
-          <div class="card back">
-            <a href="./file/resume.pdf" title="이력서 보기">이력서 보기</a>
+          <!-- 로고 -->
+          <div class="arch_con logo hidden">
+            <img src="./images/a_logo.png" alt="로고" />
+            <dl>
+              <dt>바다</dt>
+              <dd>잔잔한 바다는 저의 차분한 성격을 의미합니다.</dd>
+              <dt>물결</dt>
+              <dd>
+                어떤 장애물에도 멈추지 않고 흐르는 물결처럼, 목표를 향해 두려움
+                없이 정진하는 저의 성향을 의미합니다.
+              </dd>
+              <dt>파도</dt>
+              <dd>
+                오랜 시간 동안 돌을 깎아서 모래사장과 절벽을 만드는 파도처럼,
+                꾸준히 노력하며 발전하는 저를 의미합니다.
+              </dd>
+            </dl>
           </div>
         </div>
-        <div class="con email">
-          <div class="card front">
-          </div>
-          <div class="card back">
-            <a href="mailto:xnclxud9@gmail.com" title="이메일 보내기">xnclxud9@gmail.com</a>
+      </article>
+
+      <!-- 프로젝트 -->
+      <article id="projects">
+        <h2>PROJECTS</h2>
+        <div class="category">
+          <label for="all">ALL</label>
+          <label for="personal">PERSONAL</label>
+          <label for="team">TEAM</label>
+          <span class="line">&nbsp;</span>
+
+          <div class="year">
+            <span>2022</span>
+            <span>2023</span>
           </div>
         </div>
-        <div class="con phone">
-          <div class="card front">
-            <span><i class="fas fa-phone"></i></span>
+
+        <div class="project">
+          <input type="radio" id="all" name="cate" checked />
+          <input type="radio" id="personal" name="cate" />
+          <input type="radio" id="team" name="cate" />
+
+          <!-- 투두 -->
+          <section class="unit personal todo" data-id="todo">
+            <h3>투두 리스트 페이지 제작</h3>
+            <div class="p_top">
+              <p>투두 리스트 관리 사이트 제작</p>
+              <p>Personal Project / 24.01.26</p>
+            </div>
+            <div class="p_img">
+              <img src="./images/todo.jpg" alt="투두 목업" class="mockup" />
+              <span class="arrow"
+                ><img src="./images/arrow.png" alt="화살표"
+              /></span>
+            </div>
+            <div class="p_bottom">
+              <div>
+                <p><span>사용 언어</span>REACT CSS</p>
+                <p class="color">
+                  <span>컬러</span><span></span><span></span><span></span>
+                </p>
+                <p><span>키워드</span>#편안한 #심플한 #편리한</p>
+              </div>
+              <p>More Detail</p>
+            </div>
+          </section>
+
+          <!-- 캐논아카데미 사용자 -->
+          <section class="unit team canon" data-id="canon_user">
+            <h3>캐논아카데미 홈페이지 리뉴얼</h3>
+            <div class="p_top">
+              <p>LMS 사용자 페이지 제작</p>
+              <p>Team Project / 23.04.27 - 23.05.19</p>
+            </div>
+            <div class="p_img">
+              <img
+                src="./images/canon_user.jpg"
+                alt="캐논 사용자 목업"
+                class="mockup"
+              />
+              <span class="arrow"
+                ><img src="./images/arrow.png" alt="화살표"
+              /></span>
+            </div>
+            <div class="p_bottom">
+              <div>
+                <p><span>사용 언어</span>HTML CSS PHP JAVASCRIPT</p>
+                <p class="color">
+                  <span>컬러</span><span></span><span></span><span></span>
+                </p>
+                <p><span>키워드</span>#즐거운 #소통하는 #신뢰적인</p>
+              </div>
+              <p>More Detail</p>
+            </div>
+          </section>
+
+          <!-- 캐논아카데미 관리자 -->
+          <section class="unit team canon" data-id="canon_admin">
+            <h3>캐논아카데미 홈페이지 리뉴얼</h3>
+            <div class="p_top">
+              <p>LMS 관리자 페이지 제작</p>
+              <p>Team Project / 23.03.28 - 23.04.18</p>
+            </div>
+            <div class="p_img">
+              <img
+                src="./images/canon_admin.jpg"
+                alt="캐논 관리자 목업"
+                class="mockup"
+              />
+              <span class="arrow"
+                ><img src="./images/arrow.png" alt="화살표"
+              /></span>
+            </div>
+            <div class="p_bottom">
+              <div>
+                <p><span>사용 언어</span>HTML CSS PHP JAVASCRIPT</p>
+                <p class="color">
+                  <span>컬러</span><span></span><span></span><span></span>
+                </p>
+                <p><span>키워드</span>#즐거운 #소통하는 #신뢰적인</p>
+              </div>
+              <p>More Detail</p>
+            </div>
+          </section>
+
+          <!-- 이마트 -->
+          <section class="unit team emart" data-id="emart">
+            <h3>이마트 홈페이지 리뉴얼</h3>
+            <div class="p_top">
+              <p>대기업 사이트 적응형웹 제작</p>
+              <p>Team Project / 23.02.06 - 23.03.15</p>
+            </div>
+            <div class="p_img">
+              <img src="./images/emart.jpg" alt="이마트 목업" class="mockup" />
+              <span class="arrow"
+                ><img src="./images/arrow.png" alt="화살표"
+              /></span>
+            </div>
+            <div class="p_bottom">
+              <div>
+                <p><span>사용 언어</span>HTML CSS PHP JAVASCRIPT</p>
+                <p class="color"><span>컬러</span><span></span><span></span></p>
+                <p><span>키워드</span>#트렌디한 #따뜻한 #친근한</p>
+              </div>
+              <p>More Detail</p>
+            </div>
+          </section>
+
+          <!-- 프라이탁 -->
+          <section class="unit personal freitag" data-id="freitag">
+            <h3>FREITAG 홈페이지 리뉴얼</h3>
+            <div class="p_top">
+              <p>브랜드 사이트 적응형웹 제작</p>
+              <p>Personal Project / 23.02.08 - 23.02.15</p>
+            </div>
+            <div class="p_img">
+              <img
+                src="./images/freitag.jpg"
+                alt="freitag 목업"
+                class="mockup"
+              />
+              <span class="arrow"
+                ><img src="./images/arrow.png" alt="화살표"
+              /></span>
+            </div>
+            <div class="p_bottom">
+              <div>
+                <p><span>사용 언어</span>HTML CSS JAVASCRIPT</p>
+                <p class="color"><span>컬러</span><span></span><span></span></p>
+                <p><span>키워드</span>#도시적인 #실용적인 #심플한</p>
+              </div>
+              <p>More Detail</p>
+            </div>
+          </section>
+
+          <!-- 티지아이 -->
+          <section class="unit team tgi" data-id="tgi">
+            <h3>TGI FRIDAYS 홈페이지 리뉴얼</h3>
+            <div class="p_top">
+              <p>브랜드 사이트 반응형웹 제작</p>
+              <p>Team Project / 22.12.20 - 23.01.20</p>
+            </div>
+            <div class="p_img">
+              <img src="./images/tgi.jpg" alt="tgi 목업" class="mockup" />
+              <span class="arrow"
+                ><img src="./images/arrow.png" alt="화살표"
+              /></span>
+            </div>
+            <div class="p_bottom">
+              <div>
+                <p><span>사용 언어</span>HTML CSS JAVASCRIPT</p>
+                <p class="color">
+                  <span>컬러</span><span></span><span></span><span></span>
+                </p>
+                <p><span>키워드</span>#모던한 #친근한 #소통하는</p>
+              </div>
+              <p>More Detail</p>
+            </div>
+          </section>
+        </div>
+      </article>
+
+      <!-- 컨택 -->
+      <article id="contact">
+        <h2>CONTACT</h2>
+        <div class="con_wrap">
+          <div class="con resume">
+            <div class="card front">
+              <p>contact me!</p>
+            </div>
+            <div class="card back">
+              <a
+                href="https://github.com/xnclxud9"
+                title="깃허브 바로가기"
+                target="_blank"
+                rel="noopener noreferrer"
+                >깃허브 바로가기</a
+              >
+            </div>
           </div>
-          <div class="card back">
-            <a href="tel:010-9796-8110" title="전화하기">010-9796-8110</a>
+          <div class="con email">
+            <div class="card front"></div>
+            <div class="card back">
+              <a href="mailto:xnclxud9@gmail.com" title="이메일 보내기"
+                >xnclxud9@gmail.com</a
+              >
+            </div>
+          </div>
+          <div class="con phone">
+            <div class="card front">
+              <span><i class="fas fa-phone"></i></span>
+            </div>
+            <div class="card back">
+              <a href="tel:010-9796-8110" title="전화하기">010-9796-8110</a>
+            </div>
           </div>
         </div>
-      </div>
-    </article>
-  </main>
+      </article>
+    </main>
 
-  <!-- 푸터 -->
-  <footer>
-    <!-- 탑버튼 -->
-    <a href="#" title="상단으로 가기" class="t_btn">
-      <i class="fas fa-angle-up"></i>
-      TOP
-    </a>
-    <address>
-      본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.<br>
-      copyrightⓒ 2023 LEE SEUNGA All rights reserved.
-    </address>
-  </footer>
-
-</body>
-
+    <!-- 푸터 -->
+    <footer>
+      <!-- 탑버튼 -->
+      <a href="#" title="상단으로 가기" class="t_btn">
+        <i class="fas fa-angle-up"></i>
+        TOP
+      </a>
+      <address>
+        본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.<br />
+        copyrightⓒ 2024 LEE SEUNGA All rights reserved.
+      </address>
+    </footer>
+  </body>
 </html>
