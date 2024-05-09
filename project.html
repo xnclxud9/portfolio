@@ -62,6 +62,93 @@
     <!-- 메인 -->
     <main>
       <div class="project_wrap">
+        <!-- 유튜브 -->
+        <section id="youtube" class="project">
+          <h2>유튜브 페이지 제작 프로젝트</h2>
+          <div class="sub_wrap">
+            <img src="./images/youtube.jpg" alt="유튜브 목업" />
+            <div class="sub">
+              <span>24.03.11 - 24.03.29</span><span>개인 프로젝트</span
+              ><span>반응형</span>
+              <dl>
+                <dt>프로젝트 개요</dt>
+                <dd>유튜브 오픈 API를 사용하여 동영상 페이지 제작</dd>
+                <dt>프로젝트 목적</dt>
+                <dd>유튜브 API 사용 경험</dd>
+                <dd>Tailwind CSS 활용 경험</dd>
+                <dd>React Router를 사용하여 CSR 방식으로 제작</dd>
+                <dd>React Query를 사용한 상태관리 경험</dd>
+                <dd>Postman을 이용한 API 관리, 테스트 경험</dd>
+                <dt>사용 언어</dt>
+                <dd>React, Tailwind CSS</dd>
+                <dt>주요 기능</dt>
+                <dd>인기 동영상 기능 구현</dd>
+                <dd>검색 기능 구현</dd>
+                <dd>동영상 재생 기능 구현</dd>
+                <dd>채널 연관 동영상 리스트 구현</dd>
+                <dd>반응형 디자인</dd>
+                <dt>트러블슈팅 경험</dt>
+                <dd>문제: 메인 페이지와 연관 리스트에 중복되는 코드가 발생</dd>
+                <dd>
+                  해결: 하나의 컴포넌트에 prop으로 type 값을 전달해주고 값에
+                  따라 다른 레이아웃으로 재사용하여 해결
+                </dd>
+                <dt>느낀 점</dt>
+                <dd>
+                  API 사용 시 횟수 제한이 있기 때문에 mock data를 사용하여
+                  테스트 하는 방법을 배움
+                </dd>
+                <dd>
+                  React Router를 사용하여 필요한 데이터만 라우팅 하는 법을
+                  깨달음
+                </dd>
+                <dd>
+                  React Query로 Hook의 문제점을 보완하며 상태관리 하는 것을
+                  경험함
+                </dd>
+              </dl>
+              <a
+                href="https://stunning-seahorse-98156b.netlify.app/"
+                title="링크 바로가기"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Demo Link</a
+              >
+            </div>
+          </div>
+          <div class="con">
+            <p>Preview</p>
+            <ul>
+              <li>
+                <img src="./images/youtube01.gif" alt="youtube 추가" />
+                <div>
+                  <h3>메인 페이지</h3>
+                  <p>- 인기 동영상, 검색 기능 구현</p>
+                  <p>- API를 사용하여 인기 동영상과 검색 목록 출력하기</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>상세 페이지</h3>
+                  <p>- 동영상 재생 기능 구현</p>
+                  <p>- IFrame Player API를 사용하여 동영상 재생하기</p>
+                </div>
+                <img src="./images/youtube02.gif" alt="youtube 수정" />
+              </li>
+              <li>
+                <img src="./images/youtube03.gif" alt="youtube 삭제" />
+                <div>
+                  <h3>상세 페이지</h3>
+                  <p>- 현재 동영상 채널의 연관 동영상 기능 구현</p>
+                  <p>
+                    - API를 사용하여 현재 동영상 채널의 연관 동영상 출력하기
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
         <!-- 투두 -->
         <section id="todo" class="project">
           <h2>투두 리스트 제작 프로젝트</h2>
@@ -728,6 +815,10 @@
 
       <!-- 슬라이드 내비 -->
       <ul class="slide_nav">
+        <li>
+          <p>유튜브 페이지 제작 프로젝트</p>
+          <img src="./images/youtube.jpg" alt="유튜브 목업" />
+        </li>
         <li>
           <p>투두 리스트 제작 프로젝트</p>
           <img src="./images/todo.jpg" alt="투두 목업" />

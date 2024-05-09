@@ -532,10 +532,10 @@
       }
     }
 
-    .petfriends {
+    .canon {
       .p_bottom {
         .color {
-          @include p_color(3, #998F86, #D6D2C9, #E2DFDA);
+          @include p_color(3, #DE0010, #38373C, #E6E6E6);
         }
       }
     }
@@ -548,10 +548,10 @@
       }
     }
 
-    .canon {
+    .youtube {
       .p_bottom {
         .color {
-          @include p_color(3, #DE0010, #38373C, #E6E6E6);
+          @include p_color(3, #ff0000, #18181b, #f9fafb);
         }
       }
     }

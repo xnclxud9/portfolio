@@ -541,14 +541,14 @@ button {
 #projects .project .emart .p_bottom .color span:nth-child(3) {
   background: #484C55;
 }
-#projects .project .petfriends .p_bottom .color span:nth-child(2) {
-  background: #998F86;
+#projects .project .canon .p_bottom .color span:nth-child(2) {
+  background: #DE0010;
 }
-#projects .project .petfriends .p_bottom .color span:nth-child(3) {
-  background: #D6D2C9;
+#projects .project .canon .p_bottom .color span:nth-child(3) {
+  background: #38373C;
 }
-#projects .project .petfriends .p_bottom .color span:nth-child(4) {
-  background: #E2DFDA;
+#projects .project .canon .p_bottom .color span:nth-child(4) {
+  background: #E6E6E6;
 }
 #projects .project .todo .p_bottom .color span:nth-child(2) {
   background: #3C5296;
@@ -559,14 +559,14 @@ button {
 #projects .project .todo .p_bottom .color span:nth-child(4) {
   background: #171717;
 }
-#projects .project .canon .p_bottom .color span:nth-child(2) {
-  background: #DE0010;
+#projects .project .youtube .p_bottom .color span:nth-child(2) {
+  background: #ff0000;
 }
-#projects .project .canon .p_bottom .color span:nth-child(3) {
-  background: #38373C;
+#projects .project .youtube .p_bottom .color span:nth-child(3) {
+  background: #18181b;
 }
-#projects .project .canon .p_bottom .color span:nth-child(4) {
-  background: #E6E6E6;
+#projects .project .youtube .p_bottom .color span:nth-child(4) {
+  background: #f9fafb;
 }
 
 @keyframes arrow {

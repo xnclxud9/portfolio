@@ -46,24 +46,28 @@ $(function () {
   // console.log(p_id);
 
   switch (p_id) {
-    case "canon_user":
+    case "todo":
       $('.project_wrap').slick('slickGoTo', 1);
       break
 
-    case "canon_admin":
+    case "canon_user":
       $('.project_wrap').slick('slickGoTo', 2);
       break
 
-    case "emart":
+    case "canon_admin":
       $('.project_wrap').slick('slickGoTo', 3);
       break
 
-    case "freitag":
+    case "emart":
       $('.project_wrap').slick('slickGoTo', 4);
       break
 
-    case "tgi":
+    case "freitag":
       $('.project_wrap').slick('slickGoTo', 5);
+      break
+
+    case "tgi":
+      $('.project_wrap').slick('slickGoTo', 6);
       break
 
     default:
