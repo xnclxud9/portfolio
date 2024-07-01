@@ -66,10 +66,6 @@ $(function () {
       $('.project_wrap').slick('slickGoTo', 5);
       break
 
-    case "tgi":
-      $('.project_wrap').slick('slickGoTo', 6);
-      break
-
     default:
       $('.project_wrap').slick('slickGoTo', 0);
   }

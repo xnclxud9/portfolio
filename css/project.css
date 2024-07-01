@@ -214,6 +214,7 @@ header nav .gnb a:hover:before, header nav .gnb a:hover:after {
 }
 .slide_nav li {
   margin: 0 10px;
+  position: relative;
   filter: brightness(0.4);
   transition: 0.3s;
   cursor: pointer;
