@@ -2,10 +2,11 @@
 $(function () {
   $('.project_wrap').slick({
     slidesToShow: 1,
-    // adaptiveHeight: true,
+    adaptiveHeight: true,
     prevArrow: "<button type='button' class='slick-prev'><i class='fas fa-chevron-left'></i> Prev</button>",
     nextArrow: "<button type='button' class='slick-next'>Next <i class='fas fa-chevron-right'></i></button>",
     asNavFor: '.slide_nav',
+    lazyLoad: 'ondemand',
   });
 
   // 내비 슬라이드
@@ -15,6 +16,7 @@ $(function () {
     centerMode: true,
     focusOnSelect: true,
     asNavFor: '.project_wrap',
+    lazyLoad: 'ondemand',
     responsive: [ // 반응형 웹 구현 옵션
       {
         breakpoint: 767,
@@ -32,11 +34,11 @@ $(function () {
     }, 300);
 
     // 슬라이드 높이 변경
-    let currentSlide = $('.project_wrap').slick('slickCurrentSlide');
+    // let currentSlide = $('.project_wrap').slick('slickCurrentSlide');
 
-    s_h = $('.project_wrap .slick-slide').eq(currentSlide + 1).outerHeight();
+    // s_h = $('.project_wrap .slick-slide').eq(currentSlide + 1).outerHeight();
 
-    $('.project_wrap .slick-list').height(s_h);
+    // $('.project_wrap .slick-list').height(s_h);
     // console.log(s_h);
 
     return false;

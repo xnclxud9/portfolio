@@ -30,7 +30,7 @@ button {
   position: relative;
   height: 100vh;
   top: -100px;
-  background: #3C5296;
+  background: #3c5296;
   color: #fff;
 }
 #main_visu p {
@@ -82,7 +82,7 @@ button {
   position: absolute;
   width: 0%;
   height: 1px;
-  background: #FFF;
+  background: #fff;
   opacity: 0;
   transition: all 0.3s;
 }
@@ -174,14 +174,14 @@ button {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 30px;
+  gap: 20px;
   padding-right: 30vw;
 }
 #about .swiper-wrapper .swiper-slide h3 {
   display: inline-block;
   padding: 10px 16px 7px;
   font-size: 1.125rem;
-  background: #3C5296;
+  background: #3c5296;
   color: #fff;
 }
 #about .swiper-wrapper .swiper-slide .a_title p {
@@ -189,7 +189,7 @@ button {
   line-height: 2rem;
 }
 #about .swiper-wrapper .swiper-slide .a_title p span {
-  color: #3C5296;
+  color: #3c5296;
   font-weight: bold;
 }
 #about .swiper-wrapper .swiper-slide .a_con p {
@@ -222,7 +222,7 @@ button {
   bottom: 0;
   height: 2px;
   width: 0;
-  background-color: #3C5296;
+  background-color: #3c5296;
   transition: 0.5s ease;
 }
 #about .swiper-wrapper .profile > a:hover::before {
@@ -235,7 +235,7 @@ button {
   bottom: 0;
   height: 0;
   width: 100%;
-  background-color: #3C5296;
+  background-color: #3c5296;
   transition: 0.4s ease;
   z-index: -1;
 }
@@ -265,7 +265,6 @@ button {
   margin-top: 20px;
 }
 #about .swiper-wrapper .skil ul li img {
-  height: 70px;
   transition: 0.4s;
   cursor: pointer;
 }
@@ -275,7 +274,7 @@ button {
   bottom: 100px;
   width: 40px;
   height: 40px;
-  border: 1px solid #3C5296;
+  border: 1px solid #3c5296;
   border-radius: 50%;
 }
 #about .swiper-button-prev {
@@ -287,7 +286,7 @@ button {
 }
 #about .swiper-button-prev::after,
 #about .swiper-button-next::after {
-  color: #3C5296;
+  color: #3c5296;
   font-size: 20px;
 }
 #about .arch {
@@ -298,7 +297,7 @@ button {
   top: 120px;
   right: 16vw;
   padding: 1.2vw 2vw;
-  background: #3C5296;
+  background: #3c5296;
   z-index: 9;
 }
 #about .arch .arch_con:not(.profile) {
@@ -307,7 +306,7 @@ button {
   border-radius: 500px 500px 0px 0px;
   padding: 0 2vw;
   background: #fff;
-  border: 1px solid #3C5296;
+  border: 1px solid #3c5296;
 }
 #about .arch .profile img {
   width: 18vw;
@@ -326,7 +325,7 @@ button {
 }
 #about .arch .skil .skil_t span {
   font-size: 1.75rem;
-  color: #3C5296;
+  color: #3c5296;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -518,13 +517,13 @@ button {
   vertical-align: middle;
 }
 #projects .project .tgi .p_bottom .color span:nth-child(2) {
-  background: #B60000;
+  background: #b60000;
 }
 #projects .project .tgi .p_bottom .color span:nth-child(3) {
   background: #242422;
 }
 #projects .project .tgi .p_bottom .color span:nth-child(4) {
-  background: #F2EDE4;
+  background: #f2ede4;
 }
 #projects .project .freitag .p_bottom .color span:nth-child(2) {
   background: #000;
@@ -536,22 +535,22 @@ button {
   border: 1px solid #333;
 }
 #projects .project .emart .p_bottom .color span:nth-child(2) {
-  background: #FCB416;
+  background: #fcb416;
 }
 #projects .project .emart .p_bottom .color span:nth-child(3) {
-  background: #484C55;
+  background: #484c55;
 }
 #projects .project .canon .p_bottom .color span:nth-child(2) {
-  background: #DE0010;
+  background: #de0010;
 }
 #projects .project .canon .p_bottom .color span:nth-child(3) {
-  background: #38373C;
+  background: #38373c;
 }
 #projects .project .canon .p_bottom .color span:nth-child(4) {
-  background: #E6E6E6;
+  background: #e6e6e6;
 }
 #projects .project .todo .p_bottom .color span:nth-child(2) {
-  background: #3C5296;
+  background: #3c5296;
 }
 #projects .project .todo .p_bottom .color span:nth-child(3) {
   background: #d1d1d1;
@@ -603,7 +602,7 @@ button {
 }
 #contact .con_wrap .con a {
   font-size: 1.125rem;
-  color: #3C5296;
+  color: #3c5296;
 }
 #contact .con_wrap .con .card {
   position: relative;
@@ -622,7 +621,7 @@ button {
 }
 #contact .con_wrap .con .back {
   background: #fff;
-  border: 1px solid #3C5296;
+  border: 1px solid #3c5296;
   transform: rotateY(-180deg);
 }
 #contact .con_wrap .con:hover .front {
@@ -669,12 +668,24 @@ button {
   position: relative;
   top: 18px;
   left: 0;
-  color: #3C5296;
+  color: #3c5296;
   font-size: 28px;
   transform: rotate(-45deg);
 }
 
-@media (min-width: 0px) and (max-width: 767px) {
+@media (min-width: 1024px) {
+  .skil ul li img {
+    height: 4.4vw;
+    min-height: 55px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .skil ul li img {
+    height: 5vw;
+    min-height: 50px;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
   #main_visu p {
     top: max(15%, 100px);
     font-size: 5vw;
@@ -719,10 +730,10 @@ button {
   }
   #about .swiper-wrapper .skil ul {
     margin: 0;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
   #about .swiper-wrapper .skil ul li img {
-    height: 60px;
+    height: 55px;
   }
   #about .swiper-button-prev,
   #about .swiper-button-next {

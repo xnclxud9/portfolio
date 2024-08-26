@@ -31,7 +31,7 @@
       display: inline-block;
       opacity: 0;
       transform: translateY(-100%);
-      transition: all 0.4s ease-in-out
+      transition: all 0.4s ease-in-out;
     }
 
     .fade {
@@ -88,7 +88,7 @@
     .scroll_title {
       font-size: 1rem;
       font-weight: bold;
-      letter-spacing: .2rem;
+      letter-spacing: 0.2rem;
     }
   }
 
@@ -117,7 +117,6 @@
 
 // 상단 비주얼 끝
 
-
 // 어바웃
 #about {
   @include box;
@@ -138,8 +137,8 @@
         }
       }
 
-      >a {
-        transition: .5s ease;
+      > a {
+        transition: 0.5s ease;
         background: url(../images/arrow_b.png) no-repeat center right;
         border: none;
         padding: 15px 60px 15px 20px;
@@ -149,7 +148,7 @@
         &:hover {
           background: url(../images/arrow_w.png) no-repeat center right;
           color: $t_color01;
-          transition-delay: .5s;
+          transition-delay: 0.5s;
         }
 
         &::before {
@@ -160,7 +159,7 @@
           height: 2px;
           width: 0;
           background-color: $m_color;
-          transition: .5s ease;
+          transition: 0.5s ease;
         }
 
         &:hover::before {
@@ -175,7 +174,7 @@
           height: 0;
           width: 100%;
           background-color: $m_color;
-          transition: .4s ease;
+          transition: 0.4s ease;
           z-index: -1;
         }
 
@@ -213,8 +212,7 @@
           }
 
           img {
-            height: 70px;
-            transition: .4s;
+            transition: 0.4s;
             cursor: pointer;
           }
         }
@@ -338,7 +336,6 @@
 
 // 어바웃 끝
 
-
 // 프로젝트
 #projects {
   @include box;
@@ -359,7 +356,7 @@
       height: 1.5px;
       top: 12px;
       background: #333;
-      transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+      transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
   }
 
@@ -388,19 +385,19 @@
     display: flex;
     flex-direction: column;
 
-    input[type=radio] {
+    input[type='radio'] {
       display: none;
     }
 
-    #all:checked~.unit {
+    #all:checked ~ .unit {
       display: flex;
     }
 
-    #personal:checked~.personal {
+    #personal:checked ~ .personal {
       display: flex;
     }
 
-    #team:checked~.team {
+    #team:checked ~ .team {
       display: flex;
     }
 
@@ -427,9 +424,9 @@
 
       &:hover {
         .p_img {
-          >img {
+          > img {
             filter: brightness(0.6);
-            scale: .98;
+            scale: 0.98;
             border-radius: 25% 0 25% 0;
           }
 
@@ -468,7 +465,7 @@
         }
 
         img {
-          transition: .8s;
+          transition: 0.8s;
         }
 
         .arrow {
@@ -507,7 +504,7 @@
     .tgi {
       .p_bottom {
         .color {
-          @include p_color(3, #B60000, #242422, #F2EDE4);
+          @include p_color(3, #b60000, #242422, #f2ede4);
         }
       }
     }
@@ -527,7 +524,7 @@
     .emart {
       .p_bottom {
         .color {
-          @include p_color(2, #FCB416, #484C55, #fff);
+          @include p_color(2, #fcb416, #484c55, #fff);
         }
       }
     }
@@ -535,7 +532,7 @@
     .canon {
       .p_bottom {
         .color {
-          @include p_color(3, #DE0010, #38373C, #E6E6E6);
+          @include p_color(3, #de0010, #38373c, #e6e6e6);
         }
       }
     }
@@ -543,7 +540,7 @@
     .todo {
       .p_bottom {
         .color {
-          @include p_color(3, #3C5296, #d1d1d1, #171717);
+          @include p_color(3, #3c5296, #d1d1d1, #171717);
         }
       }
     }
@@ -573,7 +570,6 @@
 }
 
 // 프로젝트 끝
-
 
 // 컨택트
 #contact {
@@ -677,17 +673,44 @@
           }
         }
       }
-
     }
   }
 }
 
 // 컨택트 끝
 
+// 데스크탑 시작
+@include desktop {
+  .skil {
+    ul {
+      li {
+        img {
+          height: 4.4vw;
+          min-height: 55px;
+        }
+      }
+    }
+  }
+}
+// 데스크탑 끝
+
+// 태블릿 시작
+@include tablet {
+  .skil {
+    ul {
+      li {
+        img {
+          height: 5vw;
+          min-height: 50px;
+        }
+      }
+    }
+  }
+}
+// 태블릿 끝
 
 // 모바일 시작
 @include mobile {
-
   //상단 비주얼
   #main_visu {
     p {
@@ -716,7 +739,6 @@
   }
 
   // 상단 비주얼 끝
-
 
   // 어바웃
   #about {
@@ -751,7 +773,7 @@
           }
         }
 
-        >a {
+        > a {
           padding: 0 60px 0 0;
         }
       }
@@ -759,14 +781,13 @@
       .skil {
         ul {
           margin: 0;
-          justify-content: space-between;
+          justify-content: space-evenly;
 
           li {
             img {
-              height: 60px;
+              height: 55px;
             }
           }
-
         }
       }
     }
@@ -891,7 +912,7 @@
             }
           }
 
-          >p {
+          > p {
             margin-top: 10px;
             text-align: right;
             font-weight: bold;
@@ -918,7 +939,7 @@
       display: flex;
 
       .con {
-        width: calc(170%/5);
+        width: calc(170% / 5);
         height: 44vw;
 
         a {
@@ -937,7 +958,6 @@
             text-align: left;
           }
         }
-
       }
 
       .phone {

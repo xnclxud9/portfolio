@@ -27,7 +27,7 @@ button {
 }
 
 header {
-  background: #3C5296;
+  background: #3c5296;
 }
 header nav .gnb {
   display: flex;
@@ -44,7 +44,7 @@ header nav .gnb a:before, header nav .gnb a:after {
   position: absolute;
   width: 0%;
   height: 1px;
-  background: #FFF;
+  background: #fff;
   opacity: 0;
   transition: all 0.3s;
 }
@@ -106,8 +106,8 @@ header nav .gnb a:hover:before, header nav .gnb a:hover:after {
   display: inline-block;
   margin-right: 10px;
   padding: 5px 8px 3px 8px;
-  color: #3C5296;
-  border: 1px solid #3C5296;
+  color: #3c5296;
+  border: 1px solid #3c5296;
   border-radius: 11px;
 }
 .project_wrap .project .sub_wrap .sub dl {
@@ -131,8 +131,8 @@ header nav .gnb a:hover:before, header nav .gnb a:hover:after {
   overflow: hidden;
   transition: 0.5s;
   font-size: 0.875rem;
-  border: 1px solid #3C5296;
-  color: #3C5296;
+  border: 1px solid #3c5296;
+  color: #3c5296;
   z-index: 1;
 }
 .project_wrap .project .sub_wrap .sub a::before,
@@ -144,7 +144,7 @@ header nav .gnb a:hover:before, header nav .gnb a:hover:after {
   height: 50px;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  background-color: #3C5296;
+  background-color: #3c5296;
   transition: 1s ease;
   z-index: -1;
 }
@@ -243,7 +243,7 @@ header nav .gnb a:hover:before, header nav .gnb a:hover:after {
   filter: brightness(1);
 }
 
-@media (min-width: 0px) and (max-width: 767px) {
+@media (min-width: 0px) and (max-width: 768px) {
   .project_wrap button {
     top: 77px;
   }
